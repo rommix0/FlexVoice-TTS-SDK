@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> What defines a voice?</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">What defines a voice?</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><B>What defines a voice?</B>
+
+<P>At a high level, a voice is defined by its timbre and the associated intonation model. 
+Both the timbre and the intonation model have many smaller components. In order to understand 
+these components we need to learn a bit about the human sound production system. 
+Phonemes are produced in different manners. Harmonic sounds are produced using the 
+vocal folds. The sound coming out from the vocal folds is called the voicing source. 
+This sound undergoes various changes as it travels in the vocal tract. These changes are 
+determined by the positions of the various articulators in the vocal tract, basically the 
+mouth, teeth, tongue positions, and the jaw opening, just to name a few. The resulting 
+sound can be turbulent noise (like in an 's') or harmonic (like in the vowels), or mixed 
+(like in 'z'). According to the dynamic characteristic, the sound can be sustained or fast 
+changing (in plosives like 't' and 'b', when after a certain amount of silence the sound is 
+suddenly 'released'). 
+
+<P>The timbre of a voice is basically determined the static physical characteristics of the human 
+sound production system, i.e., the size of the vocal tract and the sizes of the 
+various articulators, the strength of the musculars of the vocal folds, etc. 
+
+<P>Articulation is determined by how the state of the various articulators change as a 
+function of time, i.e., articulation is related to the timing of changes in the state 
+of the sound production system. More precisely, it is related to the timing on a fast 
+time scale (0.1 seconds). 
+
+<P>Finally, intonation is determined by rythm, pitch and volume (pitch is the frequency at 
+which the vocal folds vibrate during sound production) as a function of time. Intonation 
+works on a coarser time-scale than articulation (0.2+ seconds). 
+
+<P>Timbre, articulation and intonation has different sligthly different roles in speech production. 
+Timbre is associated with speaker properties. Men have larger mouth and lower average pitch 
+than women. Someone can articulate more or even less precisely. Also, someone can speak 
+faster, hesitate more, speak in a reading style, etc. Also, people can express emotions using 
+intonation. However, both intonation and timbre contribute to the "nice" characteristics of a 
+voice (a person with good physical capabilities can speak angrily or just in a careless 
+way and then the person's voice will not be referred to as "nice" to listen to). 
+
+<P>The timbre is defined by the characteristics of the voicing source and the vocal tract. 
+In FlexVoice 3.0 the voicing source has a harmonic+noise model, i.e., it is modelled 
+as the sum of a (parametric) harmonic part and a colored noise. Also, as the vocal fold vibrate 
+one can differentiate between an open and a closed part of a period. The ratio of the 
+open part compared to a full period is called the open quotient (it's natural range is [0,1]). 
+A larger open quotient results in less supharmonics whilst a smaller open quotient results 
+in a richer system of supharmonics. Also, one can set the decay of the supharmonics using a 
+parameter called tilt (this sets the spectral tilt of the voicing source). 
+
+<P>The basic parameter of the vocal tract determines its length - this corresponds to the 
+size of the head. 
+
+<P>
+
+<P></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

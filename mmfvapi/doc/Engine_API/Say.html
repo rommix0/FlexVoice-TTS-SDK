@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Say</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Say</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>This is a useful application that can be used to produce wave files using the text to speech engine. Compared to the previous HelloWorld applications it adds command line handling. </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>Creates wave file or annotated phoneme string from given text
+
+<P><B>Usage:</B><BR>
+<TT>say&nbsp;-lang&nbsp;language&nbsp;[options]&nbsp;{&nbsp;text&nbsp;|&nbsp;-f&nbsp;input_file&nbsp;}&nbsp;[output_file]</TT>
+
+<P><B>Options:</B>
+<PRE>
+&nbsp;&nbsp;&nbsp;&nbsp;-phout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create&nbsp;phoneme&nbsp;string&nbsp;output
+&nbsp;&nbsp;&nbsp;&nbsp;-speaker&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;speaker
+&nbsp;&nbsp;&nbsp;&nbsp;-sf&nbsp;{8|11|16|22}&nbsp;&nbsp;&nbsp;&nbsp;Sampling&nbsp;frequency:&nbsp;8,&nbsp;11,&nbsp;16&nbsp;or&nbsp;22&nbsp;kHz.&nbsp;Default:&nbsp;16
+&nbsp;&nbsp;&nbsp;&nbsp;-br&nbsp;{8|16}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bit&nbsp;resolution:&nbsp;8,&nbsp;16.&nbsp;Default:&nbsp;16
+&nbsp;&nbsp;&nbsp;&nbsp;-raw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;file&nbsp;format&nbsp;as&nbsp;raw&nbsp;(without&nbsp;header)
+&nbsp;&nbsp;&nbsp;&nbsp;-pcm_signed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;signed&nbsp;PCM
+&nbsp;&nbsp;&nbsp;&nbsp;-pcm_unsigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;unsigned&nbsp;PCM
+&nbsp;&nbsp;&nbsp;&nbsp;-ulaw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;ULAW
+&nbsp;&nbsp;&nbsp;&nbsp;-alaw&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;ALAW
+&nbsp;&nbsp;&nbsp;&nbsp;-vox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;VOX
+&nbsp;&nbsp;&nbsp;&nbsp;-vis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;VIS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;default&nbsp;output&nbsp;format&nbsp;is&nbsp;signed&nbsp;PCM&nbsp;for&nbsp;16&nbsp;bit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;and&nbsp;unsigned&nbsp;PCM&nbsp;for&nbsp;8&nbsp;bit&nbsp;output.
+&nbsp;&nbsp;&nbsp;&nbsp;-speechrate&nbsp;value&nbsp;&nbsp;&nbsp;Speech&nbsp;rate&nbsp;in&nbsp;percents
+&nbsp;&nbsp;&nbsp;&nbsp;-pitch&nbsp;value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default&nbsp;pitch&nbsp;of&nbsp;speech&nbsp;in&nbsp;Hz
+&nbsp;&nbsp;&nbsp;&nbsp;-pitchrate&nbsp;value&nbsp;&nbsp;&nbsp;&nbsp;Pitch&nbsp;rate&nbsp;in&nbsp;percents
+
+&nbsp;&nbsp;language:&nbsp;one&nbsp;of&nbsp;&quot;eng&quot;,&nbsp;&quot;hun&quot;,&nbsp;or&nbsp;&quot;malay&quot;
+
+&nbsp;&nbsp;text:&nbsp;a&nbsp;single&nbsp;word&nbsp;or&nbsp;text&nbsp;in&nbsp;quotes
+
+&nbsp;&nbsp;If&nbsp;output_file&nbsp;is&nbsp;not&nbsp;specified,&nbsp;it&nbsp;defaults&nbsp;to&nbsp;sound.wav
+	</PRE>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

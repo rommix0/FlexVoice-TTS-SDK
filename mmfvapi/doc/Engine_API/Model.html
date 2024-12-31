@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Model</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Model</A></H2></TD></H2></TD></TR></TABLE>
+
+<TABLE>
+<TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="The Factory"></A>
+<A HREF=TheFactory.html><B>The Factory</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="The Engine"></A>
+<A HREF=TheEngine.html><B>The Engine</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="The Speaker"></A>
+<A HREF=TheSpeaker.html><B>The Speaker</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="OutputSites"></A>
+<A HREF=OutputSites.html><B>OutputSites</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="The Output Format"></A>
+<A HREF=TheOutputFormat.html><B>The Output Format</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Bookmarks"></A>
+<A HREF=Bookmarks.html><B>Bookmarks</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Phonemes, Phoneme Coders"></A>
+<A HREF=PhonemesPhonemeCoders.html><B>Phonemes, Phoneme Coders</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="User Dictionaries"></A>
+<A HREF=UserDictionaries.html><B>User Dictionaries</B></A></TD><TD><BR>
+</TD></TR>
+</TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><FONT SIZE="+1"><B>Introduction of the model of FlexVoice's C++ API. </B></FONT>
+
+<P>First a factory (see <!1><A HREF="TheFactory.html">The Factory</A>) needs to be created that is responsible for storing 
+the resources such as the speakers (see <!1><A HREF="TheSpeaker.html">The Speaker</A>), 
+the dictionaries (see <!1><A HREF="UserDictionaries.html">User Dictionaries</A>) and so on. 
+The factory is also responsible for creating the engines (see <!1><A HREF="TheEngine.html">The Engine</A>). 
+The engine is able to create speech from text. 
+The output speech depends on the selected speaker. The speaker is a 
+set of parameters that specify the voice quality, prosody and so forth.
+During the speech, the engine sends bookmarks (see <!1><A HREF="Bookmarks.html">Bookmarks</A>) 
+to the client that notify it of the specific speech events 
+e.g. begin, end or even the phonemes.
+It is possible to control where the output should go. By default 
+the output goes to the sound card, but it can be redirected to a file for example, or
+the user can even take control of it and implement their own strategy
+to handle the output. This behaviour can be controlled by the OutputSites
+(see <!1><A HREF="OutputSites.html">OutputSites</A>)
+The user can also use user dictionaries that enable them to define the 
+pronounciation of some specific words.
+For a more detailed description of the above mentioned concepts please read 
+their specific documentation.
+
+<P>Common operations are: 
+<UL>
+<LI> create an engine factory 
+<LI> create a notification object (typically a <!1><A HREF="Notifier.html">Notifier</A> instance) 
+in order to receive notifications about speak-events,
+<LI> create an output-site object to be used with the engine 
+<LI> create a new engine instance 
+<LI> pass the notification object to the output-site object,
+<LI> send requests to the engine, 
+<LI> manipulate the engine state, in particular the properties of the speaker
+<LI> process notification messages arriving as the engine speaks.
+</UL>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> FlexVoice Speed Test</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">FlexVoice Speed Test</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>FlexVocie Speed Tester </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>This program is used to measure the capability of the FlexVoice Server on
+the supplied machine while simulating the possible usage in a client-server
+architecture.
+The program could be fine tuned using lot of parameters to emulate the usage
+of FlexVoice in every possible circumstances. Hardware and software specific
+issues has high level if influence in the real world FvSpeesTest.exe makes
+it possible to set the level of acceptable client number for every machine.
+
+<P><B>Usage:</B> <TT>FVSpeedTest.exe&nbsp;[Options]&nbsp;&lt;channels&gt;&nbsp;&lt;requests&gt;</TT>
+
+<P>By default the program looks for a file called <TT>&quot;FVSpeedTest.par&quot;</TT>, which containes
+all the settings, but in options you can override the settings.
+<PRE>
+-sp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Speaker&nbsp;file
+-sf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sampling&nbsp;frequency&nbsp;[in&nbsp;Hz]
+-br&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bit&nbsp;resolution
+-rf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Request&nbsp;frequency&nbsp;[in&nbsp;ms]
+-pq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phoneme&nbsp;queue&nbsp;size&nbsp;[in&nbsp;phoneme&nbsp;count]
+-wq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wave&nbsp;queue&nbsp;size&nbsp;[in&nbsp;phoneme&nbsp;count]
+-ib&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Initial&nbsp;buffer&nbsp;size&nbsp;[in&nbsp;ms]
+-bs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delay&nbsp;buffer&nbsp;size&nbsp;[in&nbsp;ms]
+-spd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generation&nbsp;speed
+-tc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text&nbsp;count
+</PRE>
+
+<P>After the run two log files are going to appear:
+1. <TT>error1.log</TT> containing the dealys in msec.
+2. the log for every request, when was it issued, when was the first reply
+from the server returned and finishing of the reading.
+
+<P>On Windows Platforms you can find this utility in <TT>\Program&nbsp;Files\Mindmaker\FlexVoice3&nbsp;SDK\bin\MMFVAPI\FVSpeedTest</TT>
+directory.
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

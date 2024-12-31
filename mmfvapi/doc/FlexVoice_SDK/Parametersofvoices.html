@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Parameters of voices</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Parameters of voices</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><B>Parameters of voices</B>
+
+<P>Here we review the parameters available in the <TT>.tav</TT> files. 
+<TT>str&nbsp;voiceDescr=&quot;Leslie&quot;;</TT> - name of base voice binary. Binaries can be 
+found in the FlexVoice data directory. A voice binary corresponds to original 
+recordings (non-modified voices). 
+
+<P>Now, let's review the parameters that effect the intonation. 
+
+<P><TT>str&nbsp;durationModel=&quot;duration.drm&quot;;</TT> - name of duration model file within the quotation marks. Describes the duration, of the pronouncing of phonemes for a voice. 
+
+<P><TT>dbl&nbsp;speechRate=1.0;</TT> - rate of speech, 1.0 = normal, 2.0 double the rate of normal. For _Last 0.91 is suggested. 
+
+<P><TT>int&nbsp;speedWPM=250;</TT> - absolute speed in words per minute, not implamented yet 
+
+<P><TT>str&nbsp;pitchModel=&quot;pitch.ptm&quot;;</TT> - name of pitch model file within the quotation marks. Describes the pitch, of the pronouncing of phonemes for a voice. 
+
+<P><TT>int&nbsp;defaultPitch=210;</TT> - default average pitch[Hz]. Should match the "head-size" of the speaker. 
+
+<P><TT>int&nbsp;pitchMin=50;</TT> - minimum valid pitch [Hz]. Pitch smaller than this will be clipped to this value. 
+
+<P><TT>int&nbsp;pitchMax=500;</TT> - same as above, just for maximum valid pitch. Can e.g. be used to flatten out pitch contours (for e.g. robotic voices). 
+
+<P><TT>dbl&nbsp;pitchRate=1.0;</TT> - relative pitch multiplier (used only in embedded commands changing the relative pitch). Increasing the pitch locally yields interesting effects (speaking up, basically). You can simulate anger, interest, etc. in this way. 
+
+<P><TT>dbl&nbsp;intonationLevel=1.6;</TT> - range of intonation, big values larger range, more rapidly changing (excited) intonation. For pitch model _L 1.4 seems to be ok, for the other pitch models 1.0 should be fine. 
+
+<P><TT>dbl&nbsp;singingPitchRate=0.63;</TT> - defines singing pitch "range" relative to the default pitch. 0.63 works for must of the voices. 
+
+<P><TT>str&nbsp;loudnessModel=&quot;volume.ldm&quot;;</TT> - A file that describes the loudness of a voice. Look for volume.ldm file. 
+
+<P><TT>int&nbsp;volumeSmoothWindow=3;</TT> - Loudness smoothening in time (back and forth), larger values yield smoother loudness contour. Units are syllables. 
+
+<P><TT>dbl&nbsp;volume=1.0;</TT> - average volume, actually normalizer factor. Must be adjusted for speaker; if you change the voicing source characteristics, the head-size, etc., you should look at a sample output and set this value such that the SNR is optimized, i.e., the output is not overdriven but fills out the full range. 
+
+<P><TT>dbl&nbsp;headsize=1.0;</TT> - size of head; smaller values for children, larger for man. You should adjust at least the pitch at the same time to have reasonable sounding voices. 
+
+<P><TT>dbl&nbsp;smoothness=0.0;</TT> - overall amount (not just in voiced parts) of high frequencies. If the strength of low frequencies is too much, try increasing this value. Conversely, if low frequencies are too low, decrease this value Range is [0,1]. 
+
+<P><TT>dbl&nbsp;tilt=0.0;</TT> - spectral tilt of voicing source; range is [0,1], increasing it yields less high frequency excitation in voiced parts 
+
+<P><TT>dbl&nbsp;richness=0.99;</TT> - corresponds to "open quotient"; control strength of supharmonics of pitch, 0.99 is maximal value this yields less supharmonics (rich sound). 
+
+<P><PRE>
+	obj:Filter&nbsp;vsHarmFilter
+	{
+	&nbsp;&nbsp;dbl&nbsp;d1=0.1;
+	&nbsp;&nbsp;dbl&nbsp;d2=0.3;
+	&nbsp;&nbsp;dbl&nbsp;f1=3800;
+	&nbsp;&nbsp;dbl&nbsp;f2=7300;
+	}</PRE>
+Low-pass Butterworth filter to cut high frequencies (supharmonics) in voicing source output. There are 4 design parameters, f1 is where the cut begins, f2 is the point from which cut has maximal effect (both are given in Hz), d1 determines the strength of cut at f1, similarly, d2 determines the strength of cut at f2. Typically male speakers have more supharmonics whilst female speakers have less supharmonics, but the spectrum of the voicing source is "flattened" out by colored noise content for them. Note that because of the digital design procedure small changes may not have any effect on the output. It is a good idea to experiment first in a sound editor program that supports Butterworth filter design and then type in the parameters here. 
+
+<P><PRE>
+	obj:Filter&nbsp;vsNoiseFilter
+	{
+	&nbsp;&nbsp;dbl&nbsp;d1=0.1;
+	&nbsp;&nbsp;dbl&nbsp;d2=0.1;
+	&nbsp;&nbsp;dbl&nbsp;f1=1000;
+	&nbsp;&nbsp;dbl&nbsp;f2=5000;
+	}</PRE>
+High-pass Butterworth filter to add the noise component to the voicing source. The parameters f1, f2 have just the reversed meaning as for vsHarmFilter. d1 and d2 have the same roles. 
+
+<P>str vsShapeFileName="LeslieVsShapev"; - optional; name of a *.txt file in the data directory that determines the shape of the voicing source as a function of time. The file format is simply a list of integer numbers separated with new lines. Only the open part of the voicing source shape must be given (but sometimes it is desirable not to use richness but directly this file to achieve extreme effects, e.g. when richness is very small). 
+
+<P><TT>dbl&nbsp;fricationRate=2.0;</TT> - strength of fricatives, increasing it for telephony speech might help if you cannot hear the fricatives (f,s,..) linear range. 
+
+<P><TT>dbl&nbsp;plosiveRate=3.0;</TT> - strength of plosives; also can be increased for telephone speech to increase intelligibility. linear range. 
+
+<P><TT>boundaryModel</TT> and <TT>boundaryPostModel</TT> sets the phrase boundary. 
+
+<P><TT>prominenceModel</TT> sets which word to be read out in an eleveted voice. 
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

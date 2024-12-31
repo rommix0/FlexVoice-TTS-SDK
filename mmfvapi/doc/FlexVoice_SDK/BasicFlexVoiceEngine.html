@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Basic FlexVoice Engine</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Basic FlexVoice Engine</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The setup of the FlexVoice-engine requires the following steps:
+- copy the <TT>[system&nbsp;files]</TT> to the Window's system directory
+
+<P>- copy the <TT>[data&nbsp;files]</TT> to the data directory in Mindmaker's common
+files directory:<TT>%MINDMAKER_COMMON_FILES%/FlexVoice/Data_3_01_000</TT> (E.g. if <TT>%MINDMAKER_COMMON_FILES%</TT>
+is <B>C:/Program Files/Common Files/Mindmaker</B> then this directory will be <I>C:/Program Files/Common Files/FlexVoice/Data_3_01_000</I>
+
+<P>- create a string-type registry-entry to define the Mindmaker's Common directory:
+<TT>HKLM/software/Mindmaker/CommonDirectory&nbsp;=&nbsp;%MINDMAKER_COMMON_FILES%</TT> (e.g.:
+<I>C:\Program Files\Common Files\Mindmaker) </I>
+
+<P>- install at least one speaker using the info from file: <A HREF=RedistribuitionofVoices.html>RedistribuitionofVoices.html</A>
+The overlapping files are equal so it is the same whichever one is used
+
+<P>- select a speaker and copy its tav file to the <TT>[data&nbsp;directory]</TT> as <TT>Default.tav</TT>
+
+<P>- create a <TT>VoiceList.tvl</TT> file in the <TT>[data&nbsp;directory]</TT> listing the speakers you want
+to use. (Each line should define a speaker: name &lt;TAB&gt; filename. E.g. <I>Julie Voices/Julie.tav) </I>
+
+<P><PRE>
+[system.files]
+FlexVoice_3_01_000.dll
+
+
+[data&nbsp;files]
+bigram-2a.ngr
+English_US.phd
+L2P.id3
+L2P.dat
+NotPRTR.dat
+OnsetClusters.dat
+PhonemeGroups
+PhraseBound.net
+PhraseBoundSettings.dat
+POSset.dat
+POSStatistics.dat
+PhonemeGroup
+PRCE.dat
+PRCS.dat
+RHL2.dat
+SimplePosDict.dat
+SpecialWordPOS.dat
+TN.dat
+TTSHLTNData.dat
+
+</PRE></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

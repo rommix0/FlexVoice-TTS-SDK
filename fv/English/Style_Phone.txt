@@ -1,0 +1,7 @@
+phraseBoundThreshold		= 0.55;
+
+silenceWordSamePh   		= 10;
+silenceWordVowels   		= 40;
+
+allophoneVocalizeT		= 0;
+

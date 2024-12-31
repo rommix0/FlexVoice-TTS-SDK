@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> The Engine</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">The Engine</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>
+A TTS Engine is used to produce speech from text.
+
+<P><FONT SIZE="+1"><B>Creation</B></FONT>
+
+<P>It is created by the Factory's <!1><A HREF="EngineFactory.html#DOC.1.3.2.5.1.6">createEngine</A> method.
+The engine creation requires an OutputSite that tells the engine what 
+kind of output is to generate (e.g. wave or phoneme-string) and where to 
+put it. (see Output Sites). It also requires a default speaker and
+a language. The factory model ensures that the engine-creation is a relative cheap 
+process
+
+<P><FONT SIZE="+1"><B>Speech requests</B></FONT>
+
+<P>The engine can process requests (see <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A>) that are queued 
+and processed continuously. The input can also be given in fragments 
+by using the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.1">addFragment</A> method. Between the fragments the user
+can place own bookmarks by the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.2">addBookmark</A> method.
+The speech can be stopped, paused and resumed (see <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.5">stop</A>, 
+<!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A>, <!1><A HREF="Engine.html#DOC.1.3.2.6.1.2.2">resume</A>). There are also possibility
+for skipping parts of the text (e.g. the next two sentence) online by 
+calling the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A> method. Calling the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.7">wait</A> method it will be 
+ensured that all the given speak requests were finished.
+
+<P><FONT SIZE="+1"><B>Speaker handling</B></FONT>
+
+<P>The speakers can also be modified online and offline by using the 
+<!1><A HREF="Engine.html#DOC.1.3.2.6.1.4.5">setSpeaker</A> method. The engine stores an inner speaker structure
+that is used for getting the actual speech parameters. 
+The outer given speaker is copied to this inner instance and will 
+change the parameters of the output speech. Setting the speaker offline
+(when not speaking) the parameters change immediately and the next request 
+starts speaking by the newly set speaker parameters. In case of setting 
+the speaker online (when speaking) the parameters will change only after 
+few seconds. The inner speake instance can be get by calling the
+<!1><A HREF="Engine.html#DOC.1.3.2.6.1.4.6">getSpeaker</A> method.
+
+<P>The engine also stores a speaker map that lets the engine choose the 
+speaker from in case of an embedded speaker change 
+(e.g. \vce=speaker="Tom"\). This inner speaker map can be handled by the 
+following methods: <!1><A HREF="Engine.html#DOC.1.3.2.6.1.4.1">setSpeakers</A>, <!1><A HREF="EngineFactory.html#DOC.1.3.2.5.1.9">addSpeaker</A>, 
+<!1><A HREF="EngineFactory.html#DOC.1.3.2.5.1.10">removeSpeaker</A>, <!1><A HREF="Engine.html#DOC.1.3.2.6.1.4.4">updateSpeaker</A>, <!1><A HREF="Engine.html#DOC.1.3.2.6.1.4.7">getSpeakers</A>.
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

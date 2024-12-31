@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> FVNetClientTest</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">FVNetClientTest</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Tutorial for FVNetClientTest </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><B>Sample program and tutorial on creating a FlexVoice Client </B>
+
+<P>The FVNetClientTest Creates a client that should connect to the server. The return value is a handle that should be used to reach the client's functionality. The zero value means that the creation failed. 
+Note that a functioning and accessable server is required in order for the FVNetClient to function. 
+
+<P><B>Usage:</B>
+
+<P><TT>FVNetClientTest&nbsp;[options]&nbsp;host&nbsp;port&nbsp;output_file&nbsp;{&nbsp;text&nbsp;|&nbsp;-f&nbsp;input_file&nbsp;}</TT>
+
+<P>
+
+<P><B>Where: </B>
+<PRE>
+	[Options]
+	-h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-lang&nbsp;&nbsp;&nbsp;the&nbsp;language&nbsp;(eng,&nbsp;hun,&nbsp;or&nbsp;malay)&nbsp;REQUIRED!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-spd&nbsp;&nbsp;&nbsp;&nbsp;Generation&nbsp;speed&nbsp;[in&nbsp;percent]
+
+	[Required&nbsp;arguments]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host&nbsp;&nbsp;-&nbsp;is&nbsp;the&nbsp;address&nbsp;of&nbsp;the&nbsp;server.
+	port&nbsp;&nbsp;-&nbsp;is&nbsp;the&nbsp;designated&nbsp;server&nbsp;port.
+	output_file&nbsp;&nbsp;-&nbsp;is&nbsp;the&nbsp;name/path&nbsp;of&nbsp;the&nbsp;destination&nbsp;wave&nbsp;file.
+	text&nbsp;&nbsp;-&nbsp;is&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;converted&nbsp;to&nbsp;wave&nbsp;by&nbsp;the&nbsp;server.
+	input_file&nbsp;&nbsp;-&nbsp;is&nbsp;the&nbsp;name/path&nbsp;of&nbsp;an&nbsp;input&nbsp;text&nbsp;file&nbsp;for&nbsp;convertion.
+	</PRE>
+
+<P>
+<TT>FVnetClientTest.exe</TT> is a consoled based application, that converts text into speech 
+through a server and saves it into a given type and format wave file using a FlexVoice
+server and connecting through TCP/IP protocoll.
+
+<P>Let's see the main point in the main.cpp source, how the Client works. 
+
+<P>
+
+<P>The main program porcesses the arguments of the programs and sets the required variables 
+accordingly. (See usage) 
+
+<P>Than we try to make client with the checking of it's success. 
+
+<P><TT>unsigned&nbsp;long&nbsp;handle&nbsp;=&nbsp;FVNetClientCreate();&nbsp;</TT>
+
+<P>The <TT>FVNetClientCreate</TT> function creates a client that should connect to the 
+server. The return value is a handle that should be used to reach the client's 
+functionality. The zero value means that the creation failed. 
+
+<P>If the client was created with success, we try to connect to the server using <TT>FVNetClientConnect()</TT>
+function. (see parametring in header file). The return value is an error code 
+(see FVNetClientErrorCode in the header file). 
+
+<P>There is a separate class which deals with wave file saving (see <TT>WaveFile.cpp</TT> and <TT>WaveFile.h</TT>).
+
+<P>Depending on the given argument the programs has to branches dealing with vox 
+file writing and wave file writing. There is no point explaining both, because it is 
+basically the same. 
+
+<P>First we create a wave file and open it for saving. The speech is created with <TT>FVNetClientSpeak()</TT> function, 
+which returns an error code. This method creates speech through the callback function. 
+This method send the text to the server, the server synthesizes the speech and sends the 
+generated data back to the client. The here given callback function is called periodically to give 
+back the speech data. 
+
+<P>
+<PRE>
+	FVNetClientSpeak(&nbsp;handle
+	,&nbsp;g_text.c_str()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;g_lang
+		,&nbsp;callback,&nbsp;reinterpret_cast&lt;void*&gt;(&amp;wave)&nbsp;);
+	</PRE>
+
+<P>
+With <TT>FVNetClientWait()</TT> method we waits for the end of the speech, than we close 
+the created wave file and destroy the created client, using the <TT>FVNetClientDestroy()</TT>
+function. 
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

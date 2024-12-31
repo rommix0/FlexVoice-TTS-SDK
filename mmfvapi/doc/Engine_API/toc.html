@@ -1,0 +1,820 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Table of Contents</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Table of Contents</H1>
+<H2>General stuff</H2>
+<UL>
+<LI><A HREF="index.html">FlexVoice Engine API</A> <I>The advanced text-to-speech engine by Mindmaker. (C) 2000-2001</I>
+<UL><LI><A HREF="FAQ.html">FAQ</A> <I>Frequently Asked Questions </I>
+<LI><A HREF="Model.html">Model</A>
+<UL><LI><A HREF="Bookmarks.html">Bookmarks</A>
+<LI><A HREF="OutputSites.html">OutputSites</A>
+<LI><A HREF="PhonemesPhonemeCoders.html">Phonemes, Phoneme Coders</A>
+<LI><A HREF="TheEngine.html">The Engine</A>
+<LI><A HREF="TheFactory.html">The Factory</A>
+<LI><A HREF="TheOutputFormat.html">The Output Format</A>
+<LI><A HREF="TheSpeaker.html">The Speaker</A>
+<LI><A HREF="UserDictionaries.html">User Dictionaries</A>
+</UL><LI><A HREF="ReferenceManual.html">Reference Manual</A> <I>Interfaces, classes, enumerations ... </I>
+<UL><LI><A HREF="Attribute.h.html">Attribute.h </A>
+<UL><LI><A HREF="IAttribute.html#set/get functions">FlexVoice Engine API::Reference Manual::Attribute.h ::IAttribute::set/get functions</A>
+</UL><LI><A HREF="Bookmark.h.html">Bookmark.h </A>
+<UL><LI><A HREF="Bookmarktypestypelists.html">Bookmark types, typelists </A>
+<LI><A HREF="Bookmarks..html">Bookmarks.  </A>
+</UL><LI><A HREF="Engine.h.html">Engine.h</A>
+<UL><LI><A HREF="BasicTypes..html">Basic Types.</A>
+<LI><A HREF="Engine..html">Engine. </A>
+<UL><LI><A HREF="Engine.html#Attribute handling methods.">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::Attribute handling methods.</A>
+<LI><A HREF="Engine.html#Dictionary handler methods.">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::Dictionary handler methods.</A>
+<LI><A HREF="Engine.html#Speak requests.">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::Speak requests.</A>
+<LI><A HREF="Engine.html#Speaker access methods.">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::Speaker access methods.</A>
+<LI><A HREF="Engine.html#State control.">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::State control.</A>
+</UL><LI><A HREF="Factory..html">Factory. </A>
+<UL><LI><A HREF="EngineFactory.html#Construction, destruction.">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::Construction, destruction.</A>
+</UL><LI><A HREF="OutputFormats..html">Output Formats. </A>
+<LI><A HREF="OutputSites..html">Output Sites. </A>
+<UL><LI><A HREF="IOutputSite.html#State control ">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IOutputSite::State control </A>
+</UL></UL><LI><A HREF="Errors.h.html">Errors.h </A>
+<UL><LI><A HREF="Errors.h.html#AudioException">AudioException</A>
+<LI><A HREF="Errors.h.html#FileIOException">FileIOException</A>
+<LI><A HREF="Errors.h.html#FileNotFoundException">FileNotFoundException</A>
+<LI><A HREF="Errors.h.html#InvalidParamException">InvalidParamException</A>
+<LI><A HREF="Errors.h.html#NotSupportedException">NotSupportedException</A>
+<LI><A HREF="Errors.h.html#OutOfMemoryException">OutOfMemoryException</A>
+<LI><A HREF="Errors.h.html#ResourceException">ResourceException</A>
+<LI><A HREF="Errors.h.html#SystemException ">SystemException </A>
+</UL><LI><A HREF="FVVersion.h.html">FVVersion.h </A>
+<LI><A HREF="FileOutputSite.h.html">FileOutputSite.h </A>
+<LI><A HREF="Notifier.h.html">Notifier.h</A>
+<LI><A HREF="Phoneme.h.html">Phoneme.h </A>
+<UL><LI><A HREF="IPAPhoneme.html#Consonant properties: values are valid only if the m_type is PTY_CONSONANT ">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Consonant properties: values are valid only if the m_type is PTY_CONSONANT </A>
+<LI><A HREF="IPAPhoneme.html#Vowel properties: values are valid only if the m_type is PTY_VOWEL ">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Vowel properties: values are valid only if the m_type is PTY_VOWEL </A>
+</UL><LI><A HREF="PhonemeCoder.h.html">PhonemeCoder.h </A>
+<LI><A HREF="PlayOutputSite.h.html">PlayOutputSite.h </A>
+<UL><LI><A HREF="WavePlayOutputSite.html#Methods inherited from <!1><A HREF="IWaveOutputSite.html">IWaveOutputSite</A> ">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::Methods inherited from \Ref{IWaveOutputSite} </A>
+</UL><LI><A HREF="PlayOutputSiteEx.h.html">PlayOutputSiteEx.h </A>
+<UL><LI><A HREF="WavePlayOutputSiteEx.html#Methods inherited from <!1><A HREF="IWaveOutputSite.html">IWaveOutputSite</A> ">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::Methods inherited from \Ref{IWaveOutputSite} </A>
+</UL><LI><A HREF="Speaker.h.html">Speaker.h</A>
+<LI><A HREF="UserDictionary.h.html">UserDictionary.h</A>
+<UL><LI><A HREF="DictionaryHandle.html#Container handling methods">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::Container handling methods</A>
+</UL></UL><LI><A HREF="Tutorials.html">Tutorials</A> <I>Sample programs demonstrating of using FlexVoice Engine API </I>
+<UL><LI><A HREF="HelloWorld0.html">HelloWorld0 </A> <I>This example shows how to instantiate a FlexVoice 3.0 engine and let it speak to a file.  Demonstrates the minimal set of calls to use  FlexVoice 3.0 in an application.  </I>
+<LI><A HREF="HelloWorld1.html">HelloWorld1</A> <I>This example is an extention of the previous one in as much as it finds the data  directory on your system and also it loads the speaker definitions included in the <TT>voicelist.tvl</TT> file that acts as a registry of the available voices. This way, the user can change speakers using embedded commands without blocking the output of the speech. </I>
+<LI><A HREF="HelloWorld2.html">HelloWorld2</A> <I>In this example, a class is set up that is doing most of the work. Compared to the previous example the functionality is not extended. </I>
+<LI><A HREF="Say.html">Say</A> <I>This is a useful application that can be used to produce wave files using the text to speech engine. Compared to the previous HelloWorld applications it adds command line handling. </I>
+</UL></UL></UL>
+<H2>Classes</H2>
+<UL>
+<LI><A HREF="FakeAttribute.html">FakeAttribute</A> <I>Base must be derived from IAttribute</I>
+<LI><A HREF="IAttribute.html">IAttribute</A> <I>Attribute interface Lets object hide the member variables from the client by defining parameters with their name.</I>
+<LI><A HREF="BookmarkTypeList.html">BookmarkTypeList</A> <I>A BookmarkTypeList provides a comfortable interface to be used with  <!1><A HREF="INotifyDispatcher.html">INotifyDispatcher</A> methods, namely with <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.8">registerNotify</A>, <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.10">addBookmarkTypes</A> and <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.11">removeBookmarkTypes</A>.</I>
+<LI><A HREF="Bookmark.html">Bookmark</A> <I>Bookmarks are passed along to the <!1><A HREF="IOutputSite.html">IOutputSite</A> by the <!1><A HREF="Engine.html">Engine</A>  which forwards them to <!1><A HREF="INotify.html">INotify</A> instances.</I>
+<LI><A HREF="BookmarkDocumentStructure.html">BookmarkDocumentStructure</A> <I>NOT YET USED</I>
+<LI><A HREF="BookmarkEmbedded.html">BookmarkEmbedded</A> <I>Base class of bookmarks that are embedded into the output flow of the engine</I>
+<LI><A HREF="BookmarkIPA.html">BookmarkIPA</A>
+<LI><A HREF="BookmarkParamChanged.html">BookmarkParamChanged</A>
+<LI><A HREF="BookmarkPhoneme.html">BookmarkPhoneme</A> <I>Arrives when phoneme playing starts (but see also <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.4">prepare</A>)</I>
+<LI><A HREF="BookmarkSpeakerChanged.html">BookmarkSpeakerChanged</A>
+<LI><A HREF="Engine.html">Engine</A>
+<LI><A HREF="EngineFactory.html">EngineFactory</A> <I>Responsible for managing <!1><A HREF="Engine.html">Engine</A> and instances, <!1><A HREF="Speaker.html">Speaker</A> resources  and Dictionaries (<!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>).</I>
+<LI><A HREF="IOutputFormat.html">IOutputFormat</A> <I>Abstract base class for all TTS output formats.</I>
+<LI><A HREF="IAnnIPAPhonemeOutputSite.html">IAnnIPAPhonemeOutputSite</A> <I>Interface called by the <EM>TTS engine</EM> to send out <EM>annotated IPA phoneme</EM> data when it becomes available</I>
+<LI><A HREF="IAnnPhonemeOutputSite.html">IAnnPhonemeOutputSite</A> <I>Interface called by the <EM>TTS engine</EM> to send out <EM>annotated phoneme</EM> data (using phoneme codes) when it becomes available</I>
+<LI><A HREF="IOutputSite.html">IOutputSite</A> <I>Interface called by the <EM>TTS engine</EM> to send out data when it becomes available.</I>
+<LI><A HREF="IPhonemeOutputSite.html">IPhonemeOutputSite</A> <I>Interface called by the <EM>TTS engine</EM> to send out <EM>phoneme</EM> data (in the form of phoneme codes) when it becomes available</I>
+<LI><A HREF="IWaveOutputSite.html">IWaveOutputSite</A> <I>Interface called by the <EM>TTS engine</EM> to send out <EM>wave</EM>  data when it becomes available.</I>
+<LI><A HREF="GenericException.html">GenericException</A> <I>Base class for all exceptions</I>
+<LI><A HREF="WaveFileOutputSite.html">WaveFileOutputSite</A> <I>A WaveFileOutputSite supports saving speech into a PCM formatted "WAV" file.</I>
+<LI><A HREF="INotifier.html">INotifier</A> <I>The purpose of this class is to receive and dispatch the received notifications</I>
+<LI><A HREF="INotify.html">INotify</A> <I>Defines notification methods to be implemented by the API client</I>
+<LI><A HREF="INotifyDispatcher.html">INotifyDispatcher</A> <I>Interface for managing notification dispatching.</I>
+<LI><A HREF="Notifier.html">Notifier</A> <I>An implementation of the <!1><A HREF="INotifier.html">INotifier</A> interfacefor dispatching notifications</I>
+<LI><A HREF="NotifyTransfer.html">NotifyTransfer</A> <I>The purpose of this class is to provide an implementation of INotify such that the processing of the notifications happens on a thread different from the notification thread.</I>
+<LI><A HREF="IPAPhoneme.html">IPAPhoneme</A> <I>Describes phonemes by their features, essentially providing a language-independent representation of phonemes.</I>
+<LI><A HREF="IPhonemeCoder.html">IPhonemeCoder</A> <I>Interface to convert between phoneme symbol tables and the above IPA phoneme representations.</I>
+<LI><A HREF="FilePhonemeCoder.html">FilePhonemeCoder</A> <I><!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A> implementation for converting phoneme codes using phonemes described in a file</I>
+<LI><A HREF="WavePlayOutputSite.html">WavePlayOutputSite</A> <I>A WavePlayOutputSite supports playing waves through a hardware device.</I>
+<LI><A HREF="WavePlayOutputSiteEx.html">WavePlayOutputSiteEx</A> <I>A WavePlayOutputSite supports playing waves through a hardware device.</I>
+<LI><A HREF="Speaker.html">Speaker</A> <I>Speaker class.</I>
+<LI><A HREF="SpeakerMap.html">SpeakerMap</A>
+<LI><A HREF="SpeakerMapIterator.html">SpeakerMapIterator</A>
+<LI><A HREF="ConstDictIterator.html">ConstDictIterator</A> <I>Const iteration of a <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance.</I>
+<LI><A HREF="DictIterator.html">DictIterator</A> <I>Non-const iteration of a <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance.</I>
+<LI><A HREF="DictionaryHandle.html">DictionaryHandle</A> <I>This dictionary implementation is compatible with FlexVoice 10 implementations.</I>
+<LI><A HREF="IDictionaryItem.html">IDictionaryItem</A> <I>A dictionary item accesses the word parameters.</I>
+</UL>
+<H2>Functions</H2>
+<UL>
+<LI><A HREF="IAttribute.html#get">FlexVoice Engine API::Reference Manual::Attribute.h ::IAttribute::get</A> <I>Gets the value of a string parameter identified by the 'name' In case of arrays, the 'index' identifies the array-index If name is not recognized, the return value is false otherwise true The result will be copied to the buffer that should be minimum 'buffsize' large.</I>
+<LI><A HREF="IAttribute.html#set">FlexVoice Engine API::Reference Manual::Attribute.h ::IAttribute::set</A> <I>Sets the value of a string parameter identified by the 'name' In case of arrays, the 'index' identifies the array-index if name is not recognized, the return value is false otherwise true The length of some parameter's value is maximized that is described in the documentation.</I>
+<LI><B>get:</B>
+<UL>
+<LI><A HREF="IAttribute.html#get">get</A>
+<LI><A HREF="IAttribute.html#get">get</A>
+<LI><A HREF="IAttribute.html#get">get</A>
+<LI><A HREF="IAttribute.html#get">get</A>
+</UL>
+<LI><B>set:</B>
+<UL>
+<LI><A HREF="IAttribute.html#set">set</A>
+<LI><A HREF="IAttribute.html#set">set</A>
+<LI><A HREF="IAttribute.html#set">set</A>
+<LI><A HREF="IAttribute.html#set">set</A>
+</UL>
+<LI><B>BookmarkTypeList:</B>
+<UL>
+<LI><A HREF="BookmarkTypeList.html#BookmarkTypeList">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkTypeList::BookmarkTypeList</A>
+<LI><A HREF="BookmarkTypeList.html#BookmarkTypeList">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkTypeList::BookmarkTypeList</A>
+</UL>
+<LI><B>operator|:</B>
+<UL>
+<LI><A HREF="Bookmarktypestypelists.html#operator|">operator|</A>
+<LI><A HREF="Bookmarktypestypelists.html#operator|">operator|</A>
+<LI><A HREF="Bookmarktypestypelists.html#operator|">operator|</A>
+</UL>
+<LI><A HREF="Bookmark.html#Bookmark">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::Bookmark</A>
+<LI><A HREF="Bookmark.html#clone">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::clone</A>
+<LI><A HREF="Bookmark.html#~Bookmark">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::~Bookmark</A>
+<LI><A HREF="BookmarkEmbedded.html#BookmarkEmbedded">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkEmbedded::BookmarkEmbedded</A>
+<LI><A HREF="Engine.html#attribute">attribute</A> <I>The constant version of <!1><A HREF="Engine.html#DOC.1.3.2.6.1.5.1">attribute</A></I>
+<LI><A HREF="Engine.html#enableDictionary">enableDictionary</A> <I>Enables/disables a dictionary If the "enable" parameter is true the dictionary will be enabled otherwise it will be disabled.</I>
+<LI><A HREF="Engine.html#getDictCount">getDictCount</A> <I>Gives the engine's dictionary-list size.</I>
+<LI><B>getDictionary:</B>
+<UL>
+<LI><A HREF="Engine.html#getDictionary">getDictionary</A> <I>Gives a handle of a dictionary defined by "index" throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range</I>
+<LI><A HREF="Engine.html#getDictionary">getDictionary</A> <I>Gives a handle of a dictionary defined by "name" If the given name doesn't exists the returned handle will be invalid</I>
+</UL>
+<LI><A HREF="Engine.html#getDictionaryIndex">getDictionaryIndex</A> <I>Gives the index of a dictionary defined by "name" Return with -1 if the given name is not in the list</I>
+<LI><A HREF="Engine.html#getDictionaryName">getDictionaryName</A> <I>Gives the name of a dictionary defined by "name" throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range</I>
+<LI><A HREF="Engine.html#insertDictionary">insertDictionary</A> <I>Inserts a dictionary to the engine's list.</I>
+<LI><A HREF="Engine.html#isDictionaryEnabled">isDictionaryEnabled</A> <I>Gives if the dictonary is enabled or not</I>
+<LI><A HREF="Engine.html#removeDictionary">removeDictionary</A> <I>Removes a dictionary from the engine's list.</I>
+<LI><A HREF="Engine.html#replaceDictionary">replaceDictionary</A> <I>Replaces the dictionary.</I>
+<LI><A HREF="Engine.html#Engine">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::Engine</A> <I>Engine shouldn't be copied</I>
+<LI><A HREF="Engine.html#addBookmark">addBookmark</A> <I>Adds a user bookmark.</I>
+<LI><A HREF="Engine.html#addFragment">addFragment</A> <I>Adds a text fragment to the next request.</I>
+<LI><A HREF="Engine.html#cancel">cancel</A> <I>NOT YET IMPLEMENTED - Cancels the first 'requests' pending requests, including the current one</I>
+<LI><B>speakRequest:</B>
+<UL>
+<LI><A HREF="Engine.html#speakRequest">speakRequest</A> <I>Passes the given text to the engine for processing.</I>
+<LI><A HREF="Engine.html#speakRequest">speakRequest</A> <I>Closes the request that was given by fragments.</I>
+</UL>
+<LI><A HREF="Engine.html#stop">stop</A> <I>Cancels all the pending requests, including the current one</I>
+<LI><A HREF="Engine.html#wait">wait</A> <I>Blocks the calling thread until all the requests are processed.</I>
+<LI><A HREF="Engine.html#addSpeaker">addSpeaker</A> <I>Adds a speaker to the engine's internal speaker map.</I>
+<LI><A HREF="Engine.html#getSpeaker">getSpeaker</A> <I>Retrieves a reference to the current speaker</I>
+<LI><A HREF="Engine.html#getSpeakers">getSpeakers</A> <I>Retrieves a reference to the engine's internal speaker map</I>
+<LI><A HREF="Engine.html#removeSpeaker">removeSpeaker</A> <I>Removes the speaker from the engine's internal speaker map.</I>
+<LI><A HREF="Engine.html#setSpeaker">setSpeaker</A> <I>Sets the current speaker to the one provided in the argument.</I>
+<LI><A HREF="Engine.html#setSpeakers">setSpeakers</A> <I>Copies the given speaker map to the engine's internal map The engine can use only those speakers that are in this map (except the default speaker) Currently cacheStrategy is NOT USED</I>
+<LI><A HREF="Engine.html#updateSpeaker">updateSpeaker</A> <I>Updates the changes of the speaker in the engine's internal speaker map.</I>
+<LI><A HREF="Engine.html#pause">pause</A> <I>Pauses the playing of the current request.</I>
+<LI><A HREF="Engine.html#resume">resume</A> <I>Resumes play.</I>
+<LI><A HREF="Engine.html#getPhonemeCoder">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::getPhonemeCoder</A> <I>Gives the PhonemeCoder used by the Engine If the PhonemeCoder was set by the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.7">setPhonemeCoder</A> method this  function will return with this value otherwise it will return with the  default coder </I>
+<LI><A HREF="Engine.html#operator delete">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::operator delete</A> <I>Deletes the engine.</I>
+<LI><A HREF="Engine.html#operator=   ">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::operator=   </A> <I>Engine shouldn't be copied</I>
+<LI><A HREF="Engine.html#reset">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::reset</A> <I>Puts the engine in its initial phase and sets the current speaker to the default.</I>
+<LI><A HREF="Engine.html#setPhonemeCoder">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::setPhonemeCoder</A> <I>Sets the outer phoneme coder to code the phoneme notification.</I>
+<LI><A HREF="Engine.html#skip">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::skip</A> <I>Skips a number of units with the request under play.</I>
+<LI><A HREF="Engine.html#~Engine">FlexVoice Engine API::Reference Manual::Engine.h::Engine. ::Engine::~Engine</A> <I>Destructor</I>
+<LI><A HREF="EngineFactory.html#EngineFactory">EngineFactory</A> <I>Constructs an engine factory using the data at the given path.</I>
+<LI><A HREF="EngineFactory.html#~EngineFactory">~EngineFactory</A> <I>Destroys the factory - the behavior is undefined if the factory is destructed while there is a living <!1><A HREF="Engine.html">Engine</A> instance</I>
+<LI><A HREF="EngineFactory.html#EngineFactory">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::EngineFactory</A> <I>engine mustn't be copied</I>
+<LI><A HREF="EngineFactory.html#addSpeaker">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::addSpeaker</A> <I>Adds a speaker to the factory.</I>
+<LI><A HREF="EngineFactory.html#createDictionary">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::createDictionary</A> <I>Creates a new dictionary and returns with a handle of it.</I>
+<LI><A HREF="EngineFactory.html#createEngine">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::createEngine</A> <I>Creates an engine instance that will use the given output site and the given speaker.</I>
+<LI><A HREF="EngineFactory.html#createStreamEngine">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::createStreamEngine</A> <I>Not implemented yet!</I>
+<LI><A HREF="EngineFactory.html#createSyncEngine">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::createSyncEngine</A> <I>Not implemented yet!</I>
+<LI><A HREF="EngineFactory.html#getDefaultDataPath">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::getDefaultDataPath</A> <I>Gives the default data path.</I>
+<LI><A HREF="EngineFactory.html#getLangDataPath">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::getLangDataPath</A> <I>Gives the data path.</I>
+<LI><A HREF="EngineFactory.html#loadLanguage">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::loadLanguage</A> <I>Loads the resources for the given language.</I>
+<LI><A HREF="EngineFactory.html#operator=">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::operator=</A> <I>engine mustn't be copied</I>
+<LI><A HREF="EngineFactory.html#removeDictionary">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::removeDictionary</A> <I>Removes and deletes a dictionary referred by the given handle.</I>
+<LI><A HREF="EngineFactory.html#removeSpeaker">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::removeSpeaker</A> <I>Removes the speaker identified by its ID.</I>
+<LI><A HREF="EngineFactory.html#unloadLanguage">FlexVoice Engine API::Reference Manual::Engine.h::Factory. ::EngineFactory::unloadLanguage</A> <I>Unloads the given language.</I>
+<LI><A HREF="AnnIPAPhonemeOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::AnnIPAPhonemeOutputFormat::outputType</A>
+<LI><A HREF="AnnPhonemeOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::AnnPhonemeOutputFormat::outputType</A>
+<LI><A HREF="IOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::outputType</A>
+<LI><A HREF="IOutputFormat.html#~IOutputFormat">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::~IOutputFormat</A>
+<LI><A HREF="PhonemeOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::PhonemeOutputFormat::outputType</A>
+<LI><A HREF="TextOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::TextOutputFormat::outputType</A>
+<LI><A HREF="WaveOutputFormat.html#WaveOutputFormat">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::WaveOutputFormat::WaveOutputFormat</A> <I>Construction.</I>
+<LI><A HREF="WaveOutputFormat.html#outputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::WaveOutputFormat::outputType</A>
+<LI><A HREF="IAnnIPAPhonemeOutputSite.html#put">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IAnnIPAPhonemeOutputSite::put</A>
+<LI><A HREF="IAnnPhonemeOutputSite.html#put">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IAnnPhonemeOutputSite::put</A> <I>Called by the engine upon the arrival of the next phoneme.</I>
+<LI><A HREF="IOutputSite.html#clear">clear</A> <I>Clears all internal buffers</I>
+<LI><A HREF="IOutputSite.html#pause">pause</A> <I>Pauses playing</I>
+<LI><A HREF="IOutputSite.html#play">play</A> <I>Resumes playing</I>
+<LI><A HREF="IOutputSite.html#getOutputFormat">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IOutputSite::getOutputFormat</A> <I>Returns the format of the output site</I>
+<LI><A HREF="IOutputSite.html#sendBookmark">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IOutputSite::sendBookmark</A> <I>Called by the TTS Engine  - the IOutputSite should send out the  received bookmark immediately (in a synchronous way) to the listeners without ever trying to send it to the output device.</I>
+<LI><A HREF="IOutputSite.html#setBookmark">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IOutputSite::setBookmark</A> <I>Called by the TTS engine to pass a bookmark to the output site.</I>
+<LI><A HREF="IPhonemeOutputSite.html#put">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IPhonemeOutputSite::put</A> <I>Called by the engine upon the arrival of the next phoneme.</I>
+<LI><A HREF="IWaveOutputSite.html#put">FlexVoice Engine API::Reference Manual::Engine.h::Output Sites. ::IWaveOutputSite::put</A> <I>Called by the TTS engine to pass a data chunk to the output site.</I>
+<LI><A HREF="GenericException.html#GenericException">FlexVoice Engine API::Reference Manual::Errors.h ::GenericException::GenericException</A>
+<LI><A HREF="GenericException.html#details">FlexVoice Engine API::Reference Manual::Errors.h ::GenericException::details</A>
+<LI><A HREF="GenericException.html#what">FlexVoice Engine API::Reference Manual::Errors.h ::GenericException::what</A>
+<LI><A HREF="GenericException.html#~GenericException">FlexVoice Engine API::Reference Manual::Errors.h ::GenericException::~GenericException</A>
+<LI><A HREF="getVersion.html">getVersion</A> <I>Returns version information of the engine loaded into memory.</I>
+<LI><B>WaveFileOutputSite:</B>
+<UL>
+<LI><A HREF="WaveFileOutputSite.html#WaveFileOutputSite">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::WaveFileOutputSite</A> <I>WaveFileOutputSite shouldn't be copied</I>
+<LI><A HREF="WaveFileOutputSite.html#WaveFileOutputSite">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::WaveFileOutputSite</A>
+</UL>
+<LI><A HREF="WaveFileOutputSite.html#addBookmarkTypes">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::addBookmarkTypes</A>
+<LI><A HREF="WaveFileOutputSite.html#clear">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::clear</A>
+<LI><A HREF="WaveFileOutputSite.html#close">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::close</A>
+<LI><B>get:</B>
+<UL>
+<LI><A HREF="WaveFileOutputSite.html#get">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::get</A>
+<LI><A HREF="WaveFileOutputSite.html#get">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::get</A>
+<LI><A HREF="WaveFileOutputSite.html#get">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::get</A>
+<LI><A HREF="WaveFileOutputSite.html#get">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::get</A>
+<LI><A HREF="WaveFileOutputSite.html#get">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::get</A>
+</UL>
+<LI><A HREF="WaveFileOutputSite.html#getArraySize">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::getArraySize</A>
+<LI><B>getAttribute:</B>
+<UL>
+<LI><A HREF="WaveFileOutputSite.html#getAttribute">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::getAttribute</A>
+<LI><A HREF="WaveFileOutputSite.html#getAttribute">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::getAttribute</A>
+</UL>
+<LI><A HREF="WaveFileOutputSite.html#getOutputFormat">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::getOutputFormat</A>
+<LI><A HREF="WaveFileOutputSite.html#open">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::open</A>
+<LI><A HREF="WaveFileOutputSite.html#operator=         ">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::operator=         </A> <I>WaveFileOutputSite shouldn't be copied</I>
+<LI><A HREF="WaveFileOutputSite.html#pause">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::pause</A>
+<LI><A HREF="WaveFileOutputSite.html#play">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::play</A>
+<LI><A HREF="WaveFileOutputSite.html#put">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::put</A>
+<LI><A HREF="WaveFileOutputSite.html#registerNotify">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::registerNotify</A>
+<LI><A HREF="WaveFileOutputSite.html#removeBookmarkTypes">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::removeBookmarkTypes</A>
+<LI><A HREF="WaveFileOutputSite.html#sendBookmark">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::sendBookmark</A>
+<LI><B>set:</B>
+<UL>
+<LI><A HREF="WaveFileOutputSite.html#set">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::set</A>
+<LI><A HREF="WaveFileOutputSite.html#set">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::set</A>
+<LI><A HREF="WaveFileOutputSite.html#set">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::set</A>
+<LI><A HREF="WaveFileOutputSite.html#set">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::set</A>
+<LI><A HREF="WaveFileOutputSite.html#set">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::set</A>
+</UL>
+<LI><A HREF="WaveFileOutputSite.html#setArraySize">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::setArraySize</A>
+<LI><A HREF="WaveFileOutputSite.html#setBookmark">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::setBookmark</A>
+<LI><A HREF="WaveFileOutputSite.html#unregisterNotify">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::unregisterNotify</A>
+<LI><A HREF="WaveFileOutputSite.html#~WaveFileOutputSite">FlexVoice Engine API::Reference Manual::FileOutputSite.h ::WaveFileOutputSite::~WaveFileOutputSite</A>
+<LI><A HREF="INotify.html#bookmark">FlexVoice Engine API::Reference Manual::Notifier.h::INotify::bookmark</A> <I>This method is called when a bookmark is bypassed.</I>
+<LI><A HREF="INotify.html#prepare">FlexVoice Engine API::Reference Manual::Notifier.h::INotify::prepare</A> <I>Should be used as a "pre-notification".</I>
+<LI><A HREF="INotifyDispatcher.html#addBookmarkTypes">FlexVoice Engine API::Reference Manual::Notifier.h::INotifyDispatcher::addBookmarkTypes</A> <I>Allows the manipulation of the bookmark types associated with a given INotify instance</I>
+<LI><A HREF="INotifyDispatcher.html#registerNotify">FlexVoice Engine API::Reference Manual::Notifier.h::INotifyDispatcher::registerNotify</A> <I>Adds the given INotify instance to the internal list of INotify instances managed by the dispatcher.</I>
+<LI><A HREF="INotifyDispatcher.html#removeBookmarkTypes">FlexVoice Engine API::Reference Manual::Notifier.h::INotifyDispatcher::removeBookmarkTypes</A> <I>Allows the manipulation of the bookmark types associated with a given INotify instance</I>
+<LI><A HREF="INotifyDispatcher.html#unregisterNotify">FlexVoice Engine API::Reference Manual::Notifier.h::INotifyDispatcher::unregisterNotify</A> <I>Deletes the given INotify instance from the internal list of INotify instances managed by the dispatcher</I>
+<LI><A HREF="Notifier.html#Notifier">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::Notifier</A> <I>Notifier shouldn't be copied!</I>
+<LI><A HREF="Notifier.html#addBookmarkTypes">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::addBookmarkTypes</A>
+<LI><A HREF="Notifier.html#bookmark">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::bookmark</A>
+<LI><A HREF="Notifier.html#operator=">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::operator=</A> <I>Notifier shouldn't be copied!</I>
+<LI><A HREF="Notifier.html#prepare">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::prepare</A>
+<LI><A HREF="Notifier.html#registerNotify">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::registerNotify</A>
+<LI><A HREF="Notifier.html#removeBookmarkTypes">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::removeBookmarkTypes</A>
+<LI><A HREF="Notifier.html#unregisterNotify">FlexVoice Engine API::Reference Manual::Notifier.h::Notifier::unregisterNotify</A>
+<LI><B>NotifyTransfer:</B>
+<UL>
+<LI><A HREF="NotifyTransfer.html#NotifyTransfer">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::NotifyTransfer</A> <I>NotifyTransfer shouldn't be copied!</I>
+<LI><A HREF="NotifyTransfer.html#NotifyTransfer">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::NotifyTransfer</A>
+</UL>
+<LI><A HREF="NotifyTransfer.html#bookmark">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::bookmark</A> <I>Clients deriving from this object can implement this function to process the bookmark using the notification thread at the time the bookmark is receieved (see <!1><A HREF="INotify.html">INotify</A>).</I>
+<LI><A HREF="NotifyTransfer.html#bookmarkProcess">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::bookmarkProcess</A> <I>Clients should really implement this function - to actually process the notifications.</I>
+<LI><A HREF="NotifyTransfer.html#notifyLoopStopped">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::notifyLoopStopped</A> <I>This function can be overriden by the Clients - it will be called when the notification loop has actually stopped</I>
+<LI><A HREF="NotifyTransfer.html#operator=     ">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::operator=     </A> <I>NotifyTransfer shouldn't be copied!</I>
+<LI><A HREF="NotifyTransfer.html#prepare">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::prepare</A> <I>Clients deriving from this object can implement this function to process the bookmark using the notification thread at the time the bookmark-prepare notification is received (see <!1><A HREF="INotify.html">INotify</A>).</I>
+<LI><A HREF="NotifyTransfer.html#prepareProcess">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::prepareProcess</A> <I>Same as <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.5">bookmarkProcess</A>, just corresponds to the prepare calls</I>
+<LI><A HREF="NotifyTransfer.html#stopNotifyLoop">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::stopNotifyLoop</A> <I>This function can be called to stop the notification loop or thread associated with this object.</I>
+<LI><A HREF="NotifyTransfer.html#~NotifyTransfer">FlexVoice Engine API::Reference Manual::Notifier.h::NotifyTransfer::~NotifyTransfer</A>
+<LI><A HREF="IPAPhoneme.html#IPAPhoneme">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::IPAPhoneme</A>
+<LI><A HREF="IPAPhoneme.html#clear">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::clear</A>
+<LI><A HREF="IPAPhoneme.html#isConsonant">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::isConsonant</A>
+<LI><A HREF="IPAPhoneme.html#isSilent">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::isSilent</A>
+<LI><A HREF="IPAPhoneme.html#isSonorant">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::isSonorant</A> <I>Returns sonorant consonants as well as vowels</I>
+<LI><A HREF="IPAPhoneme.html#isVoiced">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::isVoiced</A> <I>Returns voiced consonants as well as vowels</I>
+<LI><A HREF="IPAPhoneme.html#isVowel">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::isVowel</A>
+<LI><A HREF="IPAPhoneme.html#operator==  ">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::operator==  </A>
+<LI><A HREF="IPhonemeCoder.html#clone">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::clone</A>
+<LI><A HREF="IPhonemeCoder.html#destroy">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::destroy</A> <I>Destroys the object.</I>
+<LI><A HREF="IPhonemeCoder.html#flushCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::flushCode</A> <I>Finishes the conversion of phoneme codes into IPAPhoneme object(s) and puts them into an output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#flushIPA">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::flushIPA</A> <I>Finishes the conversion of IPAPhoneme objects into phoneme code(s) and puts codes into an output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#getCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getCode</A> <I>Gets the first code in the output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#getCoderID">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getCoderID</A> <I> </I>
+<LI><A HREF="IPhonemeCoder.html#getIPA">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getIPA</A> <I>Gets the first IPAPhoneme object in the output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#getInvalidCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getInvalidCode</A> <I> </I>
+<LI><A HREF="IPhonemeCoder.html#getStressCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getStressCode</A> <I> </I>
+<LI><A HREF="IPhonemeCoder.html#getSymbol">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::getSymbol</A> <I>Returns the symbolic representation of a phoneme</I>
+<LI><A HREF="IPhonemeCoder.html#isSpecialCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::isSpecialCode</A> <I> </I>
+<LI><A HREF="IPhonemeCoder.html#parseString">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::parseString</A> <I>This method sequentially converts a symbol string into phoneme codes.</I>
+<LI><A HREF="IPhonemeCoder.html#phonemeCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::phonemeCode</A> <I>This method is to be used to enumerate the phonemes.</I>
+<LI><A HREF="IPhonemeCoder.html#phonemeCount">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::phonemeCount</A> <I>Returns the number of phoneme codes</I>
+<LI><A HREF="IPhonemeCoder.html#putCode">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::putCode</A> <I>Starts converting a phoneme code into IPAPhoneme object(s) and puts them into an output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#putIPA">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::putIPA</A> <I>Starts converting an IPAPhoneme object into phoneme code(s) and puts codes into an output queue.</I>
+<LI><A HREF="IPhonemeCoder.html#reset">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::reset</A> <I>Clears the internal state of the coder</I>
+<LI><A HREF="IPhonemeCoder.html#sampleWord">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::sampleWord</A> <I>Returns a representative word for any phoneme</I>
+<LI><A HREF="IPhonemeCoder.html#~IPhonemeCoder">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::~IPhonemeCoder</A>
+<LI><A HREF="FilePhonemeCoder.html#FilePhonemeCoder">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::FilePhonemeCoder</A>
+<LI><A HREF="FilePhonemeCoder.html#clone">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::clone</A>
+<LI><A HREF="FilePhonemeCoder.html#destroy">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::destroy</A>
+<LI><A HREF="FilePhonemeCoder.html#flushCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::flushCode</A>
+<LI><A HREF="FilePhonemeCoder.html#flushIPA">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::flushIPA</A>
+<LI><A HREF="FilePhonemeCoder.html#getCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getCode</A>
+<LI><A HREF="FilePhonemeCoder.html#getCoderID">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getCoderID</A>
+<LI><A HREF="FilePhonemeCoder.html#getIPA">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getIPA</A>
+<LI><A HREF="FilePhonemeCoder.html#getInvalidCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getInvalidCode</A>
+<LI><A HREF="FilePhonemeCoder.html#getStressCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getStressCode</A>
+<LI><A HREF="FilePhonemeCoder.html#getSymbol">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::getSymbol</A>
+<LI><A HREF="FilePhonemeCoder.html#isSpecialCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::isSpecialCode</A>
+<LI><A HREF="FilePhonemeCoder.html#parseString">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::parseString</A>
+<LI><A HREF="FilePhonemeCoder.html#phonemeCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::phonemeCode</A>
+<LI><A HREF="FilePhonemeCoder.html#phonemeCount">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::phonemeCount</A>
+<LI><A HREF="FilePhonemeCoder.html#putCode">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::putCode</A>
+<LI><A HREF="FilePhonemeCoder.html#putIPA">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::putIPA</A>
+<LI><A HREF="FilePhonemeCoder.html#reset">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::reset</A>
+<LI><A HREF="FilePhonemeCoder.html#sampleWord">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::sampleWord</A>
+<LI><A HREF="FilePhonemeCoder.html#setGeneratedIPAForm">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::setGeneratedIPAForm</A>
+<LI><A HREF="FilePhonemeCoder.html#~FilePhonemeCoder">FlexVoice Engine API::Reference Manual::PhonemeCoder.h ::FilePhonemeCoder::~FilePhonemeCoder</A>
+<LI><A HREF="WavePlayOutputSite.html#addBookmarkTypes">addBookmarkTypes</A>
+<LI><A HREF="WavePlayOutputSite.html#clear">clear</A>
+<LI><B>get:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSite.html#get">get</A>
+<LI><A HREF="WavePlayOutputSite.html#get">get</A>
+<LI><A HREF="WavePlayOutputSite.html#get">get</A>
+<LI><A HREF="WavePlayOutputSite.html#get">get</A>
+<LI><A HREF="WavePlayOutputSite.html#get">get</A>
+</UL>
+<LI><A HREF="WavePlayOutputSite.html#getArraySize">getArraySize</A>
+<LI><B>getAttribute:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSite.html#getAttribute">getAttribute</A>
+<LI><A HREF="WavePlayOutputSite.html#getAttribute">getAttribute</A>
+</UL>
+<LI><A HREF="WavePlayOutputSite.html#getOutputFormat">getOutputFormat</A>
+<LI><A HREF="WavePlayOutputSite.html#pause">pause</A>
+<LI><A HREF="WavePlayOutputSite.html#play">play</A>
+<LI><A HREF="WavePlayOutputSite.html#put">put</A> <I>Blocks until the content of the buffer is successfully copied</I>
+<LI><A HREF="WavePlayOutputSite.html#registerNotify">registerNotify</A>
+<LI><A HREF="WavePlayOutputSite.html#removeBookmarkTypes">removeBookmarkTypes</A>
+<LI><A HREF="WavePlayOutputSite.html#sendBookmark">sendBookmark</A>
+<LI><B>set:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSite.html#set">set</A>
+<LI><A HREF="WavePlayOutputSite.html#set">set</A>
+<LI><A HREF="WavePlayOutputSite.html#set">set</A>
+<LI><A HREF="WavePlayOutputSite.html#set">set</A>
+<LI><A HREF="WavePlayOutputSite.html#set">set</A>
+</UL>
+<LI><A HREF="WavePlayOutputSite.html#setArraySize">setArraySize</A>
+<LI><A HREF="WavePlayOutputSite.html#setBookmark">setBookmark</A>
+<LI><A HREF="WavePlayOutputSite.html#unregisterNotify">unregisterNotify</A>
+<LI><B>WavePlayOutputSite:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSite.html#WavePlayOutputSite">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::WavePlayOutputSite</A> <I>WavePlayOutputSite shouldn't be copied!</I>
+<LI><A HREF="WavePlayOutputSite.html#WavePlayOutputSite">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::WavePlayOutputSite</A> <I>Construct a play output site supporting the given wave output format</I>
+</UL>
+<LI><A HREF="WavePlayOutputSite.html#close">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::close</A>
+<LI><A HREF="WavePlayOutputSite.html#open">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::open</A>
+<LI><A HREF="WavePlayOutputSite.html#operator=         ">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::operator=         </A> <I>WavePlayOutputSite shouldn't be copied!</I>
+<LI><A HREF="WavePlayOutputSite.html#~WavePlayOutputSite">FlexVoice Engine API::Reference Manual::PlayOutputSite.h ::WavePlayOutputSite::~WavePlayOutputSite</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#addBookmarkTypes">addBookmarkTypes</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#clear">clear</A>
+<LI><B>get:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#get">get</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#get">get</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#get">get</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#get">get</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#get">get</A>
+</UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#getArraySize">getArraySize</A>
+<LI><B>getAttribute:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#getAttribute">getAttribute</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#getAttribute">getAttribute</A>
+</UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#getOutputFormat">getOutputFormat</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#pause">pause</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#play">play</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#put">put</A> <I>Blocks until the content of the buffer is successfully copied</I>
+<LI><A HREF="WavePlayOutputSiteEx.html#registerNotify">registerNotify</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#removeBookmarkTypes">removeBookmarkTypes</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#sendBookmark">sendBookmark</A>
+<LI><B>set:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#set">set</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#set">set</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#set">set</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#set">set</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#set">set</A>
+</UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#setArraySize">setArraySize</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#setBookmark">setBookmark</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#unregisterNotify">unregisterNotify</A>
+<LI><B>WavePlayOutputSiteEx:</B>
+<UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#WavePlayOutputSiteEx">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::WavePlayOutputSiteEx</A> <I>WavePlayOutputSiteEx shouldn't be copied!</I>
+<LI><A HREF="WavePlayOutputSiteEx.html#WavePlayOutputSiteEx">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::WavePlayOutputSiteEx</A> <I>Construct a play output site supporting the given wave output format</I>
+</UL>
+<LI><A HREF="WavePlayOutputSiteEx.html#close">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::close</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#open">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::open</A>
+<LI><A HREF="WavePlayOutputSiteEx.html#operator=         ">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::operator=         </A> <I>WavePlayOutputSiteEx shouldn't be copied!</I>
+<LI><A HREF="WavePlayOutputSiteEx.html#~WavePlayOutputSiteEx">FlexVoice Engine API::Reference Manual::PlayOutputSiteEx.h ::WavePlayOutputSiteEx::~WavePlayOutputSiteEx</A>
+<LI><A HREF="Speaker.html#load">FlexVoice Engine API::Reference Manual::Speaker.h::Speaker::load</A> <I>loads the speaker definition from a file</I>
+<LI><A HREF="Speaker.html#operator &lt;  ">FlexVoice Engine API::Reference Manual::Speaker.h::Speaker::operator <  </A>
+<LI><A HREF="Speaker.html#operator =  ">FlexVoice Engine API::Reference Manual::Speaker.h::Speaker::operator =  </A>
+<LI><A HREF="Speaker.html#operator == ">FlexVoice Engine API::Reference Manual::Speaker.h::Speaker::operator == </A>
+<LI><A HREF="Speaker.html#save">FlexVoice Engine API::Reference Manual::Speaker.h::Speaker::save</A> <I>saves the given speaker definition to a file</I>
+<LI><B>SpeakerMap:</B>
+<UL>
+<LI><A HREF="SpeakerMap.html#SpeakerMap">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::SpeakerMap</A>
+<LI><A HREF="SpeakerMap.html#SpeakerMap">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::SpeakerMap</A>
+</UL>
+<LI><B>begin:</B>
+<UL>
+<LI><A HREF="SpeakerMap.html#begin">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::begin</A>
+<LI><A HREF="SpeakerMap.html#begin">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::begin</A>
+</UL>
+<LI><A HREF="SpeakerMap.html#clear">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::clear</A>
+<LI><A HREF="SpeakerMap.html#empty">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::empty</A>
+<LI><B>end:</B>
+<UL>
+<LI><A HREF="SpeakerMap.html#end">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::end</A>
+<LI><A HREF="SpeakerMap.html#end">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::end</A>
+</UL>
+<LI><B>erase:</B>
+<UL>
+<LI><A HREF="SpeakerMap.html#erase">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::erase</A>
+<LI><A HREF="SpeakerMap.html#erase">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::erase</A>
+<LI><A HREF="SpeakerMap.html#erase">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::erase</A>
+</UL>
+<LI><B>find:</B>
+<UL>
+<LI><A HREF="SpeakerMap.html#find">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::find</A>
+<LI><A HREF="SpeakerMap.html#find">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::find</A>
+</UL>
+<LI><A HREF="SpeakerMap.html#insert">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::insert</A>
+<LI><A HREF="SpeakerMap.html#load">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::load</A> <I>This is the normal way to initialize a speaker-map (besides copying an existing one).</I>
+<LI><A HREF="SpeakerMap.html#operator=">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::operator=</A>
+<LI><A HREF="SpeakerMap.html#operator[]">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::operator[]</A>
+<LI><A HREF="SpeakerMap.html#save">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::save</A>
+<LI><A HREF="SpeakerMap.html#size">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::size</A>
+<LI><A HREF="SpeakerMap.html#~SpeakerMap">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMap::~SpeakerMap</A>
+<LI><B>SpeakerMapIterator:</B>
+<UL>
+<LI><A HREF="SpeakerMapIterator.html#SpeakerMapIterator">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::SpeakerMapIterator</A>
+<LI><A HREF="SpeakerMapIterator.html#SpeakerMapIterator">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::SpeakerMapIterator</A>
+</UL>
+<LI><A HREF="SpeakerMapIterator.html#getKey">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::getKey</A>
+<LI><A HREF="SpeakerMapIterator.html#operator!=">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator!=</A>
+<LI><A HREF="SpeakerMapIterator.html#operator* ">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator* </A>
+<LI><B>operator++:</B>
+<UL>
+<LI><A HREF="SpeakerMapIterator.html#operator++">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator++</A>
+<LI><A HREF="SpeakerMapIterator.html#operator++">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator++</A>
+</UL>
+<LI><A HREF="SpeakerMapIterator.html#operator-&gt;">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator-></A>
+<LI><A HREF="SpeakerMapIterator.html#operator= ">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator= </A>
+<LI><A HREF="SpeakerMapIterator.html#operator==">FlexVoice Engine API::Reference Manual::Speaker.h::SpeakerMapIterator::operator==</A>
+<LI><B>ConstDictIterator:</B>
+<UL>
+<LI><A HREF="ConstDictIterator.html#ConstDictIterator">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::ConstDictIterator</A>
+<LI><A HREF="ConstDictIterator.html#ConstDictIterator">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::ConstDictIterator</A>
+<LI><A HREF="ConstDictIterator.html#ConstDictIterator">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::ConstDictIterator</A>
+</UL>
+<LI><A HREF="ConstDictIterator.html#getKey">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::getKey</A> <I>Gives the word that the iterator belongs to</I>
+<LI><A HREF="ConstDictIterator.html#operator!=">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator!=</A>
+<LI><A HREF="ConstDictIterator.html#operator* ">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator* </A>
+<LI><B>operator++:</B>
+<UL>
+<LI><A HREF="ConstDictIterator.html#operator++">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator++</A>
+<LI><A HREF="ConstDictIterator.html#operator++">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator++</A>
+</UL>
+<LI><A HREF="ConstDictIterator.html#operator-&gt;">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator-></A>
+<LI><A HREF="ConstDictIterator.html#operator= ">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator= </A>
+<LI><A HREF="ConstDictIterator.html#operator==">FlexVoice Engine API::Reference Manual::UserDictionary.h::ConstDictIterator::operator==</A>
+<LI><B>DictIterator:</B>
+<UL>
+<LI><A HREF="DictIterator.html#DictIterator">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::DictIterator</A>
+<LI><A HREF="DictIterator.html#DictIterator">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::DictIterator</A>
+</UL>
+<LI><A HREF="DictIterator.html#getKey">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::getKey</A> <I>Gives the word that the iterator belongs to</I>
+<LI><A HREF="DictIterator.html#operator!=">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator!=</A>
+<LI><B>operator* :</B>
+<UL>
+<LI><A HREF="DictIterator.html#operator* ">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator* </A>
+<LI><A HREF="DictIterator.html#operator* ">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator* </A>
+</UL>
+<LI><B>operator++:</B>
+<UL>
+<LI><A HREF="DictIterator.html#operator++">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator++</A>
+<LI><A HREF="DictIterator.html#operator++">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator++</A>
+</UL>
+<LI><B>operator->:</B>
+<UL>
+<LI><A HREF="DictIterator.html#operator-&gt;">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator-></A>
+<LI><A HREF="DictIterator.html#operator-&gt;">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator-></A>
+</UL>
+<LI><A HREF="DictIterator.html#operator= ">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator= </A>
+<LI><A HREF="DictIterator.html#operator==">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictIterator::operator==</A>
+<LI><B>begin:</B>
+<UL>
+<LI><A HREF="DictionaryHandle.html#begin">begin</A>
+<LI><A HREF="DictionaryHandle.html#begin">begin</A>
+</UL>
+<LI><A HREF="DictionaryHandle.html#clear">clear</A>
+<LI><A HREF="DictionaryHandle.html#create">create</A> <I>Creates a new word in the dictionary.</I>
+<LI><A HREF="DictionaryHandle.html#empty">empty</A>
+<LI><B>end:</B>
+<UL>
+<LI><A HREF="DictionaryHandle.html#end">end</A>
+<LI><A HREF="DictionaryHandle.html#end">end</A>
+</UL>
+<LI><B>erase:</B>
+<UL>
+<LI><A HREF="DictionaryHandle.html#erase">erase</A>
+<LI><A HREF="DictionaryHandle.html#erase">erase</A>
+<LI><A HREF="DictionaryHandle.html#erase">erase</A>
+</UL>
+<LI><B>find:</B>
+<UL>
+<LI><A HREF="DictionaryHandle.html#find">find</A> <I>Finds the given word in the dictionary.</I>
+<LI><A HREF="DictionaryHandle.html#find">find</A> <I>Finds the given word in the dictionary.</I>
+</UL>
+<LI><A HREF="DictionaryHandle.html#size">size</A>
+<LI><B>DictionaryHandle:</B>
+<UL>
+<LI><A HREF="DictionaryHandle.html#DictionaryHandle">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::DictionaryHandle</A>
+<LI><A HREF="DictionaryHandle.html#DictionaryHandle">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::DictionaryHandle</A>
+</UL>
+<LI><A HREF="DictionaryHandle.html#compile">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::compile</A> <I>Compiles the dictionary.</I>
+<LI><A HREF="DictionaryHandle.html#copy">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::copy</A> <I>Copies the given dictionary to this one</I>
+<LI><A HREF="DictionaryHandle.html#decompile">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::decompile</A> <I>Decompiles the dictinary</I>
+<LI><A HREF="DictionaryHandle.html#isCompiled">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::isCompiled</A> <I>Returns true if the dictionary is compiled.</I>
+<LI><A HREF="DictionaryHandle.html#isValid">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::isValid</A> <I>True if the dictionary-handle is valid.</I>
+<LI><A HREF="DictionaryHandle.html#reRead">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::reRead</A> <I>Rereads the dictionary from a file The "compiled" status will be set depending on the read file.</I>
+<LI><A HREF="DictionaryHandle.html#read">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::read</A> <I>Reads the dictionary from a file.</I>
+<LI><A HREF="DictionaryHandle.html#write">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::write</A> <I>Writes the dictionary to a file If the dictionary was compiled the output file will be a binary file otherwise it will be a readable/editable text file.</I>
+<LI><A HREF="DictionaryHandle.html#~DictionaryHandle">FlexVoice Engine API::Reference Manual::UserDictionary.h::DictionaryHandle::~DictionaryHandle</A>
+</UL>
+<H2>Variables</H2>
+<UL>
+<LI><A HREF="BookmarkType.html#BM_EMBEDDED">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_EMBEDDED</A>
+<LI><A HREF="BookmarkType.html#BM_INVALID">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_INVALID</A>
+<LI><A HREF="BookmarkType.html#BM_IPAPHONEME_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_IPAPHONEME_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_IPAPHONEME_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_IPAPHONEME_END</A>
+<LI><A HREF="BookmarkType.html#BM_ITEM_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_ITEM_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_ITEM_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_ITEM_END</A>
+<LI><A HREF="BookmarkType.html#BM_NO_OF_BOOKMARKS">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_NO_OF_BOOKMARKS</A>
+<LI><A HREF="BookmarkType.html#BM_PARAGRAPH_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PARAGRAPH_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_PARAGRAPH_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PARAGRAPH_END</A>
+<LI><A HREF="BookmarkType.html#BM_PARAMCHANGED">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PARAMCHANGED</A>
+<LI><A HREF="BookmarkType.html#BM_PAUSE">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PAUSE</A>
+<LI><A HREF="BookmarkType.html#BM_PHONEME_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PHONEME_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_PHONEME_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_PHONEME_END</A>
+<LI><A HREF="BookmarkType.html#BM_REPEAT">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_REPEAT</A>
+<LI><A HREF="BookmarkType.html#BM_RESUME">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_RESUME</A>
+<LI><A HREF="BookmarkType.html#BM_SECTION_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_SECTION_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_SECTION_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_SECTION_END</A>
+<LI><A HREF="BookmarkType.html#BM_SENTENCE_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_SENTENCE_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_SENTENCE_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_SENTENCE_END</A>
+<LI><A HREF="BookmarkType.html#BM_SPEAKERCHANGED">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_SPEAKERCHANGED</A>
+<LI><A HREF="BookmarkType.html#BM_START">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_START</A>
+<LI><A HREF="BookmarkType.html#BM_STOP">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_STOP</A>
+<LI><A HREF="BookmarkType.html#BM_TEXT_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_TEXT_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_TEXT_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_TEXT_END</A>
+<LI><A HREF="BookmarkType.html#BM_USER">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_USER</A>
+<LI><A HREF="BookmarkType.html#BM_WORD_BEGIN">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_WORD_BEGIN</A>
+<LI><A HREF="BookmarkType.html#BM_WORD_END">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmark types, typelists ::BookmarkType::BM_WORD_END</A>
+<LI><A HREF="Bookmark.html#dur">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::dur</A> <I>Duration of the corresponding wave chunk in milliseconds - if any</I>
+<LI><A HREF="Bookmark.html#id">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::id</A> <I>Bookmark id, used internally</I>
+<LI><A HREF="Bookmark.html#len">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::len</A> <I>Character position from the beginning of the unnormalized input text</I>
+<LI><A HREF="Bookmark.html#pos">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::pos</A>
+<LI><A HREF="Bookmark.html#time_ms">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::time_ms</A> <I>Time when the bookmark was processed by the last output device.</I>
+<LI><A HREF="Bookmark.html#time_sec">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::time_sec</A> <I>Time when the bookmark was processed by the last output device.</I>
+<LI><A HREF="Bookmark.html#type">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::Bookmark::type</A>
+<LI><A HREF="BookmarkDocumentStructure.html#level">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkDocumentStructure::level</A>
+<LI><A HREF="BookmarkEmbedded.html#userData">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkEmbedded::userData</A>
+<LI><A HREF="BookmarkIPA.html#ipa">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkIPA::ipa</A>
+<LI><A HREF="BookmarkPhoneme.html#phonemeCode">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkPhoneme::phonemeCode</A>
+<LI><A HREF="BookmarkSpeakerChanged.html#speaker">FlexVoice Engine API::Reference Manual::Bookmark.h ::Bookmarks.  ::BookmarkSpeakerChanged::speaker</A>
+<LI><A HREF="CharCodeSet.html#CCS_LATIN1">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::CharCodeSet::CCS_LATIN1</A> <I>Unicode's Latin 1 page</I>
+<LI><A HREF="CharCodeSet.html#Unicode.">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::CharCodeSet::Unicode.</A>
+<LI><A HREF="DocumentUnit.html#DU_EXPRESSION">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_EXPRESSION</A>
+<LI><A HREF="DocumentUnit.html#DU_NULL_UNIT">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_NULL_UNIT</A> <I>When used in a <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> call instructs the engine  to stop immediately</I>
+<LI><A HREF="DocumentUnit.html#DU_PARAGRAPH">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_PARAGRAPH</A>
+<LI><A HREF="DocumentUnit.html#DU_PHRASE">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_PHRASE</A>
+<LI><A HREF="DocumentUnit.html#DU_SECTION">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_SECTION</A>
+<LI><A HREF="DocumentUnit.html#DU_SENTENCE">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_SENTENCE</A>
+<LI><A HREF="DocumentUnit.html#DU_TEXT">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_TEXT</A> <I>Text given in a single <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A> forms a DU_TEXT unit</I>
+<LI><A HREF="DocumentUnit.html#DU_WORD">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::DocumentUnit::DU_WORD</A>
+<LI><A HREF="Language.html#LNG_ENGLISH">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::Language::LNG_ENGLISH</A> <I>English   </I>
+<LI><A HREF="Language.html#LNG_HUNGARIAN">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::Language::LNG_HUNGARIAN</A> <I>Hungarian </I>
+<LI><A HREF="Language.html#LNG_INVALID">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::Language::LNG_INVALID</A> <I>Invalid   </I>
+<LI><A HREF="Language.html#LNG_MALAY">FlexVoice Engine API::Reference Manual::Engine.h::Basic Types.::Language::LNG_MALAY</A> <I>Malay     </I>
+<LI><A HREF="IOutputFormat.html#IPA_PHONEME_STRING_WITH_PROSODY">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType::IPA_PHONEME_STRING_WITH_PROSODY</A>
+<LI><A HREF="IOutputFormat.html#NORMALIZED_TEXT">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType::NORMALIZED_TEXT</A> <I>NOT YET IMPLEMENTED </I>
+<LI><A HREF="IOutputFormat.html#PHONEME_STRING">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType::PHONEME_STRING</A>
+<LI><A HREF="IOutputFormat.html#PHONEME_STRING_WITH_PROSODY">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType::PHONEME_STRING_WITH_PROSODY</A>
+<LI><A HREF="IOutputFormat.html#WAVE">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType::WAVE</A>
+<LI><A HREF="WaveOutputFormat.html#bitResolution">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::WaveOutputFormat::bitResolution</A> <I>bit resolution</I>
+<LI><A HREF="WaveOutputFormat.html#sampleFreq">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::WaveOutputFormat::sampleFreq</A> <I>sampling frequency</I>
+<LI><A HREF="WaveOutputFormat.html#waveCoding">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::WaveOutputFormat::waveCoding</A> <I>wave coding</I>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_IMMEDIATELY_DELETE_TIMEOUT">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_IMMEDIATELY_DELETE_TIMEOUT</A>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_IMMEDIATELY_DELETE_WHEN_NOT_USED">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_IMMEDIATELY_DELETE_WHEN_NOT_USED</A>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_IMMEDIATELY_DO_NOT_DELETE">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_IMMEDIATELY_DO_NOT_DELETE</A>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_WHEN_NEEDED_DELETE_TIMEOUT">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_WHEN_NEEDED_DELETE_TIMEOUT</A>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_WHEN_NEEDED_DELETE_WHEN_NOT_USED">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_WHEN_NEEDED_DELETE_WHEN_NOT_USED</A>
+<LI><A HREF="SpeakerCacheStrategy.html#SCS_LOAD_WHEN_NEEDED_DO_NOT_DELETE">FlexVoice Engine API::Reference Manual::Engine.h::SpeakerCacheStrategy::SCS_LOAD_WHEN_NEEDED_DO_NOT_DELETE</A>
+<LI><A HREF="AnnIPAPhoneme.html#duration">FlexVoice Engine API::Reference Manual::Phoneme.h ::AnnIPAPhoneme::duration</A> <I>Duration in msec</I>
+<LI><A HREF="AnnIPAPhoneme.html#ipa">FlexVoice Engine API::Reference Manual::Phoneme.h ::AnnIPAPhoneme::ipa</A> <I>IPAPhoneme object</I>
+<LI><A HREF="AnnIPAPhoneme.html#loudnessContour">FlexVoice Engine API::Reference Manual::Phoneme.h ::AnnIPAPhoneme::loudnessContour</A> <I>This vector contains pairs of relative locations in the phoneme [0,1]  and corresponding loudness values, relative to the speaker's default loudness</I>
+<LI><A HREF="AnnIPAPhoneme.html#pitchContour">FlexVoice Engine API::Reference Manual::Phoneme.h ::AnnIPAPhoneme::pitchContour</A> <I>This vector contains pairs of relative locations in the phoneme [0,1]  and corresponding pitch values, relative to the speaker's default pitch</I>
+<LI><A HREF="IPAPhoneme.html#BTY_COUNT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_COUNT</A>
+<LI><A HREF="IPAPhoneme.html#BTY_HYPHENATEDWORD_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_HYPHENATEDWORD_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_HYPHENATEDWORD_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_HYPHENATEDWORD_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_MAJORGROUP_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_MAJORGROUP_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_MAJORGROUP_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_MAJORGROUP_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_MINORGROUP_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_MINORGROUP_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_MINORGROUP_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_MINORGROUP_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_PHONEME_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_PHONEME_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_PHONEME_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_PHONEME_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_SYLLABLE_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_SYLLABLE_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_SYLLABLE_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_SYLLABLE_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_WORD_FINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_WORD_FINAL</A>
+<LI><A HREF="IPAPhoneme.html#BTY_WORD_INITIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType::BTY_WORD_INITIAL</A>
+<LI><A HREF="IPAPhoneme.html#m_consonantPos">m_consonantPos</A>
+<LI><A HREF="IPAPhoneme.html#m_consonantType">m_consonantType</A>
+<LI><A HREF="IPAPhoneme.html#m_voicingState">m_voicingState</A>
+<LI><A HREF="IPAPhoneme.html#CPS_ALVEOLAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_ALVEOLAR</A> <I>alveolar        </I>
+<LI><A HREF="IPAPhoneme.html#CPS_BILABIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_BILABIAL</A> <I>bilabial        </I>
+<LI><A HREF="IPAPhoneme.html#CPS_COUNT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_COUNT</A>
+<LI><A HREF="IPAPhoneme.html#CPS_DENTAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_DENTAL</A> <I>dental          </I>
+<LI><A HREF="IPAPhoneme.html#CPS_EPIGLOTTAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_EPIGLOTTAL</A> <I>epiglottal      </I>
+<LI><A HREF="IPAPhoneme.html#CPS_GLOTTAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_GLOTTAL</A> <I>glottal         </I>
+<LI><A HREF="IPAPhoneme.html#CPS_LABIAL_PALATAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_LABIAL_PALATAL</A> <I>labial-palatal  </I>
+<LI><A HREF="IPAPhoneme.html#CPS_LABIAL_VELAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_LABIAL_VELAR</A> <I>labial velar    </I>
+<LI><A HREF="IPAPhoneme.html#CPS_LABIODENTAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_LABIODENTAL</A> <I>labiodental     </I>
+<LI><A HREF="IPAPhoneme.html#CPS_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#CPS_PALATAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_PALATAL</A> <I>palatal         </I>
+<LI><A HREF="IPAPhoneme.html#CPS_PALATOALVEOLAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_PALATOALVEOLAR</A> <I>palato-alveolar </I>
+<LI><A HREF="IPAPhoneme.html#CPS_PHARYNGEAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_PHARYNGEAL</A> <I>pharyngeal      </I>
+<LI><A HREF="IPAPhoneme.html#CPS_POSTALVEOLAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_POSTALVEOLAR</A> <I>postalveolar    </I>
+<LI><A HREF="IPAPhoneme.html#CPS_POSTALVEOLAR_VELAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_POSTALVEOLAR_VELAR</A> <I>postalveolar-velar</I>
+<LI><A HREF="IPAPhoneme.html#CPS_RETROFLEX">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_RETROFLEX</A> <I>retroflex       </I>
+<LI><A HREF="IPAPhoneme.html#CPS_UVULAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_UVULAR</A> <I>uvular          </I>
+<LI><A HREF="IPAPhoneme.html#CPS_VELAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos::CPS_VELAR</A> <I>velar           </I>
+<LI><A HREF="IPAPhoneme.html#CTY_AFFRICATE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_AFFRICATE</A> <I>affricate               </I>
+<LI><A HREF="IPAPhoneme.html#CTY_AFFRICATE_CLOSURE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_AFFRICATE_CLOSURE</A> <I>affricate closure       </I>
+<LI><A HREF="IPAPhoneme.html#CTY_AFFRICATE_RELEASE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_AFFRICATE_RELEASE</A> <I>affricate release       </I>
+<LI><A HREF="IPAPhoneme.html#CTY_APPROXIMANT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_APPROXIMANT</A> <I>approximant             </I>
+<LI><A HREF="IPAPhoneme.html#CTY_CENTRAL_APROXIMANT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_CENTRAL_APROXIMANT</A> <I>Catalan (j)             </I>
+<LI><A HREF="IPAPhoneme.html#CTY_CLICK">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_CLICK</A> <I>click                   </I>
+<LI><A HREF="IPAPhoneme.html#CTY_COUNT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_COUNT</A>
+<LI><A HREF="IPAPhoneme.html#CTY_EJECTIVE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_EJECTIVE</A> <I>ejective                </I>
+<LI><A HREF="IPAPhoneme.html#CTY_FRICATIVE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_FRICATIVE</A> <I>fricative   ( f, s, )   </I>
+<LI><A HREF="IPAPhoneme.html#CTY_IMPLOSIVE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_IMPLOSIVE</A> <I>implosive               </I>
+<LI><A HREF="IPAPhoneme.html#CTY_LATERAL_APPROX">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_LATERAL_APPROX</A> <I>lateral approximant     </I>
+<LI><A HREF="IPAPhoneme.html#CTY_LATERAL_FRIC">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_LATERAL_FRIC</A> <I>lateral fricative       </I>
+<LI><A HREF="IPAPhoneme.html#CTY_NASAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_NASAL</A> <I>nasal   ( n, m )        </I>
+<LI><A HREF="IPAPhoneme.html#CTY_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_NOT_SPECIFIED</A> <I>invalid consonant type  </I>
+<LI><A HREF="IPAPhoneme.html#CTY_PLOSIVE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_PLOSIVE</A> <I>plosive ( p, t, k, )    </I>
+<LI><A HREF="IPAPhoneme.html#CTY_PLOSIVE_ASPIRATION">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_PLOSIVE_ASPIRATION</A> <I>plosive aspiration      </I>
+<LI><A HREF="IPAPhoneme.html#CTY_PLOSIVE_CLOSURE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_PLOSIVE_CLOSURE</A> <I>plosive closure         </I>
+<LI><A HREF="IPAPhoneme.html#CTY_PLOSIVE_RELEASE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_PLOSIVE_RELEASE</A> <I>plosive release         </I>
+<LI><A HREF="IPAPhoneme.html#CTY_TAPORFLAP">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_TAPORFLAP</A> <I>taporflap               </I>
+<LI><A HREF="IPAPhoneme.html#CTY_TRILL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType::CTY_TRILL</A> <I>trill   ( hungarian r ) </I>
+<LI><A HREF="IPAPhoneme.html#LNG_EXTRA_SHORT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length::LNG_EXTRA_SHORT</A>
+<LI><A HREF="IPAPhoneme.html#LNG_HALF_LONG">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length::LNG_HALF_LONG</A>
+<LI><A HREF="IPAPhoneme.html#LNG_LONG">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length::LNG_LONG</A>
+<LI><A HREF="IPAPhoneme.html#LNG_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length::LNG_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#LNG_SHORT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length::LNG_SHORT</A>
+<LI><A HREF="IPAPhoneme.html#PAT_ADVANCED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_ADVANCED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_ADVANCED_TONGUE_ROOT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_ADVANCED_TONGUE_ROOT</A>
+<LI><A HREF="IPAPhoneme.html#PAT_APICAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_APICAL</A>
+<LI><A HREF="IPAPhoneme.html#PAT_ASPIRATED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_ASPIRATED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_BREATHY_VOICED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_BREATHY_VOICED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_CENTRALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_CENTRALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_COUNT_OF_ATTRIBUTES">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_COUNT_OF_ATTRIBUTES</A>
+<LI><A HREF="IPAPhoneme.html#PAT_CREAKY_VOICED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_CREAKY_VOICED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_DENTAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_DENTAL</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LABIALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LABIALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LAMINAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LAMINAL</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LATERAL_RELEASE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LATERAL_RELEASE</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LESS_ROUNDED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LESS_ROUNDED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LINGUOLABIAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LINGUOLABIAL</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LINKING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LINKING</A>
+<LI><A HREF="IPAPhoneme.html#PAT_LOWERED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_LOWERED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_MID_CENTRALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_MID_CENTRALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_MORE_ROUNDED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_MORE_ROUNDED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_NASALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_NASALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_NASAL_RELEASE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_NASAL_RELEASE</A>
+<LI><A HREF="IPAPhoneme.html#PAT_NON_PULMONIC">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_NON_PULMONIC</A>
+<LI><A HREF="IPAPhoneme.html#PAT_NON_SYLLABIC">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_NON_SYLLABIC</A>
+<LI><A HREF="IPAPhoneme.html#PAT_NO_AUDIBLE_RELEASE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_NO_AUDIBLE_RELEASE</A>
+<LI><A HREF="IPAPhoneme.html#PAT_PALATALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_PALATALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_PHARYNGEALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_PHARYNGEALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_PRENASALIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_PRENASALIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_RAISED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_RAISED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_RETRACTED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_RETRACTED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_RETRACTED_TONGUE_ROOT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_RETRACTED_TONGUE_ROOT</A>
+<LI><A HREF="IPAPhoneme.html#PAT_RHOTICITY">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_RHOTICITY</A>
+<LI><A HREF="IPAPhoneme.html#PAT_SYLLABIC">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_SYLLABIC</A>
+<LI><A HREF="IPAPhoneme.html#PAT_VELARIZED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_VELARIZED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_VOICED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_VOICED</A>
+<LI><A HREF="IPAPhoneme.html#PAT_VOICELESS">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute::PAT_VOICELESS</A>
+<LI><A HREF="IPAPhoneme.html#PTY_CONSONANT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeType::PTY_CONSONANT</A>
+<LI><A HREF="IPAPhoneme.html#PTY_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeType::PTY_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#PTY_SILENT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeType::PTY_SILENT</A>
+<LI><A HREF="IPAPhoneme.html#PTY_VOWEL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeType::PTY_VOWEL</A>
+<LI><A HREF="IPAPhoneme.html#SST_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::StressState::SST_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#SST_NO_STRESS">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::StressState::SST_NO_STRESS</A>
+<LI><A HREF="IPAPhoneme.html#SST_PRIMARY_STRESS">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::StressState::SST_PRIMARY_STRESS</A>
+<LI><A HREF="IPAPhoneme.html#SST_SECONDARY_STRESS">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::StressState::SST_SECONDARY_STRESS</A>
+<LI><A HREF="IPAPhoneme.html#TST_DOWNSTEP">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_DOWNSTEP</A>
+<LI><A HREF="IPAPhoneme.html#TST_EXTRA_HIGH">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_EXTRA_HIGH</A>
+<LI><A HREF="IPAPhoneme.html#TST_EXTRA_LOW">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_EXTRA_LOW</A>
+<LI><A HREF="IPAPhoneme.html#TST_FALLING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_FALLING</A>
+<LI><A HREF="IPAPhoneme.html#TST_GLOBAL_FALL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_GLOBAL_FALL</A>
+<LI><A HREF="IPAPhoneme.html#TST_GLOBAL_RISE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_GLOBAL_RISE</A>
+<LI><A HREF="IPAPhoneme.html#TST_HIGH">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_HIGH</A>
+<LI><A HREF="IPAPhoneme.html#TST_HIGH_RISING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_HIGH_RISING</A>
+<LI><A HREF="IPAPhoneme.html#TST_LOW">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_LOW</A>
+<LI><A HREF="IPAPhoneme.html#TST_LOW_RISING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_LOW_RISING</A>
+<LI><A HREF="IPAPhoneme.html#TST_MID">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_MID</A>
+<LI><A HREF="IPAPhoneme.html#TST_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#TST_RISING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_RISING</A>
+<LI><A HREF="IPAPhoneme.html#TST_RISING_FALLING">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_RISING_FALLING</A>
+<LI><A HREF="IPAPhoneme.html#TST_UPSTEP">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle::TST_UPSTEP</A>
+<LI><A HREF="IPAPhoneme.html#VST_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VoicingState::VST_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#VST_UNVOICED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VoicingState::VST_UNVOICED</A>
+<LI><A HREF="IPAPhoneme.html#VST_VOICED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VoicingState::VST_VOICED</A>
+<LI><A HREF="IPAPhoneme.html#m_lipState">m_lipState</A>
+<LI><A HREF="IPAPhoneme.html#m_mouthPos">m_mouthPos</A>
+<LI><A HREF="IPAPhoneme.html#m_stressState">m_stressState</A>
+<LI><A HREF="IPAPhoneme.html#m_toneStyle">m_toneStyle</A>
+<LI><A HREF="IPAPhoneme.html#m_tonguePos">m_tonguePos</A>
+<LI><A HREF="IPAPhoneme.html#LST_NOT_ROUNDED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelLipState::LST_NOT_ROUNDED</A>
+<LI><A HREF="IPAPhoneme.html#LST_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelLipState::LST_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#LST_ROUNDED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelLipState::LST_ROUNDED</A>
+<LI><A HREF="IPAPhoneme.html#VMP_CLOSE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_CLOSE</A> <I>mouth is closed                                         </I>
+<LI><A HREF="IPAPhoneme.html#VMP_CLOSE_MID">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_CLOSE_MID</A> <I>mouth is a little bit more closed than the middle level </I>
+<LI><A HREF="IPAPhoneme.html#VMP_CLOSE_NEAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_CLOSE_NEAR</A> <I>mouth is nearly closed                                  </I>
+<LI><A HREF="IPAPhoneme.html#VMP_MIDDLE">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_MIDDLE</A> <I>mouth is middle level opened                            </I>
+<LI><A HREF="IPAPhoneme.html#VMP_OPEN">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_OPEN</A> <I>mouth is opened                                         </I>
+<LI><A HREF="IPAPhoneme.html#VMP_OPEN_MID">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_OPEN_MID</A> <I>mouth is a little bit more opened than the middle level </I>
+<LI><A HREF="IPAPhoneme.html#VMP_OPEN_NEAR">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos::VMP_OPEN_NEAR</A> <I>mouth is nearly opened                                  </I>
+<LI><A HREF="IPAPhoneme.html#VTP_BACK">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_BACK</A>
+<LI><A HREF="IPAPhoneme.html#VTP_BACK_CENTRAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_BACK_CENTRAL</A>
+<LI><A HREF="IPAPhoneme.html#VTP_CENTRAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_CENTRAL</A>
+<LI><A HREF="IPAPhoneme.html#VTP_FRONT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_FRONT</A>
+<LI><A HREF="IPAPhoneme.html#VTP_FRONT_CENTRAL">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_FRONT_CENTRAL</A>
+<LI><A HREF="IPAPhoneme.html#VTP_NOT_SPECIFIED">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos::VTP_NOT_SPECIFIED</A>
+<LI><A HREF="IPAPhoneme.html#m_attr">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::m_attr</A>
+<LI><A HREF="IPAPhoneme.html#m_boundary">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::m_boundary</A>
+<LI><A HREF="IPAPhoneme.html#m_length">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::m_length</A>
+<LI><A HREF="IPAPhoneme.html#m_type">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::m_type</A>
+<LI><A HREF="IPhonemeCoder.html#GIF_DEFAULT">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::GeneratedIPAForm::GIF_DEFAULT</A>
+<LI><A HREF="IPhonemeCoder.html#GIF_LONGEST">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::GeneratedIPAForm::GIF_LONGEST</A> <I>selects the longest IPA representation  (eg.</I>
+<LI><A HREF="IPhonemeCoder.html#GIF_SHORTEST">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::GeneratedIPAForm::GIF_SHORTEST</A> <I>selects the shortest IPA representation  (eg.</I>
+</UL>
+<H2>Enums, Unions, Structs</H2>
+<UL>
+<LI><A HREF="BookmarkType.html">BookmarkType</A> <I>List of valid bookmark types</I>
+<LI><A HREF="CharCodeSet.html">CharCodeSet</A> <I>Character code sets known by the engine - NOT YET SUPPORTED.</I>
+<LI><A HREF="DocumentUnit.html">DocumentUnit</A> <I>Document units for controlling <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A> and <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> - NOT YET SUPPORTED.</I>
+<LI><A HREF="Language.html">Language</A> <I>Languages known by the engine.</I>
+<LI><A HREF="AnnIPAPhonemeOutputFormat.html">AnnIPAPhonemeOutputFormat</A> <I><!1><A HREF="IOutputSite.html">IOutputSite</A> instances having a <!1><A HREF="AnnIPAPhonemeOutputFormat.html">AnnIPAPhonemeOutputFormat</A> inform the engine that they expect phoneme input from the engine.</I>
+<LI><A HREF="AnnPhonemeOutputFormat.html">AnnPhonemeOutputFormat</A> <I><!1><A HREF="IOutputSite.html">IOutputSite</A> instances having a <!1><A HREF="AnnPhonemeOutputFormat.html">AnnPhonemeOutputFormat</A> inform the engine that they expect phoneme input from the engine.</I>
+<LI><A HREF="IOutputFormat.html#OutputType">FlexVoice Engine API::Reference Manual::Engine.h::Output Formats. ::IOutputFormat::OutputType</A>
+<LI><A HREF="PhonemeOutputFormat.html">PhonemeOutputFormat</A> <I><!1><A HREF="IOutputSite.html">IOutputSite</A> instances having a <!1><A HREF="PhonemeOutputFormat.html">PhonemeOutputFormat</A> inform the engine that they expect phoneme input from the engine.</I>
+<LI><A HREF="TextOutputFormat.html">TextOutputFormat</A> <I>NOT YET IMPLEMENTED.</I>
+<LI><A HREF="WaveOutputFormat.html">WaveOutputFormat</A> <I><!1><A HREF="IOutputSite.html">IOutputSite</A> instances having a <!1><A HREF="WaveOutputFormat.html">WaveOutputFormat</A> inform the engine that they expect wave input from the engine.</I>
+<LI><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> <I>The Speaker cache strategy determines the Speaker Data managemenet strategy, ie, when the speaker data (which can be huge) is loaded in or is discarded from memory.</I>
+<LI><A HREF="AnnIPAPhoneme.html">AnnIPAPhoneme</A> <I>This struct contains an IPAPhoneme object and prosodic information</I>
+<LI><A HREF="IPAPhoneme.html#BoundaryType">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::BoundaryType</A>
+<LI><A HREF="IPAPhoneme.html#ConsonantPos">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantPos</A>
+<LI><A HREF="IPAPhoneme.html#ConsonantType">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ConsonantType</A>
+<LI><A HREF="IPAPhoneme.html#Length">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::Length</A>
+<LI><A HREF="IPAPhoneme.html#PhonemeAttribute">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeAttribute</A>
+<LI><A HREF="IPAPhoneme.html#PhonemeType">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::PhonemeType</A>
+<LI><A HREF="IPAPhoneme.html#StressState">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::StressState</A>
+<LI><A HREF="IPAPhoneme.html#ToneStyle">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::ToneStyle</A>
+<LI><A HREF="IPAPhoneme.html#VoicingState">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VoicingState</A>
+<LI><A HREF="IPAPhoneme.html#VowelLipState">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelLipState</A>
+<LI><A HREF="IPAPhoneme.html#VowelMouthPos">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelMouthPos</A>
+<LI><A HREF="IPAPhoneme.html#VowelTonguePos">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPAPhoneme::VowelTonguePos</A>
+<LI><A HREF="IPhonemeCoder.html#GeneratedIPAForm">FlexVoice Engine API::Reference Manual::Phoneme.h ::IPhonemeCoder::GeneratedIPAForm</A> <I>If several IPA forms are recognized as the same code, the user may select which  one is generated</I>
+</UL>
+<H2>Typedefs</H2>
+<UL>
+<LI><A HREF="LoudnessContour.html">LoudnessContour</A> <I>A vector of timepoint-loudness pairs;  time is relative to the phoneme duration  and loudness is relative to the speaker's default loudness</I>
+<LI><A HREF="PitchContour.html">PitchContour</A> <I>A vector of timepoint-pitch pairs;  time is relative to the phoneme duration  and pitch is relative to the speaker's default pitch</I>
+</UL>
+<P><I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

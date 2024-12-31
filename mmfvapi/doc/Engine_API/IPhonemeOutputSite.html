@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC IPhonemeOutputSite</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Engine.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">IPhonemeOutputSite</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Interface called by the <EM>TTS engine</EM> to send out <EM>phoneme</EM> data (in the form of phoneme codes) when it becomes available</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="CIAttribute,MIAttribute.html,CINotifyDispatcher,MINotifyDispatcher.html,CIOutputSite,MIOutputSite.html,CIPhonemeOutputSite,MIPhonemeOutputSite.html">
+<param name=before value="M,M,M,M">
+<param name=after value="Ml_SP,MD_SP,Md_,M">
+<param name=indent value="0,0,1,2">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.3.3.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>put</B> ( int <!1><A HREF="FilePhonemeCoder.html#DOC.1.3.7.1.6">phonemeCode</A> )<BR>
+<I>Called by the engine upon the arrival of the next phoneme.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="IOutputSite.html">IOutputSite</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   const <!1><A HREF="IOutputFormat.html">IOutputFormat</A>&amp; <B>getOutputFormat</B>() const 
+<DT>
+<P> <B>State control </B>
+<P><DL>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.3.2.3.1.2.1">pause</A></B>() = 0
+<DD><I>Pauses playing</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.3.2.3.1.2.2">play</A></B>() = 0
+<DD><I>Resumes playing</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   void <B><A HREF="#DOC.1.3.2.3.1.2.3">clear</A></B>() = 0
+<DD><I>Clears all internal buffers</I>
+</DL></P>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>setBookmark</B>( <!1><A HREF="Bookmark.html">Bookmark</A>* <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>sendBookmark</B>( <!1><A HREF="Bookmark.html">Bookmark</A>&amp; <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> )
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="INotifyDispatcher.html">INotifyDispatcher</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>registerNotify</B>( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>unregisterNotify</B>( <!1><A HREF="INotify.html">INotify</A>*  notify )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>addBookmarkTypes</B>( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   void <B>removeBookmarkTypes</B>( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )
+</DL></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="IAttribute.html">IAttribute</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<P> <B>set/get functions</B>
+<P><DL>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.1">set</A></B>( const char*  name, bool data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.2">get</A></B>( const char*  name, bool&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.3">set</A></B>( const char*  name, char data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.4">get</A></B>( const char*  name, char&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.5">set</A></B>( const char*  name, int data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.6">get</A></B>( const char*  name, int&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.7">set</A></B>( const char*  name, double data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.8">get</A></B>( const char*  name, double&amp; data, int index=0 ) const  = 0
+</DL></P>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>set</B>( const char*  name, const char*  data, int index=0 )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>get</B>( const char*  name, char* buffer, int buffsize, int* reqsize=0, int index=0 ) const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Interface called by the <EM>TTS engine</EM> to send out <EM>phoneme</EM>
+data (in the form of phoneme codes) when it becomes available</BLOCKQUOTE>
+<DL>
+
+<A NAME="put"></A>
+<A NAME="DOC.1.3.2.3.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void put( int <!1><A HREF="FilePhonemeCoder.html#DOC.1.3.7.1.6">phonemeCode</A> ) = 0</B></TT>
+<DD>Called by the engine upon the arrival of the next phoneme.
+Normally, this is a blocking call.
+The coding of the phonemes can be set by calling the engine's
+<!1><A HREF="Engine.html#DOC.1.3.2.6.1.7">setPhonemeCoder</A> method
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

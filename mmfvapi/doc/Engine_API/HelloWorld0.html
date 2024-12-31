@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> HelloWorld0 </TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">HelloWorld0 </A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>This example shows how to instantiate a FlexVoice 3.0 engine and let it speak to a file.  Demonstrates the minimal set of calls to use  FlexVoice 3.0 in an application.  </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>After setting up various directory paths which we do not detail here, 
+first, a TTS engine factory is created using the line<BR>
+<TT></TT><BR>
+<TT>MM_TTSAPI::EngineFactory&nbsp;factory(&nbsp;NULL&nbsp;);</TT><BR>
+<TT></TT><BR>
+The factory can be used to create engine instances in a <EM>cheap</EM> (fast)
+way. The only parameter of the factory is the path to the FlexVoice
+data files. Please refer to the Release Notes to find out where
+the data files are installed on your system. 
+
+<P>Once the factory has been created you can create engines with it.
+an engine is capable of speaking text using any voice and
+an output site. The output site is an object that 
+receives the output of the engine.
+You must provide an output site at construction time so
+we must create an output site first:<BR>
+<TT></TT><BR>
+<TT>MM_TTSAPI::WaveOutputFormat&nbsp;&nbsp;&nbsp;&nbsp;outputFormat(&nbsp;16000,&nbsp;16,&nbsp;0&nbsp;);</TT><BR>
+<TT>MM_TTSAPI::WaveFileOutputSite&nbsp;&nbsp;output(&nbsp;outputFormat&nbsp;);</TT><BR>
+<TT></TT><BR>
+The first of the above lines creates an output formatter object of
+type <!1><A HREF="WaveOutputFormat.html">WaveOutputFormat</A> with a sampling frequency of 16000 kHz,
+16 bits per sample and zero level 0.
+
+<P>Next, an output site is created with the given output formatter object.
+The output site created here is one that writes the output to a file
+(<!1><A HREF="WaveFileOutputSite.html">WaveFileOutputSite</A>).
+
+<P>Since the instantiation of the engine also requires a speaker or voice
+to be defined we instantiate a speaker:<BR>
+<TT></TT><BR>   
+<TT>MM_TTSAPI::Speaker&nbsp;defSpeaker;</TT><BR>
+<TT>defSpeaker.load(&nbsp;speakerFile.c_str()&nbsp;);</TT><BR>
+<TT></TT><BR>
+The second line loads the parameters of the speaker from an associated
+speaker definition file (a "tav" file), which in our case is 
+<TT>default.tav</TT> residing in the data directory of FlexVoice.
+
+<P>Now, we need to add this speaker to the factory so that when we instantiate
+the engine the factory will already know of this speaker and instantiation
+of the engine will be faster (as it will not incur the cost of loading
+the voice definition):<BR>
+<TT></TT><BR>
+<TT>factory.addSpeaker(&nbsp;defSpeaker,&nbsp;MM_TTSAPI::SCS_LOAD_IMMEDIATELY_DO_NOT_DELETE&nbsp;);</TT><BR>
+<TT></TT><BR>
+
+<P>Finally, we are ready to instantiate an engine:<BR>
+<TT></TT><BR>
+<TT>{</TT><BR>
+<TT>std::auto_ptr&lt;MM_TTSAPI::Engine&gt;&nbsp;engine</TT><BR> 
+<TT>&nbsp;=&nbsp;factory.createEngine(&nbsp;&amp;output,&nbsp;defSpeaker,&nbsp;MM_TTSAPI::LNG_ENGLISH&nbsp;);</TT><BR>
+<TT></TT><BR>
+A number of things are to be noted here.
+We pass to the engine the <EM>address</EM> of the output site. According
+to the Programming Conventions of the FlexVoice API, if an object
+is passed by its address then the ownership of the object is retained
+by the caller. As a consequence, it is the responsibility of the
+caller to "keep alive" the passed object during the lifetime of the
+receiver (in this case the engine). 
+If an object is passed by reference then a copy is made of the
+object and no ownership issues arise.
+
+<P>The last parameter determines the language. Currently, only US English
+is supported. 
+
+<P>The factory returns an engine pointer which is stored in an auto-pointer
+(so that e.g. if an exception is thrown by some subsequent line the engine
+is destructed appropriately).
+
+<P>More about the opening brace (<TT>{</TT>) later.
+
+<P>The next line opens a wave-file for writing:<BR>
+<TT></TT><BR>
+<TT>output.open(&nbsp;&quot;hello.wav&quot;,&nbsp;outputFormat&nbsp;);</TT><BR>
+<TT></TT><BR>
+Here the first parameter is the name of the file, the second
+determines the required format (this format overwrites the format
+given previously).
+
+<P>Finally, we let the engine speak:<BR>
+<TT></TT><BR>    
+<TT>engine-&gt;speakRequest(&nbsp;&quot;Hello&nbsp;World!&quot;,&nbsp;1&nbsp;);</TT><BR>
+<TT>engine-&gt;wait();</TT><BR>
+<TT></TT><BR>
+In the first line a speak request is sent to the TTS engine with
+the text "Hello World". The engine is asked to repeat the output
+once (second parameter). This call to the engine is asynchronous:
+the call returns immediately after the request is accepted by
+the engine, i.e., before the actual speech has been generated.
+Since the engine cannot be shut down and the output cannot be closed
+before the engine has stopped speaking, one must wait until that
+time. This is the purpose of the second line. This line blocks the
+execution of the client thread until the engine has fully processed all
+of its inputs and sent the resulting speech to the output site.
+
+<P>Once this call returns it is safe to close the output site and shut down
+the engine:<BR>
+<TT></TT><BR>
+<TT>output.close();</TT><BR>
+<TT>}</TT><BR>
+<TT></TT><BR>
+Note that upon arriving at the closing brace (<TT>}</TT>) <TT>auto_ptr</TT> destructs
+its pointee, i.e., the engine. The first line simply closes the output site
+and as a result the file associated with it.
+
+<P>Finally, we may return from the code, destructing the factory:<BR>
+<TT></TT><BR>
+<TT>return&nbsp;0;</TT><BR>
+<TT></TT><BR>
+Note that the factory <EM>should not</EM> be destructed until there is a living
+engine that was created through the factory. This is because the
+factory manages resources shared among the engines. In this example
+this is achieved by introducing the scope using the opening and closing
+braces and having the engine destructed by leaving the scope.
+
+<P>This concludes this tutorial. 
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="EngineFactory.html">EngineFactory</A>, <!1><A HREF="WaveOutputFormat.html">WaveOutputFormat</A>, <!1><A HREF="WaveFileOutputSite.html">WaveFileOutputSite</A>, <!1><A HREF="Speaker.html">Speaker</A>, <!1><A HREF="Engine.html">Engine</A>
+<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

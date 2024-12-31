@@ -1,0 +1,68 @@
+
+str version="3.01.000";
+str gender="female";
+str age="adult";
+str synthType="diphone_lpc";
+str voiceDescr="Julie";
+str styleDescr="";
+str boundaryModel="boundary.bdm";
+str boundaryPostModel="boundaryPost.bdm";
+str prominenceModel="prominence.prm";
+str durationModel="duration.drm";
+str pitchModel="pitch.ptm";
+str loudnessModel="volume.ldm";
+str loudnessModelType="absolute";
+str vsShape="Julie";
+int volumeSmoothWindow=1;
+dbl volume=25.000000;
+dbl speechRate=1.055000;
+int speedWPM=219;
+int defaultPitch=203;
+int pitchMin=50;
+int pitchMax=500;
+dbl pitchRate=1.000000;
+dbl singingPitchRate=0.630000;
+dbl intonationLevel=1.710000;
+dbl headsize=0.950000;
+dbl tilt=0.000000;
+dbl richness=1.000000;
+dbl breathiness=0.000000;
+dbl creakiness=0.000000;
+dbl smoothness=0.780000;
+dbl fricationRate=0.120000;
+dbl plosiveRate=0.400000;
+obj:Filter vsHarmFilter
+{
+    dbl d1=0.100000;
+    dbl d2=0.300000;
+    dbl f1=1800.000000;
+    dbl f2=4300.000000;
+}
+obj:Filter vsNoiseFilter
+{
+    dbl d1=0.100000;
+    dbl d2=0.100000;
+    dbl f1=1000.000000;
+    dbl f2=7000.000000;
+}
+obj:Equalizer equalizer[12]
+<
+    obj { 31.000000; 1.200000; -27.000000; },
+    obj { 51.000000; 1.200000; -27.000000; },
+    obj { 85.000000; 1.000000; -4.200000; },
+    obj { 140.000000; 1.000000; 3.780000; },
+    obj { 231.000000; 1.000000; -2.940000; },
+    obj { 382.000000; 1.000000; -3.080000; },
+    obj { 632.000000; 1.000000; -6.300000; },
+    obj { 1045.000000; 1.000000; -9.240000; },
+    obj { 1727.000000; 1.000000; -7.560000; },
+    obj { 2855.000000; 1.000000; -2.940000; },
+    obj { 4719.000000; 0.250000; 0.420000; },
+    obj { 7800.000000; 0.150000; 0.000000; }
+>
+obj:VSNoiseParams vsNoiseParams
+{
+    dbl noisePeakAmpl=0.300000;
+    dbl noiseStartPos=0.700000;
+    dbl noiseFloor=0.000000;
+}

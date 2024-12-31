@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> HelloWorld2</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">HelloWorld2</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>In this example, a class is set up that is doing most of the work. Compared to the previous example the functionality is not extended. </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>In this example we use two classes: SpeechParams and WavFileWriter.
+
+<P>SpeechParams sp;
+sp.speaker = "JulieCalm";
+sp.samplingFreq = 16000;
+
+<P>With the SpeechParams class we can set the speaking voice("speaker") and 
+various speech parameters("samplingFreq", 'speechRate", "pitch", "pitchRate"). 
+The default value for all of the speech parameters is 0 (zero). In this sample 
+we set the speaking voice to JulieCalm and the sampling frequency to 16000.
+
+<P>
+The WavFileWriter class is responsible for all operations required to 
+generate speech and save it to a wave file. For details of what operations are needed 
+for speech-generation see the <!1><A HREF="HelloWorld1.html">HelloWorld1</A> example. 
+
+<P>WavFileWriter wfw( "Hello World", "hello.wav", sp )
+
+<P>This class constructor requires 3 parameters: the text that will be converted to speech, the 
+output file name and a SpeechParams instance. In our case we save the "Hello world" text into 
+hello.wav file.
+
+<P>if (wfw.writeFile()) return 0;
+return -1;
+
+<P>At the end of the sample we have a verification that the save to file succeded.
+
+<P></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

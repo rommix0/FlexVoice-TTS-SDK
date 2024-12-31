@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> OutputSites</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">OutputSites</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The OutputSites lets the user define where to put the output of the
+engine. it also defines the output format of the engine. 
+The output can be either simple wave or phoneme string or even the 
+normalized text. By default the SDK supports output sites for the most
+usual cases but the user can create own output sites. 
+To do it the <!1><A HREF="IOutputSite.html">IOutputSite</A> interface should be implemented.
+The OutputSite has to put the output data to the destination 
+(e.g. to the sound card or to a .wav file) and it also has to deal 
+with the dispatching of the notifications. Through its interface it gets
+the output data and teh notifications in streaming mode. 
+The data should be forwarded to the destination 
+(e.g. to the sound card o or to the .wav file) while the notifications 
+(the bookmarks) should be passed to the listeners that was registered 
+to the OutputSite.
+The <!1><A HREF="IOutputSite.html">IOutputSite</A> interface itself is not able to recieve the output
+of the engine while it varies  depending on the required output format.
+There are different outputs in case wave output or in case of phoneme 
+string output. That's why the implementation shouldn't implement directly
+the <!1><A HREF="IOutputSite.html">IOutputSite</A> interface but one of the following: 
+<!1><A HREF="IWaveOutputSite.html">IWaveOutputSite</A>, <!1><A HREF="IPhonemeOutputSite.html">IPhonemeOutputSite</A>, 
+<!1><A HREF="IAnnPhonemeOutputSite.html">IAnnPhonemeOutputSite</A>, IAnnIPAOutputSite. 
+These interfaces are inherited from the <!1><A HREF="IOutputSite.html">IOutputSite</A> interface.
+The IOutputSite inteface has a <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.1">getOutputFormat</A> method that gives
+an <!1><A HREF="IOutputFormat.html">IOutputFormat</A> interface. This interface has the <!1><A HREF="WaveOutputFormat.html#DOC.1.3.2.2.2.2">outputType</A>
+method that defines the type of the OutputSite.
+When giving the OutputSite implementation to the engine 
+(see factory's <!1><A HREF="EngineFactory.html#DOC.1.3.2.5.1.6">createEngine</A> method) it calls this method to categorize
+the given OutputSite. Afgter it the engine tries to dynamic_cast the 
+IOutputSite pointer to the one of the above mentioned specific interfaces.
+(note that it requires the enabling of the RTTI information in the compiler)
+If it suceeded the <!1><A HREF="IOutputFormat.html">IOutputFormat</A> will be also dynamic_cast-ed to 
+the specific output format: <!1><A HREF="WaveOutputFormat.html">WaveOutputFormat</A>, <!1><A HREF="PhonemeOutputFormat.html">PhonemeOutputFormat</A>,
+<!1><A HREF="AnnPhonemeOutputFormat.html">AnnPhonemeOutputFormat</A>. These structures contains all the information 
+for the engine tho generate the proper output. (see also <!1><A HREF="TheOutputFormat.html">The Output Format</A>)
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

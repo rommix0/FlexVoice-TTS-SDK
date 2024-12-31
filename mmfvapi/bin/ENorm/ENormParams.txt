@@ -1,0 +1,17 @@
+reader          Ben
+quote_reader    Tom
+narrator        Julie
+narration       yes
+
+from_field      yes 
+to_field        no
+cc_field        yes
+subject_field   yes
+
+embedded_header yes
+signature       yes
+quote_depth     8
+
+attachment_names    yes         
+textual_attachment  no          
+email_attachment    no          

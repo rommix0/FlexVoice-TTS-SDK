@@ -1,0 +1,68 @@
+
+str version="3.01.000";
+str gender="male";
+str age="adult";
+str synthType="diphone_lpc";
+str voiceDescr="Tom";
+str styleDescr="";
+str boundaryModel="boundary.bdm";
+str boundaryPostModel="boundaryPost.bdm";
+str prominenceModel="prominence.prm";
+str durationModel="duration.drm";
+str pitchModel="pitch.ptm";
+str loudnessModel="volume.ldm";
+str loudnessModelType="absolute";
+str vsShape="";
+int volumeSmoothWindow=1;
+dbl volume=40.020000;
+dbl speechRate=1.115000;
+int speedWPM=163;
+int defaultPitch=105;
+int pitchMin=50;
+int pitchMax=500;
+dbl pitchRate=1.000000;
+dbl singingPitchRate=0.630000;
+dbl intonationLevel=2.280000;
+dbl headsize=1.000000;
+dbl tilt=0.000000;
+dbl richness=0.960600;
+dbl breathiness=0.000000;
+dbl creakiness=0.000000;
+dbl smoothness=0.720000;
+dbl fricationRate=0.100000;
+dbl plosiveRate=0.120000;
+obj:Filter vsHarmFilter
+{
+    dbl d1=0.100000;
+    dbl d2=0.771500;
+    dbl f1=206.000000;
+    dbl f2=2170.000000;
+}
+obj:Filter vsNoiseFilter
+{
+    dbl d1=0.162400;
+    dbl d2=0.368600;
+    dbl f1=2071.000000;
+    dbl f2=5479.000000;
+}
+obj:Equalizer equalizer[12]
+<
+    obj { 31.000000; 1.500000; -17.640000; },
+    obj { 51.000000; 1.500000; -9.720000; },
+    obj { 85.000000; 1.500000; -8.280000; },
+    obj { 140.000000; 1.500000; -2.880000; },
+    obj { 231.000000; 1.500000; -1.800000; },
+    obj { 382.000000; 1.500000; -3.080000; },
+    obj { 632.000000; 1.500000; -13.020000; },
+    obj { 1045.000000; 1.500000; -12.800000; },
+    obj { 1727.000000; 1.500000; -3.200000; },
+    obj { 2855.000000; 1.500000; 0.000000; },
+    obj { 4719.000000; 1.500000; 0.000000; },
+    obj { 7800.000000; 1.500000; 0.000000; }
+>
+obj:VSNoiseParams vsNoiseParams
+{
+    dbl noisePeakAmpl=0.180000;
+    dbl noiseStartPos=0.700000;
+    dbl noiseFloor=0.000000;
+}

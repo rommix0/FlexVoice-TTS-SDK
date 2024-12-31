@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int FVSERVER_DECLSPEC FVServerSpeak</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\FVServer.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>int FVSERVER_DECLSPEC <A HREF="#DOC.DOCU">FVServerSpeak</A></H2></TD><TD><H2>( const char*  text,<BR>&nbsp; int language,  int format,<BR>&nbsp; int sampleFreq,<BR>&nbsp; int bitResolution,<BR>&nbsp; FVServerCallback callback,<BR>&nbsp; void*  param )</H2></TD></TR></TABLE>
+<BLOCKQUOTE>Creates speech through the callback function.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Creates speech through the callback function.
+The here given callback function is called periodically to give back the speech data.
+(see FVServerCallback)
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>text</B> -              The text to be synthesized
+<BR><B>language</B> -          The language of the given text
+<BR><B>format</B> -            The required output format (see <!1><A HREF="FVServerOutputFormat.html">FVServerOutputFormat</A>)
+<BR><B>sampleFreq</B> -        The sampling frequency
+<BR><B>bitResolution</B> -     The bit resolution (mainly for PCM output)
+<BR><B>callback</B> -          The callback function (FVServerCallback) that recieves the data.
+<BR><B>param</B> -             Any user-specific data that is passed to the callback.
+<BR><DT><B>Returns:</B><DD>  The return value is an error code (see <!1><A HREF="FVServerErrorCode.html">FVServerErrorCode</A>)<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

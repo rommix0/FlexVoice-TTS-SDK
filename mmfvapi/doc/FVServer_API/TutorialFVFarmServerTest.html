@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Tutorial FVFarmServerTest</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Tutorial FVFarmServerTest</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Demonstrating the power of FlexVoice Farm Server </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The FvFarmServerTest application is a combined Client/Server application. It
+is used for testing and demostrating the FlexVocie Client/Server operation.
+
+<P><B>Usage: </B>
+
+<P><TT>FVFarmServerTest.exe&nbsp;[options]</TT>
+
+<P>
+<B>Options: </B><BR>
+<TT>I</TT>  - input text (default is "Hello World").<BR>
+<TT>O</TT>  - output file name (default is "sample.wav).<BR>
+<TT>MU</TT> - use MU-LAW encoding instead of PCM.<BR>
+<TT>VOX</TT>  - use VOX encoding instead of PCM.<BR>
+
+<P>
+
+<P><I>For example: </I>
+<PRE>
+	FVFarmServerTest.exe
+	FVFarmServerTest.exe&nbsp;I&nbsp;&quot;This&nbsp;is&nbsp;a&nbsp;simple&nbsp;test&nbsp;sentence&quot;
+	FVFarmServerTest.exe&nbsp;O&nbsp;myfile.wav
+	FVFarmServerTest.exe&nbsp;I&nbsp;&quot;The&nbsp;text&nbsp;is&nbsp;here&quot;&nbsp;O&nbsp;out.wav&nbsp;MU
+	</PRE>
+
+<P>
+
+<P>The program starts with a server initialization: <TT>FVFarmServerInitialize(&nbsp;NULL,&nbsp;1&nbsp;);&nbsp;</TT>
+Only one instance is initialized using handle NULL. This is a simple test program,
+so no handle should be supplied.
+
+<P>The next step is branching. Depending ont the required output file type (voc or
+PCM) the program can processes the output in a different synthax, but they are
+basically same, so only one is explained.
+
+<P><PRE>
+	FILE&nbsp;*&nbsp;file&nbsp;=&nbsp;fopen(&nbsp;outputfile,&nbsp;&quot;wb&quot;&nbsp;);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FVFarmServerSpeak(&nbsp;inputtext,&nbsp;dformat,&nbsp;SAMPLE_FREQ,&nbsp;BIT_RESOLUTION,&nbsp;put_VOX,&nbsp;(void*)file&nbsp;);
+		&nbsp;&nbsp;&nbsp;&nbsp;FVFarmServerWait();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fclose(&nbsp;file&nbsp;);</PRE>
+
+<P>A file is opened for writing(outputfile). The inputtext is saved using the
+<TT>dfromat&nbsp;SAMPLE_FREQ&nbsp;BIT_RESOLUTION</TT> file properties with put_VOX function (fwrite)
+into the file named file.
+
+<P>While the processing and the writing is in progress the program puts in a wait:
+<TT>FVFarmServerWait()&nbsp;</TT>
+
+<P>The last step is to close everything: <TT>FVFarmServerUninitialize</TT>
+
+<P>
+
+<P></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

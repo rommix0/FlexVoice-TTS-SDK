@@ -1,0 +1,65 @@
+HELLOWORLD0 TUTORIAL (C++)
+==========================
+
+HelloWorld0 is a simple command line sample program that uses the FlexVoice TTS engine 
+through the C++ interface. The full source code is included and installed with the 
+FlexVoice SDK.
+
+The following code listing shows a section of the program. 
+
+int main()
+{
+    MM_TTSAPI::EngineFactory factory( NULL );
+
+    std::string speakerFile = factory.getDataPath();
+    speakerFile += "/Default.tav";
+
+    MM_TTSAPI::WaveOutputFormat    outputFormat( 16000, 16, MM_TTSAPI::WaveOutputFormat::WC_PCM_SIGNED );
+    MM_TTSAPI::WaveFileOutputSite  output( outputFormat );
+
+    MM_TTSAPI::Speaker defSpeaker;
+    defSpeaker.load( speakerFile.c_str() );
+
+    factory.addSpeaker( defSpeaker, MM_TTSAPI::SCS_LOAD_IMMEDIATELY_DO_NOT_DELETE );
+
+    output.open( "hello.wav", outputFormat );
+
+    std::auto_ptr<MM_TTSAPI::Engine> engine 
+        = factory.createEngine( &output, defSpeaker, MM_TTSAPI::LNG_ENGLISH );
+
+    engine->speakRequest( "Hello World!", 1 );
+    engine->wait();
+
+    output.close();
+    return 0;
+}
+
+
+Now, let's go through the program step-by-step. 
+
+The EngineFactory is created  and stored to the "factory" variable. The EngineFactory is 
+responsible for managing Engines and Speaker instances. The factory also instantiates 
+engines and manages resources, such as speaker binaries. The factory must be kept alive 
+until the last engine instance is destroyed.
+
+In order to speak a speaker voice ("defSpeaker") is required, the speaker voice definition 
+file path is loaded into the "speakerFile" variable. The speaker definition file(Default.tav) 
+is loaded to the "defSpeaker" variable.
+
+An output site and format must be defined, in our example the output site is a .wav 
+file therefore the format must be appropriate to a .wav file. 
+
+The default Speaker ("defSpeaker") is now added to the EngineFactory("factory").
+
+The output is now opened, in this example "hello.wav", and the predefined format is 
+applied to it. 
+
+The Engine is now created ("engine").The Engine manages the settings of the speech, 
+and creates the speech using the speakRequest() function.
+
+The "engine" speakRequest() function now outputs the text "Hello World!" as speech to the 
+previously opened site the specified number of times, in this case once. 
+
+A delay is required to allow the process to complete ( wait() ).
+
+Finally the output site is closed.

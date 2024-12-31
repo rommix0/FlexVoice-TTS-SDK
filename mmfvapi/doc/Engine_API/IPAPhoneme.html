@@ -1,0 +1,893 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  IPAPhoneme</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Phoneme.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  <A HREF="#DOC.DOCU">IPAPhoneme</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Describes phonemes by their features, essentially providing a language-independent representation of phonemes.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=35>
+<param name=classes value="CIPAPhoneme,MIPAPhoneme.html">
+<param name=before value="M">
+<param name=after value="M">
+<param name=indent value="0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Fields</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.21"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.1">PhonemeType</A> </TD><TD><B>m_type</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.22"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>std::bitset&lt;<!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.12.34">PAT_COUNT_OF_ATTRIBUTES</A>&gt;  </TD><TD><B>m_attr</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.23"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>std::bitset&lt;<!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.11.13">BTY_COUNT</A>&gt;  </TD><TD><B>m_boundary</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.24"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Consonant properties: values are valid only if the m_type is PTY_CONSONANT </B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.24.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.2">ConsonantType</A> </TD><TD><B>m_consonantType</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.24.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.3">ConsonantPos</A> </TD><TD><B>m_consonantPos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.24.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.4">VoicingState</A> </TD><TD><B>m_voicingState</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Vowel properties: values are valid only if the m_type is PTY_VOWEL </B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.5">VowelMouthPos</A> </TD><TD><B>m_mouthPos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.6">VowelTonguePos</A> </TD><TD><B>m_tonguePos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.7">VowelLipState</A> </TD><TD><B>m_lipState</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.9">ToneStyle</A> </TD><TD><B>m_toneStyle</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.25.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.10">StressState</A> </TD><TD><B>m_stressState</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.26"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.8">Length</A> </TD><TD><B>m_length</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.13"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>IPAPhoneme</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.14"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>operator==  </B> ( const <!1><A HREF="IPAPhoneme.html">IPAPhoneme</A>&amp; ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.15"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   void </TD><TD><B>clear</B> ()<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.16"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>isVowel</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.17"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>isConsonant</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.18"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>isSilent</B> () const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.19"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>isVoiced</B> () const <BR>
+<I>Returns voiced consonants as well as vowels</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.20"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>inline   bool </TD><TD><B>isSonorant</B> () const <BR>
+<I>Returns sonorant consonants as well as vowels</I>
+</TD></TR></TABLE></P>
+
+<P><TABLE BORDER>
+<DT><H3>Public Members</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>PhonemeType</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>ConsonantType</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>ConsonantPos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>VoicingState</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>VowelMouthPos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>VowelTonguePos</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>VowelLipState</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>Length</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>ToneStyle</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>StressState</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>BoundaryType</B> <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.6.1.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>enum  </TD><TD><B>PhonemeAttribute</B> <BR>
+<I></I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Describes phonemes by their features, essentially providing
+a language-independent representation of phonemes.
+Features follow the naming system of the International Phonetic Association (IPA)
+as described in the Handbook of IPA (Cambridge Univ. Press 1999) 
+and on the IPA website at http://www2.arts.gla.ac.uk/IPA/ipa.html</BLOCKQUOTE>
+<DL>
+
+<A NAME="PhonemeType"></A>
+<A NAME="DOC.1.3.6.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  PhonemeType</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="PTY_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PTY_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PTY_SILENT"></A>
+<A NAME="DOC.1.3.6.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PTY_SILENT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PTY_CONSONANT"></A>
+<A NAME="DOC.1.3.6.1.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PTY_CONSONANT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PTY_VOWEL"></A>
+<A NAME="DOC.1.3.6.1.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PTY_VOWEL</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="ConsonantType"></A>
+<A NAME="DOC.1.3.6.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  ConsonantType</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="CTY_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_NOT_SPECIFIED</B></TT>
+<DD>invalid consonant type  
+<DL><DT><DD></DL><P>
+<A NAME="CTY_PLOSIVE"></A>
+<A NAME="DOC.1.3.6.1.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_PLOSIVE</B></TT>
+<DD>plosive ( p, t, k, )    
+<DL><DT><DD></DL><P>
+<A NAME="CTY_PLOSIVE_CLOSURE"></A>
+<A NAME="DOC.1.3.6.1.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_PLOSIVE_CLOSURE</B></TT>
+<DD>plosive closure         
+<DL><DT><DD></DL><P>
+<A NAME="CTY_PLOSIVE_RELEASE"></A>
+<A NAME="DOC.1.3.6.1.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_PLOSIVE_RELEASE</B></TT>
+<DD>plosive release         
+<DL><DT><DD></DL><P>
+<A NAME="CTY_PLOSIVE_ASPIRATION"></A>
+<A NAME="DOC.1.3.6.1.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_PLOSIVE_ASPIRATION</B></TT>
+<DD>plosive aspiration      
+<DL><DT><DD></DL><P>
+<A NAME="CTY_IMPLOSIVE"></A>
+<A NAME="DOC.1.3.6.1.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_IMPLOSIVE</B></TT>
+<DD>implosive               
+<DL><DT><DD></DL><P>
+<A NAME="CTY_AFFRICATE"></A>
+<A NAME="DOC.1.3.6.1.2.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_AFFRICATE</B></TT>
+<DD>affricate               
+<DL><DT><DD></DL><P>
+<A NAME="CTY_AFFRICATE_CLOSURE"></A>
+<A NAME="DOC.1.3.6.1.2.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_AFFRICATE_CLOSURE</B></TT>
+<DD>affricate closure       
+<DL><DT><DD></DL><P>
+<A NAME="CTY_AFFRICATE_RELEASE"></A>
+<A NAME="DOC.1.3.6.1.2.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_AFFRICATE_RELEASE</B></TT>
+<DD>affricate release       
+<DL><DT><DD></DL><P>
+<A NAME="CTY_NASAL"></A>
+<A NAME="DOC.1.3.6.1.2.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_NASAL</B></TT>
+<DD>nasal   ( n, m )        
+<DL><DT><DD></DL><P>
+<A NAME="CTY_TRILL"></A>
+<A NAME="DOC.1.3.6.1.2.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_TRILL</B></TT>
+<DD>trill   ( hungarian r ) 
+<DL><DT><DD></DL><P>
+<A NAME="CTY_TAPORFLAP"></A>
+<A NAME="DOC.1.3.6.1.2.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_TAPORFLAP</B></TT>
+<DD>taporflap               
+<DL><DT><DD></DL><P>
+<A NAME="CTY_FRICATIVE"></A>
+<A NAME="DOC.1.3.6.1.2.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_FRICATIVE</B></TT>
+<DD>fricative   ( f, s, )   
+<DL><DT><DD></DL><P>
+<A NAME="CTY_LATERAL_FRIC"></A>
+<A NAME="DOC.1.3.6.1.2.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_LATERAL_FRIC</B></TT>
+<DD>lateral fricative       
+<DL><DT><DD></DL><P>
+<A NAME="CTY_APPROXIMANT"></A>
+<A NAME="DOC.1.3.6.1.2.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_APPROXIMANT</B></TT>
+<DD>approximant             
+<DL><DT><DD></DL><P>
+<A NAME="CTY_CENTRAL_APROXIMANT"></A>
+<A NAME="DOC.1.3.6.1.2.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_CENTRAL_APROXIMANT</B></TT>
+<DD>Catalan (j)             
+<DL><DT><DD></DL><P>
+<A NAME="CTY_LATERAL_APPROX"></A>
+<A NAME="DOC.1.3.6.1.2.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_LATERAL_APPROX</B></TT>
+<DD>lateral approximant     
+<DL><DT><DD></DL><P>
+<A NAME="CTY_EJECTIVE"></A>
+<A NAME="DOC.1.3.6.1.2.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_EJECTIVE</B></TT>
+<DD>ejective                
+<DL><DT><DD></DL><P>
+<A NAME="CTY_CLICK"></A>
+<A NAME="DOC.1.3.6.1.2.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_CLICK</B></TT>
+<DD>click                   
+<DL><DT><DD></DL><P>
+<A NAME="CTY_COUNT"></A>
+<A NAME="DOC.1.3.6.1.2.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CTY_COUNT</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="ConsonantPos"></A>
+<A NAME="DOC.1.3.6.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  ConsonantPos</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="CPS_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="CPS_BILABIAL"></A>
+<A NAME="DOC.1.3.6.1.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_BILABIAL</B></TT>
+<DD>bilabial        
+<DL><DT><DD></DL><P>
+<A NAME="CPS_LABIODENTAL"></A>
+<A NAME="DOC.1.3.6.1.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_LABIODENTAL</B></TT>
+<DD>labiodental     
+<DL><DT><DD></DL><P>
+<A NAME="CPS_DENTAL"></A>
+<A NAME="DOC.1.3.6.1.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_DENTAL</B></TT>
+<DD>dental          
+<DL><DT><DD></DL><P>
+<A NAME="CPS_ALVEOLAR"></A>
+<A NAME="DOC.1.3.6.1.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_ALVEOLAR</B></TT>
+<DD>alveolar        
+<DL><DT><DD></DL><P>
+<A NAME="CPS_POSTALVEOLAR"></A>
+<A NAME="DOC.1.3.6.1.3.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_POSTALVEOLAR</B></TT>
+<DD>postalveolar    
+<DL><DT><DD></DL><P>
+<A NAME="CPS_RETROFLEX"></A>
+<A NAME="DOC.1.3.6.1.3.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_RETROFLEX</B></TT>
+<DD>retroflex       
+<DL><DT><DD></DL><P>
+<A NAME="CPS_PALATAL"></A>
+<A NAME="DOC.1.3.6.1.3.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_PALATAL</B></TT>
+<DD>palatal         
+<DL><DT><DD></DL><P>
+<A NAME="CPS_PALATOALVEOLAR"></A>
+<A NAME="DOC.1.3.6.1.3.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_PALATOALVEOLAR</B></TT>
+<DD>palato-alveolar 
+<DL><DT><DD></DL><P>
+<A NAME="CPS_VELAR"></A>
+<A NAME="DOC.1.3.6.1.3.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_VELAR</B></TT>
+<DD>velar           
+<DL><DT><DD></DL><P>
+<A NAME="CPS_UVULAR"></A>
+<A NAME="DOC.1.3.6.1.3.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_UVULAR</B></TT>
+<DD>uvular          
+<DL><DT><DD></DL><P>
+<A NAME="CPS_PHARYNGEAL"></A>
+<A NAME="DOC.1.3.6.1.3.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_PHARYNGEAL</B></TT>
+<DD>pharyngeal      
+<DL><DT><DD></DL><P>
+<A NAME="CPS_GLOTTAL"></A>
+<A NAME="DOC.1.3.6.1.3.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_GLOTTAL</B></TT>
+<DD>glottal         
+<DL><DT><DD></DL><P>
+<A NAME="CPS_EPIGLOTTAL"></A>
+<A NAME="DOC.1.3.6.1.3.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_EPIGLOTTAL</B></TT>
+<DD>epiglottal      
+<DL><DT><DD></DL><P>
+<A NAME="CPS_LABIAL_VELAR"></A>
+<A NAME="DOC.1.3.6.1.3.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_LABIAL_VELAR</B></TT>
+<DD>labial velar    
+<DL><DT><DD></DL><P>
+<A NAME="CPS_LABIAL_PALATAL"></A>
+<A NAME="DOC.1.3.6.1.3.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_LABIAL_PALATAL</B></TT>
+<DD>labial-palatal  
+<DL><DT><DD></DL><P>
+<A NAME="CPS_POSTALVEOLAR_VELAR"></A>
+<A NAME="DOC.1.3.6.1.3.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_POSTALVEOLAR_VELAR</B></TT>
+<DD>postalveolar-velar
+<DL><DT><DD></DL><P>
+<A NAME="CPS_COUNT"></A>
+<A NAME="DOC.1.3.6.1.3.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> CPS_COUNT</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="VoicingState"></A>
+<A NAME="DOC.1.3.6.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  VoicingState</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="VST_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VST_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VST_UNVOICED"></A>
+<A NAME="DOC.1.3.6.1.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VST_UNVOICED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VST_VOICED"></A>
+<A NAME="DOC.1.3.6.1.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VST_VOICED</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="VowelMouthPos"></A>
+<A NAME="DOC.1.3.6.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  VowelMouthPos</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="VMP_CLOSE"></A>
+<A NAME="DOC.1.3.6.1.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_CLOSE</B></TT>
+<DD>mouth is closed                                         
+<DL><DT><DD></DL><P>
+<A NAME="VMP_CLOSE_NEAR"></A>
+<A NAME="DOC.1.3.6.1.5.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_CLOSE_NEAR</B></TT>
+<DD>mouth is nearly closed                                  
+<DL><DT><DD></DL><P>
+<A NAME="VMP_CLOSE_MID"></A>
+<A NAME="DOC.1.3.6.1.5.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_CLOSE_MID</B></TT>
+<DD>mouth is a little bit more closed than the middle level 
+<DL><DT><DD></DL><P>
+<A NAME="VMP_MIDDLE"></A>
+<A NAME="DOC.1.3.6.1.5.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_MIDDLE</B></TT>
+<DD>mouth is middle level opened                            
+<DL><DT><DD></DL><P>
+<A NAME="VMP_OPEN_MID"></A>
+<A NAME="DOC.1.3.6.1.5.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_OPEN_MID</B></TT>
+<DD>mouth is a little bit more opened than the middle level 
+<DL><DT><DD></DL><P>
+<A NAME="VMP_OPEN_NEAR"></A>
+<A NAME="DOC.1.3.6.1.5.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_OPEN_NEAR</B></TT>
+<DD>mouth is nearly opened                                  
+<DL><DT><DD></DL><P>
+<A NAME="VMP_OPEN"></A>
+<A NAME="DOC.1.3.6.1.5.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VMP_OPEN</B></TT>
+<DD>mouth is opened                                         
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="VowelTonguePos"></A>
+<A NAME="DOC.1.3.6.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  VowelTonguePos</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="VTP_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VTP_FRONT"></A>
+<A NAME="DOC.1.3.6.1.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_FRONT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VTP_FRONT_CENTRAL"></A>
+<A NAME="DOC.1.3.6.1.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_FRONT_CENTRAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VTP_CENTRAL"></A>
+<A NAME="DOC.1.3.6.1.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_CENTRAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VTP_BACK_CENTRAL"></A>
+<A NAME="DOC.1.3.6.1.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_BACK_CENTRAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="VTP_BACK"></A>
+<A NAME="DOC.1.3.6.1.6.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> VTP_BACK</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="VowelLipState"></A>
+<A NAME="DOC.1.3.6.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  VowelLipState</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="LST_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.7.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LST_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LST_NOT_ROUNDED"></A>
+<A NAME="DOC.1.3.6.1.7.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LST_NOT_ROUNDED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LST_ROUNDED"></A>
+<A NAME="DOC.1.3.6.1.7.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LST_ROUNDED</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Length"></A>
+<A NAME="DOC.1.3.6.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  Length</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="LNG_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.8.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LNG_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LNG_EXTRA_SHORT"></A>
+<A NAME="DOC.1.3.6.1.8.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LNG_EXTRA_SHORT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LNG_SHORT"></A>
+<A NAME="DOC.1.3.6.1.8.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LNG_SHORT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LNG_HALF_LONG"></A>
+<A NAME="DOC.1.3.6.1.8.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LNG_HALF_LONG</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="LNG_LONG"></A>
+<A NAME="DOC.1.3.6.1.8.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> LNG_LONG</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="ToneStyle"></A>
+<A NAME="DOC.1.3.6.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  ToneStyle</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="TST_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.9.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_EXTRA_HIGH"></A>
+<A NAME="DOC.1.3.6.1.9.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_EXTRA_HIGH</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_HIGH"></A>
+<A NAME="DOC.1.3.6.1.9.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_HIGH</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_MID"></A>
+<A NAME="DOC.1.3.6.1.9.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_MID</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_LOW"></A>
+<A NAME="DOC.1.3.6.1.9.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_LOW</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_EXTRA_LOW"></A>
+<A NAME="DOC.1.3.6.1.9.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_EXTRA_LOW</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_DOWNSTEP"></A>
+<A NAME="DOC.1.3.6.1.9.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_DOWNSTEP</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_UPSTEP"></A>
+<A NAME="DOC.1.3.6.1.9.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_UPSTEP</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_RISING"></A>
+<A NAME="DOC.1.3.6.1.9.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_RISING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_FALLING"></A>
+<A NAME="DOC.1.3.6.1.9.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_FALLING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_HIGH_RISING"></A>
+<A NAME="DOC.1.3.6.1.9.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_HIGH_RISING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_LOW_RISING"></A>
+<A NAME="DOC.1.3.6.1.9.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_LOW_RISING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_RISING_FALLING"></A>
+<A NAME="DOC.1.3.6.1.9.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_RISING_FALLING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_GLOBAL_RISE"></A>
+<A NAME="DOC.1.3.6.1.9.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_GLOBAL_RISE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="TST_GLOBAL_FALL"></A>
+<A NAME="DOC.1.3.6.1.9.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> TST_GLOBAL_FALL</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="StressState"></A>
+<A NAME="DOC.1.3.6.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  StressState</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="SST_NOT_SPECIFIED"></A>
+<A NAME="DOC.1.3.6.1.10.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SST_NOT_SPECIFIED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="SST_NO_STRESS"></A>
+<A NAME="DOC.1.3.6.1.10.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SST_NO_STRESS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="SST_PRIMARY_STRESS"></A>
+<A NAME="DOC.1.3.6.1.10.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SST_PRIMARY_STRESS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="SST_SECONDARY_STRESS"></A>
+<A NAME="DOC.1.3.6.1.10.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> SST_SECONDARY_STRESS</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="BoundaryType"></A>
+<A NAME="DOC.1.3.6.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  BoundaryType</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="BTY_PHONEME_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_PHONEME_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_PHONEME_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_PHONEME_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_SYLLABLE_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_SYLLABLE_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_SYLLABLE_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_SYLLABLE_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_WORD_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_WORD_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_WORD_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_WORD_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_HYPHENATEDWORD_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_HYPHENATEDWORD_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_HYPHENATEDWORD_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_HYPHENATEDWORD_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_MINORGROUP_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_MINORGROUP_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_MINORGROUP_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_MINORGROUP_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_MAJORGROUP_INITIAL"></A>
+<A NAME="DOC.1.3.6.1.11.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_MAJORGROUP_INITIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_MAJORGROUP_FINAL"></A>
+<A NAME="DOC.1.3.6.1.11.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_MAJORGROUP_FINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="BTY_COUNT"></A>
+<A NAME="DOC.1.3.6.1.11.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> BTY_COUNT</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="PhonemeAttribute"></A>
+<A NAME="DOC.1.3.6.1.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>enum  PhonemeAttribute</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="PAT_VOICELESS"></A>
+<A NAME="DOC.1.3.6.1.12.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_VOICELESS</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_VOICED"></A>
+<A NAME="DOC.1.3.6.1.12.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_VOICED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_ASPIRATED"></A>
+<A NAME="DOC.1.3.6.1.12.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_ASPIRATED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_MORE_ROUNDED"></A>
+<A NAME="DOC.1.3.6.1.12.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_MORE_ROUNDED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LESS_ROUNDED"></A>
+<A NAME="DOC.1.3.6.1.12.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LESS_ROUNDED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_ADVANCED"></A>
+<A NAME="DOC.1.3.6.1.12.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_ADVANCED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_RETRACTED"></A>
+<A NAME="DOC.1.3.6.1.12.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_RETRACTED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_CENTRALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_CENTRALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_MID_CENTRALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_MID_CENTRALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_SYLLABIC"></A>
+<A NAME="DOC.1.3.6.1.12.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_SYLLABIC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_NON_SYLLABIC"></A>
+<A NAME="DOC.1.3.6.1.12.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_NON_SYLLABIC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_RHOTICITY"></A>
+<A NAME="DOC.1.3.6.1.12.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_RHOTICITY</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_BREATHY_VOICED"></A>
+<A NAME="DOC.1.3.6.1.12.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_BREATHY_VOICED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_CREAKY_VOICED"></A>
+<A NAME="DOC.1.3.6.1.12.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_CREAKY_VOICED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LINGUOLABIAL"></A>
+<A NAME="DOC.1.3.6.1.12.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LINGUOLABIAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LABIALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LABIALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_PALATALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_PALATALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_VELARIZED"></A>
+<A NAME="DOC.1.3.6.1.12.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_VELARIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_PHARYNGEALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_PHARYNGEALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_RAISED"></A>
+<A NAME="DOC.1.3.6.1.12.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_RAISED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LOWERED"></A>
+<A NAME="DOC.1.3.6.1.12.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LOWERED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_ADVANCED_TONGUE_ROOT"></A>
+<A NAME="DOC.1.3.6.1.12.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_ADVANCED_TONGUE_ROOT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_RETRACTED_TONGUE_ROOT"></A>
+<A NAME="DOC.1.3.6.1.12.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_RETRACTED_TONGUE_ROOT</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_DENTAL"></A>
+<A NAME="DOC.1.3.6.1.12.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_DENTAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_APICAL"></A>
+<A NAME="DOC.1.3.6.1.12.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_APICAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LAMINAL"></A>
+<A NAME="DOC.1.3.6.1.12.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LAMINAL</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_NASALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.27"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_NASALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_NASAL_RELEASE"></A>
+<A NAME="DOC.1.3.6.1.12.28"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_NASAL_RELEASE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_PRENASALIZED"></A>
+<A NAME="DOC.1.3.6.1.12.29"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_PRENASALIZED</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LATERAL_RELEASE"></A>
+<A NAME="DOC.1.3.6.1.12.30"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LATERAL_RELEASE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_NO_AUDIBLE_RELEASE"></A>
+<A NAME="DOC.1.3.6.1.12.31"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_NO_AUDIBLE_RELEASE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_NON_PULMONIC"></A>
+<A NAME="DOC.1.3.6.1.12.32"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_NON_PULMONIC</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_LINKING"></A>
+<A NAME="DOC.1.3.6.1.12.33"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_LINKING</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="PAT_COUNT_OF_ATTRIBUTES"></A>
+<A NAME="DOC.1.3.6.1.12.34"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> PAT_COUNT_OF_ATTRIBUTES</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="IPAPhoneme"></A>
+<A NAME="DOC.1.3.6.1.13"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> IPAPhoneme()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator==  "></A>
+<A NAME="DOC.1.3.6.1.14"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool operator==  ( const <!1><A HREF="IPAPhoneme.html">IPAPhoneme</A>&amp; ) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="clear"></A>
+<A NAME="DOC.1.3.6.1.15"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   void clear()</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="isVowel"></A>
+<A NAME="DOC.1.3.6.1.16"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool isVowel() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="isConsonant"></A>
+<A NAME="DOC.1.3.6.1.17"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool isConsonant() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="isSilent"></A>
+<A NAME="DOC.1.3.6.1.18"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool isSilent() const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="isVoiced"></A>
+<A NAME="DOC.1.3.6.1.19"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool isVoiced() const </B></TT>
+<DD>Returns voiced consonants as well as vowels
+<DL><DT><DD></DL><P>
+<A NAME="isSonorant"></A>
+<A NAME="DOC.1.3.6.1.20"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>inline   bool isSonorant() const </B></TT>
+<DD>Returns sonorant consonants as well as vowels
+<DL><DT><DD></DL><P>
+<A NAME="m_type"></A>
+<A NAME="DOC.1.3.6.1.21"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.1">PhonemeType</A> m_type</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_attr"></A>
+<A NAME="DOC.1.3.6.1.22"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::bitset&lt;<!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.12.34">PAT_COUNT_OF_ATTRIBUTES</A>&gt;  m_attr</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_boundary"></A>
+<A NAME="DOC.1.3.6.1.23"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>std::bitset&lt;<!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.11.13">BTY_COUNT</A>&gt;  m_boundary</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="Consonant properties: values are valid only if the m_type is PTY_CONSONANT "></A>
+<A NAME="DOC.1.3.6.1.24"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Consonant properties: values are valid only if the m_type is PTY_CONSONANT </B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="m_consonantType"></A>
+<A NAME="DOC.1.3.6.1.24.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.2">ConsonantType</A> m_consonantType</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_consonantPos"></A>
+<A NAME="DOC.1.3.6.1.24.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.3">ConsonantPos</A> m_consonantPos</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_voicingState"></A>
+<A NAME="DOC.1.3.6.1.24.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.4">VoicingState</A> m_voicingState</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Vowel properties: values are valid only if the m_type is PTY_VOWEL "></A>
+<A NAME="DOC.1.3.6.1.25"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Vowel properties: values are valid only if the m_type is PTY_VOWEL </B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="m_mouthPos"></A>
+<A NAME="DOC.1.3.6.1.25.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.5">VowelMouthPos</A> m_mouthPos</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_tonguePos"></A>
+<A NAME="DOC.1.3.6.1.25.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.6">VowelTonguePos</A> m_tonguePos</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_lipState"></A>
+<A NAME="DOC.1.3.6.1.25.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.7">VowelLipState</A> m_lipState</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_toneStyle"></A>
+<A NAME="DOC.1.3.6.1.25.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.9">ToneStyle</A> m_toneStyle</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="m_stressState"></A>
+<A NAME="DOC.1.3.6.1.25.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.10">StressState</A> m_stressState</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="m_length"></A>
+<A NAME="DOC.1.3.6.1.26"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="IPAPhoneme.html#DOC.1.3.6.1.8">Length</A> m_length</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

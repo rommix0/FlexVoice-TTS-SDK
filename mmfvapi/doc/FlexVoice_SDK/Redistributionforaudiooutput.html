@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Redistribution for audio output</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Redistribution for audio output</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>For accessing the audio object the engine uses the AudioMixer module. It contains
+three self registerable files. The files should be copied to the same directory,
+register the two dll-s using the regsv32.exe and start the exe for registering it into
+the system. Of course it is possible to have a different, custom solution for the wave
+output site. Using AudioMixer is not compulsory.
+
+<P><PRE>
+	[common&nbsp;files]
+	AudioMixerps.dll
+	AudioMixerServer3.exe
+	AudioMixer3.dll
+	</PRE>
+
+<P>The basic engine and at least one voice is required for FlexVoice TTS to work.
+<A HREF=BasicFlexVoiceEngine.html>Basic Engine Redistribution</A>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

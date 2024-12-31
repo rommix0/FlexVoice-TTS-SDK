@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Engine.h</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Engine.h</A></H2></TD></H2></TD></TR></TABLE>
+
+<TABLE>
+<TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Basic Types."></A>
+<A HREF=BasicTypes..html><B>Basic Types.</B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Output Formats. "></A>
+<A HREF=OutputFormats..html><B>Output Formats. </B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Output Sites. "></A>
+<A HREF=OutputSites..html><B>Output Sites. </B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="SpeakerCacheStrategy"></A>
+<A HREF=SpeakerCacheStrategy.html><B>SpeakerCacheStrategy</B></A></TD><TD><BR>
+<I>The Speaker cache strategy determines the Speaker Data managemenet strategy, ie, when the speaker data (which can be huge) is loaded in or is discarded from memory.</I>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Factory. "></A>
+<A HREF=Factory..html><B>Factory. </B></A></TD><TD><BR>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="Engine. "></A>
+<A HREF=Engine..html><B>Engine. </B></A></TD><TD><BR>
+</TD></TR>
+</TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>A TTS Engine is used to produce speech from text.
+Common operations are: 
+<UL>
+<LI> create an engine factory (factories are used for speeding up 
+the initialization of engines, see <!1><A HREF="EngineFactory.html">EngineFactory</A>),
+<LI> create a notification object (typically a <!1><A HREF="Notifier.html">Notifier</A> instance) in order to receive notifications about speak-events,
+<LI> create an output site object to be used with the engine 
+(see <!1><A HREF="IOutputSite.html">IOutputSite</A> for the interface; <!1><A HREF="WaveFileOutputSite.html">WaveFileOutputSite</A> is a fully implemented class that is capable of writing output to files),
+<LI> pass the notification object to the destination object,
+<LI> create a new engine instance (see <!1><A HREF="EngineFactory.html">EngineFactory</A> and <!1><A HREF="Engine.html">Engine</A>), 
+<LI> pass it the destination object,
+<LI> send requests to the engine, 
+<LI> manipulate the engine state, in particular the properties of the speaker
+<LI> process notification messages arriving as the engine speaks.
+</UL></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Preformance figures of FlexVoice 3.01</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Preformance figures of FlexVoice 3.01</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><BLOCKQUOTE>Performance measurement of FlexVoice.
+<PRE>
+	*A FlexVoice server is started on Windows2000. The OS was simply choosen, 
+	due to it's resource meter.
+
+<P><P>	*A sample text is choosen, which is 61.5 secs long. This text was issued 
+	from the client machines in an infinite loop, and measured time taken to 
+	the serve to complete the  the request. If the response time is greater 
+	than the length of the text, the server reached its maximal usage.
+
+<P><P>	*In the table below the measurement were done on different CPUs and the maximal 
+	number of simultaneous request were recorded into the table. In other 
+	words how many simultaneous requests can the specified CPU fulfill in 
+	real-time.
+	</PRE>
+
+<P><P>
+The table below shows how many seconds does it required to finish one 
+request out of the simultaneous requests on the given CPU.
+<table cellpadding="2" cellspacing="2" border="1" width="50%" height="25%">
+<tbody>
+<tr valign="Top">
+<td valign="Top" width="50%"><b>numeber of maximal clients</b> /<br>memory usage on the number of clients
+</td>
+<td valign="Top" width="15%"><b>PII 333MHz</b><br>
+<td valign="Top" width="15%"><b>PIII 800MHz</b><br>
+<td valign="Top" width="20%"><b>P4 1400 MHz</b><br>
+</td>
+</tr>
+<tr valign="Top">
+<td valign="Top" width="25%"><b>  3</b> / 4MB</td>
+<td valign="Top"><b>59.3</b>s<br>
+<td valign="Top">35.2s<br>
+<td valign="Top">25.1s<br>
+</td>
+</tr>
+<tr valign="Top">
+<td valign="Top"><b>  6</b> / 12.5MB<br>
+<td valign="Top">-<br>
+<td valign="Top"><b>60.1</b>s<br>
+<td valign="Top">48.9s<br>
+</tr>
+<tr valign="Top">
+<td valign="Top"><b>  8</b> / 16.8MB<br>
+<td valign="Top">-<br>
+<td valign="Top">-<br>
+<td valign="Top"><b>59.9</b>s<br>
+</tr>
+</tbody>
+</table>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

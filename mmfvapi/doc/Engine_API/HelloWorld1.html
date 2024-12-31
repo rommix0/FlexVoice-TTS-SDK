@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> HelloWorld1</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">HelloWorld1</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>This example is an extention of the previous one in as much as it finds the data  directory on your system and also it loads the speaker definitions included in the <TT>voicelist.tvl</TT> file that acts as a registry of the available voices. This way, the user can change speakers using embedded commands without blocking the output of the speech. </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>We explain only the lines which are different from the previous example.(see HelloWorld0)
+
+<P>std::string dataDir = factory.getDataPath();
+
+<P>We declared a string variable "dataDir", which contains the path to the 
+Data directory, where all sources needed to generate speech are located.The getDataPath() 
+function retrieves the Data directory path.
+
+<P>std::string speakerListFile = dataDir + "/VoiceList.tvl";
+
+<P>The string variable "speakerListFile" will contain the path to a file, this file contains 
+all the available voices that, later, the engine will load into its SpeakerMap. Which in our example 
+is VoiceList.tvl file.
+
+<P>SpeakerMap speakerList;
+speakerList.load( speakerListFile.c_str(), dataDir.c_str() );
+SpeakerMap::iterator it;
+for( it = speakerList.begin(); it != speakerList.end(); ++it )
+{
+factory.addSpeaker( *it, SCS_LOAD_WHEN_NEEDED_DO_NOT_DELETE );
+}
+
+<P>In order to access all the available voices a SpeakerMap ("speakerList") is required, the 
+available voices file path ("speakerListFile") is loaded into the "speakerList" variable. 
+Then all the voices added to the factory one by one.
+
+<P>for( it = speakerList.begin(); it != speakerList.end(); ++it )
+{
+engine-&gt;addSpeaker( it.getKey(), *it, SCS_LOAD_WHEN_NEEDED_DO_NOT_DELETE );
+}
+
+<P>After the engine creation a speaker(s) need to be added to the engine, in our case we added 
+all the available voices (speakerList), that we previously added to the factory. We add all 
+the available voices in order to use a specific embedded command in the speakRequest function:
+
+<P>engine-&gt;speakRequest( "<BR>vce=speaker=\"BenCalm\"<BR> Hello World!", 1 );
+
+<P>
+
+<P>This embedded command(<BR>vce=speaker=\"voice_name\"<BR>) calls a change in the actual speaking voice 
+to another.
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

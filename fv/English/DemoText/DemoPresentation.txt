@@ -1,0 +1,35 @@
+\Vce=Speaker="Julie"\\rspd=100\
+Welcome to the demonstration of FlexVoice. We're 
+going to hear how the embedded commands enhance 
+the speech.
+ 
+First, the speaker changes. Let's change to the 
+speaker called Ben.
+ 
+\Vce=Speaker="Ben"\
+Hi Julie! How are you today? 
+ 
+\Vce=Speaker="Julie"\
+Fine thanks! Let's continue with Leslie and Tom!
+ 
+\Vce=Speaker="Leslie"\
+Hi, my name is Leslie.
+ 
+\Vce=Speaker="Tom"\
+Tom's speaking!
+ 
+\Vce=Speaker="Julie"\
+Thanks guys.
+ 
+\rspd=100\ 
+By altering \rspd=60\ speed or \vol=220\ volume, 
+\vol=100\ \rspd=100\  you can easily draw attention to 
+a specific portion of the text. Long lists are also more 
+comprehensible this way.
+ 
+Finally let's listen to how the word \rspd=80\ "Mind"  
+\rspd=100\ is spelled. For better articulation pause is 
+also used. The spelling is: \pau=1000\ \wspell\ 
+\rspd=80\ "Mind".
+ 
+This concludes our demonstration.

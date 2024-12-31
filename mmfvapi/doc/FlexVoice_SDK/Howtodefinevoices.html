@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> How to define voices?</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">How to define voices?</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><B>How to define voices?</B>
+
+<P>
+Voice definitions are to be found in <TT>.tav</TT>, or voice definition files.
+The voice definition files that come with FlexVoice can be found in
+the <TT>Voices</TT> subdirectory of the FlexVoice data directory.
+The <TT>voicelist.tvl</TT> file is normally used by programs to enumerate the
+voices available on the system, so the <TT>voicelist.tvl</TT> file acts as
+a registry. However, using the C++ API you can add individual voices
+to the engine by just loading the voice definition directly from a <TT>.tav</TT>
+file. Or you can even instatiate a Speaker object and fill in
+the various parameters.
+
+<P></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

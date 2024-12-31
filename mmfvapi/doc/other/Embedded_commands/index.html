@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Embedded Commands of the FlexVoice Engine</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Embedded Commands of the FlexVoice Engine</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><P><BLOCKQUOTE>While you are reading a text with FlexVoice you can change all sort of parameters,
+like voice, pitch, speed etc. (more below in the table). It is very useful to bring
+a colour in the speech making it more interesting, or to highlight a part of the
+text. The Tags are only used by the engine, and are not read out loudly.
+
+<P><P><P>A simple sample text:
+{<i>\Vce=Speaker="Tom"\</i> Hello I'm Tom. <i>\Vce=Speaker="Julie"\ </i>and I'm Julie.}
+The first reader is Tom introduces itself and "gives the microphone" to Julie.
+
+<P><P><P>The Available control tags and their syntax are listed below:
+<CODE> <br>
+\Controltag\ <br>
+\Controltag='##'\<br>
+\Controltag='$$'\<br>
+<br>
+</CODE> Where '##' is a numeric parameter and '$$' is a string parameter. 
+The string value could be enclosed between all sort of characters ' {} [] 
+< &gt " or even it is possible not to use any of them<br>
+The fractional parameters must be set as percent.
+
+<P><P><P>The available tags:
+
+<P><P><P>
+<table cellpadding="2" cellspacing="2" border="1" width="75%" height="75%">
+<tr valign="Top"> 
+<td valign="Top" colspan="2"><b>Basic Commands</b></td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">vce=speaker="$$"<br>
+</td>
+<td valign="Top">sets the speaker to read the text <b>after</b> the tag. 
+If the supplied speaker is a non-existing one on the system simply neglects 
+this tag.
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">vol=##<br>
+</td>
+<td valign="Top">sets the volume the reading.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">spd=##</td>
+<td valign="Top">Sets the default speed of the reading in Word Per Minute. 
+The speed of a reading is not an exactly defined measurement! </td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">rspd=##<br>
+</td>
+<td valign="Top">sets relative speed to the default (in percent) &nbsp; 
+<br>
+</td>
+</tr>
+<tbody> 
+<tr valign="Top"> 
+<td valign="Top">pau=##<br>
+</td>
+<td valign="Top" width="50%">inserts a silence with the given length (in 
+ms)<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">pit=##<br>
+</td>
+<td valign="Top">sets the default pitch (in Hz)<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">rpit=##<br>
+</td>
+<td valign="Top">sets the relative pitch to the default (in percent)<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">emp=##</td>
+<td valign="Top">Tells the engine the level of accent on the following 
+word. There are 4 levels, starting from 0 (with no emphasis at all) 
+to the maximal level of 3.
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">intlevel=##<br>
+</td>
+<td valign="Top">sets the intonation level (in percent), the lower the 
+number is, the reading is more monotone.
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" colspan="2"><b>Pronunciation and spelling commands</b></td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">pron="$$"<br>
+</td>
+<td valign="Top">Describes the pronunciation for the next block. <br>
+The block ends with \<i>endpron</i>\ The given phoneme<br>
+string must follow the documentation
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">endpron<br>
+</td>
+<td valign="Top">closes the pronunciation block <br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">wpron="$$"<br>
+</td>
+<td valign="Top">sets the pronunciation for the next word.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">wspell=##</td>
+<td valign="Top">Spells out a word, instead of trying to read it out, 
+like FBI<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">spell<br>
+</td>
+<td valign="Top">spells the next block. The block ends with <i>\endspell\</i> 
+<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">endspell<br>
+</td>
+<td valign="Top">closes the spell block started by <i>\spell\</i> tag.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">sayas</td>
+<td valign="Top">Tells the engine to start pronouncing a block in the 
+given manner.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">endsayas</td>
+<td valign="Top">The end marks for the block started by the <i>sayas</i><br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">wsayas=$$</td>
+<td valign="Top">Tells the Engine to pronounce the following word in the 
+given way<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">wordmode=on|off</td>
+<td valign="Top">Reads every word in an accented manner, and keeps a slight 
+break after very word. To be used, when the speech has to highlighted 
+extremely.</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">lang=$$</td>
+<td valign="Top">Sets the language used for processing and reading the 
+text after the tag. Possible entries: <i> eng, ger and hun</i>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">endlang</td>
+<td valign="Top">Sets the end boundary for the language set by <i>Lang</i> 
+tag.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top"  width="25%">wlang=$$</td>
+<td valign="Top">Sets the language used for processing and reading of 
+the following word see <i>Lang</i></td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">langdet on|off</td>
+<td valign="Top">turns the automatic language detection on or off.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">aspell</td>
+<td valign="Top">Tells the engine to spell out words letter-by-letter. 
+Like C-H-A-I-R
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">endaspell</td>
+<td valign="Top">Closes the block started by <i>aspell</i><br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">waspell</td>
+<td valign="Top">Tells the engine to spell out the following word letter-by-letter<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" colspan="2"><b>Dictionary handling commands</b></td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">loaddict "$$","$$"<br>
+</td>
+<td valign="Top">Loads a user dictionary file with a specified name.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">unloaddict "$$"<br>
+</td>
+<td valign="Top">Unloads a dictionary file with a specified name.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">enabledict "$$"<br>
+</td>
+<td valign="Top">Enables a dictionary.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">disabledict "$$"<br>
+</td>
+<td valign="Top">Disables a dictionary.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">pwd=##<br>
+</td>
+<td valign="Top">password<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">adddict</td>
+<td valign="Top">Adds a new dictionary.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">removedicts</td>
+<td valign="Top">Removes all dictionaries.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">enabledicts</td>
+<td valign="Top">Enables the dictionaries.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">disabledicts</td>
+<td valign="Top">Disables all dictionaries.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top"width="25%">removedict</td>
+<td valign="Top">Removes a dictionary.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" colspan="2"><b>Advanced commands</b></td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top">eng *<br>
+</td>
+<td valign="Top"><br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">phstr=## **</td>
+<td valign="Top">Tells the Engine, that the input is a phoneme string.<br>
+</td>
+</tr>
+<tr valign="Top"> 
+<td valign="Top" width="25%">mrk=##</td>
+<td valign="Top">places a user marker, for the engine to issue a bookmark 
+event for the programmer.</td>
+</tr>
+</tbody> 
+</table>
+
+<P><P><P>
+
+<P><P><P><B>*The control tag Eng has special syntax:</B><br>
+<CODE>
+\Eng:%%\ or \Eng;{CLSID}:%%\<BR>
+where `CLSID' is the CLS ID of the engine and `%%' is one of the following:<BR>
+<BR>
+[:phone arpa TruVoice][@@]<BR>
+[:phone arpa Sampa][@@]<BR>
+[:phone arpa DEC][@@]<BR>
+</CODE>
+
+<P><P><P>`@@' is a phoneme sequence with syntax $$<##,##><BR>
+where `$$' is the phoneme symbol,<BR>
+the first `##' is the duration in milliseconds,<BR>
+the second `##' is the pitch of the phoneme (in the range 0-31
+it is in relative semitones, from 32 it is in Herz).<BR>
+Phonemes should be written without any separator.<BR>
+
+<P><P><P>
+
+<P><P><P><B>**Phoneme strings for FlexVoice Engine.</B>
+<br>If you would like to pronounce a special word, or to make the engine sing or
+to modify the pronouncing of a word, it is wise to use <i>phstr</i> embedded
+command.
+
+<P><P><P><B>Usage</B>
+
+<P><P>
+<P>phoneme_code: < <i>duration, pitch-contour</i>[,loudness-contour] &gt <br>
+
+<P><P>
+<br>
+<P><b>Where</b><br>
+<i>duration</i>: in milliseconds, This is the duration of the phoneme.
+<P> <i>pitch-contour</i>: <br>
+Syntax:<b> pitch_value:position </b> <br>
+<b>Where</b> <br>
+<i>pitch_value</i> is the value of the pitch in Hz <br>
+<i>position</i> is the position where the pitch value should take its full value in % of the full duration of the phoneme
+<br><br>
+Describing the pitch contour of the phoneme. By default the pitch supplied here is valid in the middle of the 
+duration (of course if it's not defined in a different way) The engine automatically 
+creates the transition between the prevoius and the following phoneme's 
+pitch level. There is a possibility to exactly determine the value of the 
+pitch for every interval of the duration. <i>Like 120:30</i> means the pitch 
+value of 120 Hz should be taken when the phoneme is at the 30% of the duration. 
+Multiple pitch and &quot;time&quot; values are accepted by the phoneme descriptor.<br>
+<br>
+<i>loudness-contour</i>: optional, describes the loudness boundaries of 
+the phoneme, the numerical values should measured and compared with the 
+one used by the engine. It is very dangereous to change this value.
+<P><P><b>For example:</b> <br>
+<B>Phoneme:</B> "ju:" (from <B>U</B>se)<br>
+<CODE>ju:<100,120></CODE><BR>
+- duration = 100<br>
+- pitch = 120 at 0 position<br>
+Here the phoneme is 0.1sec long, and has a pitch of 100Hz. The basic description 
+of a phoneme. The pitch is set to be valid at the beginning of the phoneme.<br>
+<br>
+<CODE>ju:<100,120,200000></CODE><br>
+- duration = 100<br>
+- pitch = 120 at 0 position<br>
+- loudness = 200000 (absolute loudness * 100) at 50% of the phoneme<br>
+You can add loudness to a phoneme. Elevating the voice in a word makes the
+remark during the speech.<br>
+<br>
+<CODE>ju:<100,120:30,200000></CODE><br>
+- pitch = 120 at 30%<br>
+The pitch could be set to change at other point than the begetting. Here 
+it is at 30% of the phoneme.<br>
+<br>
+<CODE>ju:<100,<120:30,150:70,200:90>,200000></CODE><br>
+It is possible to make a description of the phoneme pronunciation. Start 
+at the default pitch until 30% of the phoneme, than change the pitch to 
+120 up till 70%. At this point elevate the pitch to 150 and after 90% raise 
+it to 200 until the phoneme is finished.<br>
+<br>
+<CODE>ju:<100,<120:30,150:70,200:90>,<200000:70,300000:80>></CODE><br>
+Like in the previous example the loudness could change inside a phoneme either.
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

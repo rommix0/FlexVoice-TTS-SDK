@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Phonemes, Phoneme Coders</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Phonemes, Phoneme Coders</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>By the notifications and in case of the expected phoneme output the engine
+give phoneme codes to the application. The code is a simple integer that
+depends on the used phoneme table. By default these codes are representing
+the FlexVoice's inner phoneme table that doesn't contain too much 
+information for the application. Unfortunately the used phoneme tables 
+can be very different. Not only the codes are variing table by table but
+even the phoneme sets. FlexVoice has to give useful phoneme information
+to the applications not depending on the phoneme table they're using.
+Of course it is not possible to burn all the used phoneme tables to 
+FlexVoice and identify them by e.g. an id. To solve this problem we've 
+chosen a general solution. 
+
+<P><FONT SIZE="+1"><B>IPA feature vectors</B></FONT>
+
+<P>All phonemes can be described by features that was defined by IPA 
+(International Phonetic Associations). This is a standard way 
+(created by internationa linguists) to describe a phoneme by its 
+features. Having these features it's clear which is the phoneme 
+it's about not depending on even the language. This IPA description
+doesn't deal with the diphones triphones and so on. We treat diphones
+and triphones as a list of IPA features. 
+
+<P><FONT SIZE="+1"><B>Phoneme Coders</B></FONT>
+
+<P>If we have a phoneme table we can describe all its phoneme by a list
+of the IPA features. It means that if the application uses a specific 
+phoneme table and if it can provide a method that can convert its code
+to a list of IPA features then FlexVoice can understand their codes.
+And also if FlexVocie has a method that can convert its own phoneme codes
+to IPA featire list the Application can understand these codes.
+
+<P>This model is realized by the <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A> interface. It has a 
+method that can accept phoneme-table-specific phoneme codes and can
+give IPA feature list. The coder also has to accept IPA features and should
+give back the proper phoneme-table-specific phoneme code.
+
+<P>If the application gives a phoneme coder to the engine, it can put its 
+own phoneme codes to the inner phoneme coder that give IPA features which
+can be put to the given coder that will be converted to application-specific
+phoneme codes.
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Frequently Asked Questions</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Frequently Asked Questions</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>
+<B>Q.</B> What systems/interfaces are supported?
+
+<P><B>A.</B> On the Windows platform FlexVoice 3 supports SAPI 4 and SAPI 5, as well as Mindmaker's proprietary cross-platform C++ API.
+On the Linux/Unix platform, due to the lack of a standardized interface, FlexVoice 3 supports the Mindmaker proprietary C++ API only.
+
+<P><B>Q.</B> How do I generate a wave file (or other formats like VOX, u-law, ...)?
+
+<P><B>A.</B> The SDK comes with various sample programs showing how to generate various file formats    on the fly using the FlexVoice 3 C++ API.
+
+<P><B>Q.</B> What programming languages can I use with the SDK?
+
+<P><B>A.</B> You can use any programming language that supports the COM technique (C, C++, JAVA,    Visual Basic, etc.), for which you can find examples in the Microsoft Speech SDK.    FlexVoice 3 also supports a proprietary cross-platform C++ API on Windows and Linux/Unix.
+
+<P><B>Q.</B> What sampling frequency should I use?
+
+<P><B>A.</B> The suggested mode is 16 kHz. This provides a voice quality that is quite good at a    moderate computational load. The 8 kHz sampling frequency mode is recommended for    telephony applications; 11 kHz is needed for some full-duplex sound cards and some    popular telephony boards.
+
+<P><B>Q.</B> Does playing text slower reduce system load?
+
+<P><B>A.</B> Probably not. When the playing speed is reduced, the number of sentences to be processed    per unit time will become smaller. Most of the CPU's resources are consumed by producing    the wave files. Since this must produce the same number of samples per unit time, the    system load will not reduce significantly as a result of changing the playback speed.
+
+<P>Somewhat contrary to expectations, increasing the playback speed may actually reduce the    system load. Since the number of words/sentences processed per unit of time will    increase, fewer samples are required per sentence. However, it is most practical to take    measurements before implementing any change. TTS is a complicated process whose system    load is difficult to predict.
+
+<P><B>Q.</B> Can I include any number of voices with my distribution of the FlexVoice engine?
+
+<P><B>A.</B> Yes. You can specify which voices you want to include by modifying the content of the    install.dat file. This file contains the list of voices that are to be registered when    you run the TTSReg.exe program.
+
+<P><B>Q.</B> Can I change the intonation for a given text?
+
+<P><B>A.</B> Yes. You can insert hyphens between words to prevent a phrase boundary between them, and    you can enclose a portion of text in quotation marks or parenthesis to force phrase    boundaries and, thus, pauses, before and after the text.
+
+<P><B>Q.</B> Can I change the way FlexVoice pronounces certain words?
+
+<P><B>A.</B> Yes. FlexVoice supports exception dictionary files in which users can enter particular    words along with descriptions of how they would like them to be pronounced. This feature    is especially useful for acronyms, abbreviations, proper nouns, and foreign expressions,    which frequently do not follow the regular pronunciation patterns of English. For more    details, refer to the FlexVoice documentation.
+
+<P></DL></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

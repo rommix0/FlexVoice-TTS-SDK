@@ -1,0 +1,102 @@
+FlexVoice_Phoneme_List_3_01_001
+0	_	<silence>	1	silent				-	-	0	
+1	eI	mAte	2	vowel	close_mid	front	not_rounded	-	short	0	
+				vowel	close_near	front_central	not_rounded	-	short	0	
+2	b	Bat	1	consonant	plosive	bilabial	voiced	-	-	0	
+2	b	Bat	2	consonant	plosive_closure	bilabial	voiced	-	-	0	
+				consonant	plosive_release	bilabial	voiced	-	-	0	
+3	tS	CHat	1	consonant	affricate	postalveolar	unvoiced	-	-	0	
+3	tS	CHat	2	consonant	affricate_closure	postalveolar	unvoiced	-	-	0	
+				consonant	affricate_release	postalveolar	unvoiced	-	-	0	
+4	d	Date	1	consonant	plosive	alveolar	voiced	-	-	0	
+4	d	Date	2	consonant	plosive_closure	alveolar	voiced	-	-	0	
+				consonant	plosive_release	alveolar	voiced	-	-	0	
+5	i:	mEEt	1	vowel	close	front	not_rounded	-	long	0	
+6	f	Fat	1	consonant	fricative	labiodental	unvoiced	-	-	0	
+7	g	Gate	1	consonant	plosive	velar	voiced	-	-	0	
+7	g	Gate	2	consonant	plosive_closure	velar	voiced	-	-	0	
+				consonant	plosive_release	velar	voiced	-	-	0	
+8	h	Hat	1	consonant	fricative	glottal	unvoiced	-	-	0	
+9	aI	bIte	2	vowel	open_near	central	not_rounded	-	short	0	
+				vowel	close_near	front_central	not_rounded	-	short	0	
+10	dZ	Jet	1	consonant	affricate	postalveolar	voiced	-	-	0	
+10	dZ	Jet	2	consonant	affricate_closure	postalveolar	voiced	-	-	0	
+				consonant	affricate_release	postalveolar	voiced	-	-	0	
+11	k	sCate	1	consonant	plosive	velar	unvoiced	-	-	0	
+11	k	sCate	2	consonant	plosive_closure	velar	unvoiced	-	-	0	
+				consonant	plosive_release	velar	unvoiced	-	-	0	
+12	l	Let	1	consonant	lateral_approx	alveolar	voiced	-	-	0	
+13	m	Met	1	consonant	nasal	bilabial	voiced	-	-	0	
+14	n	Net	1	consonant	nasal	alveolar	voiced	-	-	0	
+15	oU	bOAt	2	vowel	close_mid	back	rounded	-	short	0	
+				vowel	close_mid	back_central	rounded	-	short	0	
+16	p	sPain	1	consonant	plosive	bilabial	unvoiced	-	-	0	
+16	p	sPain	2	consonant	plosive_closure	bilabial	unvoiced	-	-	0	
+				consonant	plosive_release	bilabial	unvoiced	-	-	0	
+18	r	Rat	1	consonant	approximant	alveolar	voiced	-	-	0	
+19	s	Set	1	consonant	fricative	alveolar	unvoiced	-	-	0	
+20	t	sTep	1	consonant	plosive	alveolar	unvoiced	-	-	0	
+20	t	sTep	2	consonant	plosive_closure	alveolar	unvoiced	-	-	0	
+				consonant	plosive_release	alveolar	unvoiced	-	-	0	
+21	ju:	Use	2	consonant	approximant	palatal	voiced	-	-	0	
+				vowel	close	back_central	rounded	-	long	0	
+22	v	Vat	1	consonant	fricative	labiodental	voiced	-	-	0	
+23	w	Wet	1	consonant	approximant	labial_velar	voiced	-	-	0	
+24	T	THin	1	consonant	fricative	dental	unvoiced	-	-	0	
+25	j	Yet	1	consonant	approximant	palatal	voiced	-	-	0	
+26	z	Zoo	1	consonant	fricative	alveolar	voiced	-	-	0	
+27	ae	mAt	1	vowel	open	front	not_rounded	-	short	0	
+28	u:	bOOt	1	vowel	close	back_central	rounded	-	long	0	
+29	Ur	pOOR	2	vowel	close_mid	back_central	rounded	-	short	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+30	H	beHind	1	consonant	fricative	glottal	voiced	-	-	0	
+31	E	mEt	1	vowel	open_mid	front	not_rounded	-	short	0	
+32	aU	hOUse	2	vowel	open_near	central	not_rounded	-	short	0	
+				vowel	close_mid	back_central	rounded	-	short	0	
+33	O:r	mORe	2	vowel	open_mid	back	rounded	-	long	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+35	I	bIt	1	vowel	close_near	front_central	not_rounded	-	short	0	
+36	L	maLe	1	consonant	lateral_approx	alveolar	voiced	-	-	1	pharyngealized
+37	Er	cARE	2	vowel	open_mid	front	not_rounded	-	short	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+38	=l	bottLE	1	consonant	lateral_approx	alveolar	voiced	-	-	1	syllabic
+39	=m	bottOM	1	consonant	nasal	bilabial	voiced	-	-	1	syllabic
+40	=n	buttON	1	consonant	nasal	alveolar	voiced	-	-	1	syllabic
+41	A	gOt	1	vowel	open	back_central	not_rounded	-	short	0	
+44	A:r	mARch	2	vowel	open	back_central	not_rounded	-	long	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+44	A:r	mARch	2	vowel	open	back_central	not_rounded	-	short	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+45	S	SHeet	1	consonant	fricative	postalveolar	unvoiced	-	-	0	
+47	U	bOOk	1	vowel	close_mid	back_central	rounded	-	short	0	
+48	V	mUd	1	vowel	open_mid	central	not_rounded	-	short	0	
+49	A:	bOUght	1	vowel	open	back_central	not_rounded	-	long	0	
+49	A:	bOUght	1	vowel	open_mid	back	rounded	-	long	0	
+50	D	THen	1	consonant	fricative	dental	voiced	-	-	0	
+51	OI	bOY	2	vowel	open_mid	back	rounded	-	short	0	
+				vowel	close_near	front_central	not_rounded	-	short	0	
+52	Z	aSia	1	consonant	fricative	postalveolar	voiced	-	-	0	
+55	3:	bIRd	1	vowel	middle	central	not_rounded	-	long	1	rhoticity
+55	3:	bIRd	2	vowel	middle	central	not_rounded	-	extra_short	0
+				consonant	approximant	alveolar	voiced	-	-	1	syllabic
+56	Ir	pIER	2	vowel	close_near	front_central	not_rounded	-	short	0	
+				consonant	approximant	alveolar	voiced	-	-	0	
+58	@	About	1	vowel	middle	central	not_rounded	-	extra_short	0	
+60	N	riNG	1	consonant	nasal	velar	voiced	-	-	0	
+61	!k	Cat	1	consonant	plosive	velar	unvoiced	-	-	1	aspirated
+61	!k	Cat	3	consonant	plosive_closure	velar	unvoiced	-	-	0	
+				consonant	plosive_release	velar	unvoiced	-	-	0	
+				consonant	plosive_aspiration	velar	unvoiced	-	-	0	
+62	!p	Pet	1	consonant	plosive	bilabial	unvoiced	-	-	1	aspirated
+62	!p	Pet	3	consonant	plosive_closure	bilabial	unvoiced	-	-	0	
+				consonant	plosive_release	bilabial	unvoiced	-	-	0	
+				consonant	plosive_aspiration	bilabial	unvoiced	-	-	0	
+63	!t	Tap	1	consonant	plosive	alveolar	unvoiced	-	-	1	aspirated
+63	!t	Tap	3	consonant	plosive_closure	alveolar	unvoiced	-	-	0	
+				consonant	plosive_release	alveolar	unvoiced	-	-	0	
+				consonant	plosive_aspiration	alveolar	unvoiced	-	-	0	
+64	`	<primary_stress>	0	primary_stress							
+65	,	<secondary_stress>	0	secondary_stress							
+66	|	<phoneme_separator>	0	phoneme_separator							
+67	.	<syllable_separator>	0	syllable_separator
+68	<space>	<word_separator>	0	word_separator

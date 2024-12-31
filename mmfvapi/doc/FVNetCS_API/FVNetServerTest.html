@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> FVNetServerTest</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">FVNetServerTest</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Tutorial for FVNetServerTest </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><B>Sample program for creating a FlexVoice server </B>
+
+<P>The FVNetServerTest creates a server which will accept text files passed to it 
+by one or more FVNetClientTests return them to there originating client after 
+converting them to wave format. 
+
+<P><B>Usage: </B>
+<TT>FVNetServerTest&nbsp;[options]&nbsp;&lt;port&gt;&nbsp;&lt;channels&gt;&nbsp;&lt;language&nbsp;list&gt;</TT><BR>
+
+<P><B>Where: </B><BR>
+<PRE>
+	-sf&nbsp;{8|11|16|22}&nbsp;&nbsp;&nbsp;&nbsp;Sampling&nbsp;frequency:&nbsp;8,&nbsp;11,&nbsp;16&nbsp;or&nbsp;22&nbsp;kHz.&nbsp;Default:&nbsp;16
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-br&nbsp;{8|16}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bit&nbsp;resolution:&nbsp;8,&nbsp;16.&nbsp;Default:&nbsp;16
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-pcm_signed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;signed&nbsp;PCM
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-pcm_unsigned&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;unsigned&nbsp;PCM
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;default&nbsp;output&nbsp;format&nbsp;is&nbsp;signed&nbsp;PCM&nbsp;for&nbsp;16&nbsp;bit
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;and&nbsp;unsigned&nbsp;PCM&nbsp;for&nbsp;8&nbsp;bit&nbsp;output.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ULAW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;ULAW
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-ALAW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;ALAW
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-VOX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;VOX
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-VIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifies&nbsp;the&nbsp;otuput&nbsp;format&nbsp;as&nbsp;VIS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;port&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;port&nbsp;where&nbsp;the&nbsp;server&nbsp;should&nbsp;listen
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;channels&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;max&nbsp;count&nbsp;of&nbsp;the&nbsp;channes.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;language&nbsp;list&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;space&nbsp;separated&nbsp;language&nbsp;identifiers&nbsp;(eng&nbsp;hun&nbsp;malay)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at&nbsp;least&nbsp;one&nbsp;language&nbsp;should&nbsp;be&nbsp;specified
+</PRE>
+
+<P>
+
+<P>This simple demo application requires a port number and the required number 
+of the FlexVoice engines to be initialized. As you can see above, the 
+program receives the numbers from the argument. 
+
+<P>handle = FVNetServerCreate(); Creates the server which is then initialized, and a 
+handle is issued to the server. If the handle is zero, the initialization was 
+unsuccessful. 
+After successfull server creation the language modules are loaded too in accordance
+with the language specified by the argument(s).<BR>
+<TT>FVNetServerLoadLanguage(&nbsp;handle,&nbsp;lang&nbsp;)</TT><BR>
+
+<P><PRE>
+	FVNetServerInitialize(handle,&nbsp;atoi(atoi(argv[2]),&nbsp;atoi(argv[1]))));&nbsp;a&nbsp;FlexVoice&nbsp;engine&nbsp;must&nbsp;be&nbsp;installed,&nbsp;if&nbsp;not&nbsp;then&nbsp;a&nbsp;FVNetServerError_CannotInitEngine&nbsp;error&nbsp;is&nbsp;generated.&nbsp;The&nbsp;function&nbsp;needs&nbsp;the&nbsp;port&nbsp;number&nbsp;and&nbsp;required&nbsp;number&nbsp;of&nbsp;instances.&nbsp;Two&nbsp;errors&nbsp;are&nbsp;enumerated:\\FVNetServerError_CannotInitEngine
+	FVNetServerError_CannotOpenPort
+	</PRE>
+
+<P>
+The program waits for the ENTER to be pressed as an event. In case this is 
+true the program closes all FlexVoice Server instances. <BR>
+<TT>FVNetServerDestroy(handle)&nbsp;</TT>
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

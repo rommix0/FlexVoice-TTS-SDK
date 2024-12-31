@@ -1,0 +1,531 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC Engine</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Engine.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">Engine</A></H2></TD></H2></TD></TR></TABLE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=35>
+<param name=classes value="CEngine,MEngine.html">
+<param name=before value="M">
+<param name=after value="M">
+<param name=indent value="0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Speak requests.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>addFragment</B> ( const char*  text )<BR>
+<I>Adds a text fragment to the next request.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>addBookmark</B> ( <!1><A HREF="Bookmark.html">Bookmark</A>*  <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> )<BR>
+<I>Adds a user bookmark.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>speakRequest</B> ( int repeatCount )<BR>
+<I>Closes the request that was given by fragments.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>speakRequest</B> (const char*  text, int repeatCount=1)<BR>
+<I>Passes the given text to the engine for processing.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>stop</B> ()<BR>
+<I>Cancels all the pending requests, including the current one</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>cancel</B> ( int requests = 1 )<BR>
+<I>NOT YET IMPLEMENTED - Cancels the first 'requests' pending requests, including the current one</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.1.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>wait</B> ()<BR>
+<I>Blocks the calling thread until all the requests are processed.</I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>State control.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.2.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>pause</B> ( <!1><A HREF="DocumentUnit.html">DocumentUnit</A> documentUnit = <!1><A HREF="DocumentUnit.html#DOC.1.3.2.1.3.8">DU_NULL_UNIT</A>, int items = 0 )<BR>
+<I>Pauses the playing of the current request.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.2.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>resume</B> ()<BR>
+<I>Resumes play.</I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>skip</B> (<!1><A HREF="DocumentUnit.html">DocumentUnit</A> unit, int items )<BR>
+<I>Skips a number of units with the request under play.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Speaker access methods.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>setSpeakers</B> ( const <!1><A HREF="SpeakerMap.html">SpeakerMap</A>&amp; speakerMap, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )<BR>
+<I>Copies the given speaker map to the engine's internal map The engine can use only those speakers that are in this map (except the default speaker) Currently cacheStrategy is NOT USED</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>addSpeaker</B> ( const char*  speakerName, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )<BR>
+<I>Adds a speaker to the engine's internal speaker map.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>removeSpeaker</B> ( const char*  speakerName )<BR>
+<I>Removes the speaker from the engine's internal speaker map.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>updateSpeaker</B> ( const char*  speakerName, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A> )<BR>
+<I>Updates the changes of the speaker in the engine's internal speaker map.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>setSpeaker</B> (const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, bool now)<BR>
+<I>Sets the current speaker to the one provided in the argument.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="Speaker.html">Speaker</A>&amp; </TD><TD><B>getSpeaker</B> () const <BR>
+<I>Retrieves a reference to the current speaker</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.4.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="SpeakerMap.html">SpeakerMap</A>&amp; </TD><TD><B>getSpeakers</B> () const <BR>
+<I>Retrieves a reference to the engine's internal speaker map</I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Attribute handling methods.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.5.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IAttribute.html">IAttribute</A>&amp; </TD><TD><B>attribute</B> () const <BR>
+<I>The constant version of <!1><A HREF="Engine.html#DOC.1.3.2.6.1.5.1">attribute</A></I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Dictionary handler methods.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>insertDictionary</B> ( const char*  name, <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>&amp; dicthandle, const char*  before = 0 )<BR>
+<I>Inserts a dictionary to the engine's list.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>replaceDictionary</B> ( const char*  name, <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>&amp; dicthandle )<BR>
+<I>Replaces the dictionary.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>removeDictionary</B> ( const char*  name )<BR>
+<I>Removes a dictionary from the engine's list.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>enableDictionary</B> ( const char*  name, bool enable=true )<BR>
+<I>Enables/disables a dictionary If the "enable" parameter is true the dictionary will be enabled otherwise it will be disabled.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>isDictionaryEnabled</B> ( const char*  name ) const <BR>
+<I>Gives if the dictonary is enabled or not</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>getDictCount</B> () const <BR>
+<I>Gives the engine's dictionary-list size.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>int </TD><TD><B>getDictionaryIndex</B> ( const char*  name ) const <BR>
+<I>Gives the index of a dictionary defined by "name" Return with -1 if the given name is not in the list</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const char* </TD><TD><B>getDictionaryName</B> ( int index ) const <BR>
+<I>Gives the name of a dictionary defined by "name" throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> </TD><TD><B>getDictionary</B> ( const char*  name ) const <BR>
+<I>Gives a handle of a dictionary defined by "name" If the given name doesn't exists the returned handle will be invalid</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.6.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> </TD><TD><B>getDictionary</B> ( int index ) const <BR>
+<I>Gives a handle of a dictionary defined by "index" throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range</I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>setPhonemeCoder</B> ( <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A>* coder )<BR>
+<I>Sets the outer phoneme coder to code the phoneme notification.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A>&amp; </TD><TD><B>getPhonemeCoder</B> () const <BR>
+<I>Gives the PhonemeCoder used by the Engine If the PhonemeCoder was set by the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.7">setPhonemeCoder</A> method this  function will return with this value otherwise it will return with the  default coder </I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>reset</B> ()<BR>
+<I>Puts the engine in its initial phase and sets the current speaker to the default.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~Engine</B> ()<BR>
+<I>Destructor</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.6.1.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   void </TD><TD><B>operator delete</B> ( void* p )<BR>
+<I>Deletes the engine.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<DL>
+
+<A NAME="Speak requests."></A>
+<A NAME="DOC.1.3.2.6.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Speak requests.</B></TT>
+<DD>Requests are queued up and are processed in their order of
+appearance.
+They can be cancelled by either calling to <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.5">stop</A> or
+<!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.6">cancel</A>.
+
+<P>The input text may contain so-called embedded commands.
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="addFragment"></A>
+<A NAME="DOC.1.3.2.6.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addFragment( const char*  text )</B></TT>
+<DD>Adds a text fragment to the next request.
+The request <EM>must</EM> be closed by calling <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A>.
+The engine copies the text.
+<DL><DT><DD></DL><P>
+<A NAME="addBookmark"></A>
+<A NAME="DOC.1.3.2.6.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addBookmark( <!1><A HREF="Bookmark.html">Bookmark</A>*  <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> )</B></TT>
+<DD>Adds a user bookmark.
+Ownership of the user bookmark is transferred to the engine.
+The bookmarks are let through the system and will be sent
+back to the client if an <!1><A HREF="INotify.html">INotify</A> instance is passed
+to the <!1><A HREF="IOutputSite.html">IOutputSite</A> given to this engine.
+
+<P>
+<DL><DT><DT><B>See Also:</B><DD><!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A>, <!1><A HREF="INotify.html">INotify</A>, <!1><A HREF="IOutputSite.html">IOutputSite</A><BR><DD></DL><P>
+<A NAME="speakRequest"></A>
+<A NAME="DOC.1.3.2.6.1.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void speakRequest( int repeatCount )</B></TT>
+<DD>Closes the request that was given by fragments.
+repeatCount determines the number of repetitions of the requests.
+if this parameter is zero the text will be repeated infinitly
+<DL><DT><DD></DL><P>
+<A NAME="speakRequest"></A>
+<A NAME="DOC.1.3.2.6.1.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void speakRequest(const char*  text, int repeatCount=1)</B></TT>
+<DD>Passes the given text to the engine for processing.
+The engine copies the text.
+repeatCount determines the number of repetitions of the requests.
+if this parameter is zero the text will be repeated infinitly
+<DL><DT><DD></DL><P>
+<A NAME="stop"></A>
+<A NAME="DOC.1.3.2.6.1.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void stop()</B></TT>
+<DD>Cancels all the pending requests, including the current one
+<DL><DT><DD></DL><P>
+<A NAME="cancel"></A>
+<A NAME="DOC.1.3.2.6.1.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void cancel( int requests = 1 )</B></TT>
+<DD>NOT YET IMPLEMENTED - Cancels the first 'requests' pending requests, including the current one
+<DL><DT><DD></DL><P>
+<A NAME="wait"></A>
+<A NAME="DOC.1.3.2.6.1.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void wait()</B></TT>
+<DD>Blocks the calling thread until all the requests are processed. 
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="State control."></A>
+<A NAME="DOC.1.3.2.6.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> State control.</B></TT>
+<DD>The state of the engine is identified with the state of an imagined
+pause button: it can be `paused', or `resumed' (pause on/off).
+The methods below provide a means of transfer in between these states.
+The initial state of the engine is `resumed'.
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="pause"></A>
+<A NAME="DOC.1.3.2.6.1.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void pause( <!1><A HREF="DocumentUnit.html">DocumentUnit</A> documentUnit = <!1><A HREF="DocumentUnit.html#DOC.1.3.2.1.3.8">DU_NULL_UNIT</A>, int items = 0 )</B></TT>
+<DD>Pauses the playing of the current request.
+
+<P>First, calls pause on the output site associated with this Engine instance
+and then pauses the processing of the current request. As a result, the
+output should stop playing immediately after calling this function.
+Changes the state to `paused'.
+
+<P>The pause happens at the first items document unit.
+If e.g. items = 0, and documentUnit = WORD, the pause happens at
+the end of the currently spoken word. Negative values are clipped at zero.
+documentUnit = NULL_UNIT instructs the engine to stop immediately (ASAP).
+
+<P>documentUnit and items are NOT USED.
+
+<DL><DT><DD></DL><P>
+<A NAME="resume"></A>
+<A NAME="DOC.1.3.2.6.1.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void resume()</B></TT>
+<DD>Resumes play.
+First calls resume on the output site associated with this Engine instance
+and then resumes the processing of the current request. As a result the
+output should start playing immediately after calling this function.
+Changes the state to `resumed'.
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="skip"></A>
+<A NAME="DOC.1.3.2.6.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int skip(<!1><A HREF="DocumentUnit.html">DocumentUnit</A> unit, int items )</B></TT>
+<DD>Skips a number of units with the request under play.
+Skip is a synchronous call. First, it
+stores the current state of the engine, then puts it in the paused state.
+Then it executes the skip and, finally, it resumes the stored
+playing state of the engine (e.g. if the state was paused before, the
+engine state remains paused after the call, as well).
+
+<P>Document units are ordered. A unit is called larger than another one if
+its range over the text is larger (e.g. a section unit is larger than
+a sentence unit).
+Requests are units themselves.
+
+<P>A skip command issued for a given unit will work only within the smallest enclosing unit
+of the current speech cursor (whose position is the position of the last bookmark
+for which the engine received a "played" notification from the output site).
+Thus, if skip( sen, -3 ) is issued when the speech cursor is in the middle of the second
+sentence of a paragraph, then the speech cursor is put to the beginning of the paragraph,
+exactly on the unit boundaries. The call will return by -2.
+Now, another skip( sen, -1 ) accomplishes the original call of skipping 3 sentences backwards
+provided that there are enough sentences in the previous (paragraph) unit.
+
+<P>The purpose of limiting the range of skip is to avoid skipping a large number of units.
+Users are rather suggested to use document structure markers and walking over the document
+structure. The rational of this is that skip is an expensive operation, at least at the level
+of sentences.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>unit</B> -   <!1><A HREF="Bookmark.html#DOC.1.3.4.2.1.4">type</A> of units to be skipped.
+<BR><B>items</B> -  determines the number of items to <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A>; if items=0, restarts reading the current unit,
+if item&gt;0 skips forward, and if item&lt;0 it skips backward the corresponding number of units
+<BR><DT><B>Returns:</B><DD>  number of items actually skipped.
+Currently documentUnit must be DU_SENTENCE or DU_WORD<BR><DD></DL><P>
+<A NAME="Speaker access methods."></A>
+<A NAME="DOC.1.3.2.6.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Speaker access methods.</B></TT>
+<DD>
+The methods below access the parameters of the current speaking
+voice (or speaker), as well as the list of speakers available in the engine to be used
+e.g. in embedded commands.
+
+<P>Note that the lifetime of "speaker" resources is managed globally by the factory, but
+for convenience, we allow the user to manage speaker definitions through engine
+instances.
+
+<P>A change to a speaker used in an engine instance with a given name will not affect
+speakers with the same name of other engine instances.
+In other words, speaker names are used only engine-wide.
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="setSpeakers"></A>
+<A NAME="DOC.1.3.2.6.1.4.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSpeakers( const <!1><A HREF="SpeakerMap.html">SpeakerMap</A>&amp; speakerMap, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )</B></TT>
+<DD>Copies the given speaker map to the engine's internal map
+The engine can use only those speakers that are in this map (except the default speaker)
+Currently cacheStrategy is NOT USED
+<DL><DT><DD></DL><P>
+<A NAME="addSpeaker"></A>
+<A NAME="DOC.1.3.2.6.1.4.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void addSpeaker( const char*  speakerName, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )</B></TT>
+<DD>Adds a speaker to the engine's internal speaker map.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>speakerName</B> - 
+<BR><B></B> - <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>
+<BR><B>cacheStrategy</B> - 
+Currently cacheStrategy is NOT USED.<BR><DD></DL><P>
+<A NAME="removeSpeaker"></A>
+<A NAME="DOC.1.3.2.6.1.4.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void removeSpeaker( const char*  speakerName )</B></TT>
+<DD>Removes the speaker from the engine's internal speaker map.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>speakerName</B> - 
+LIMITATIONS: There is a known issue with function.<BR><DD></DL><P>
+<A NAME="updateSpeaker"></A>
+<A NAME="DOC.1.3.2.6.1.4.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void updateSpeaker( const char*  speakerName, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A> )</B></TT>
+<DD>Updates the changes of the speaker in the engine's internal speaker map.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>speakerName</B> - 
+<BR><B></B> - <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A><BR><DD></DL><P>
+<A NAME="setSpeaker"></A>
+<A NAME="DOC.1.3.2.6.1.4.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setSpeaker(const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, bool now)</B></TT>
+<DD>Sets the current speaker to the one provided in the argument.
+
+<P>If the engine is speaking, the changes will take place as
+soon as it is possible.
+It is guaranteed that the changes will take place all at once.
+The actual position of change will depend on what parameters
+are changed - the ``smaller'' the changes the sooner they
+will takes place.
+E.g., the changes will take place almost immediately if
+the value of the baseline pitch is changed, but will be slightly delayed if
+the intonation model is changed.
+
+<P>If setSpeaker is called when the engine is in the `paused' state
+then all changes will already be in effect upon the next call to <!1><A HREF="Engine.html#DOC.1.3.2.6.1.2.2">resume</A>.
+However, this also means that resuming the engine in this case might take
+somewhat longer than it would normally take.
+
+<P>The actual place of change is version-dependent and is described
+separately in an accompanying document.
+
+<P>Note that the size of the buffers of the output sites might cause
+some delay, as well.
+
+<P>LIMITATIONS:
+If the engine is about to finish speaking it does not work as expected.
+Pause mode is not yet implemented.
+<DL><DT><DD></DL><P>
+<A NAME="getSpeaker"></A>
+<A NAME="DOC.1.3.2.6.1.4.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="Speaker.html">Speaker</A>&amp; getSpeaker() const </B></TT>
+<DD>Retrieves a reference to the current speaker
+<DL><DT><DD></DL><P>
+<A NAME="getSpeakers"></A>
+<A NAME="DOC.1.3.2.6.1.4.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="SpeakerMap.html">SpeakerMap</A>&amp; getSpeakers() const </B></TT>
+<DD>Retrieves a reference to the engine's internal speaker map
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Attribute handling methods."></A>
+<A NAME="DOC.1.3.2.6.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Attribute handling methods.</B></TT>
+<DD>Gives an IAttribute interface reference of the engine.
+Through this interface user can set some engine-specific parameters using
+the set/get functions <!1><A HREF="IAttribute.html">IAttribute</A>. These parameter-settings are independent
+from the speaker and also from the embedded command settings
+Currently the following parameters 
+are available:
+
+<P>- "speechRate":
+Specifies the speaking rate (speed) of the engine.
+The default value is 1.0. Larger values mean faster speech, smaller values 
+mean slower speech. Scale is roughly linear.
+
+<P>- "volume"
+Specifies the volume of the engine.
+The default value is 1.0 that represents the speaker's default volume.
+If the value is smaller than 1.0 the speech will be softer, if it is greater
+the speech will be lauder.
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="attribute"></A>
+<A NAME="DOC.1.3.2.6.1.5.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IAttribute.html">IAttribute</A>&amp; attribute() const </B></TT>
+<DD>The constant version of <!1><A HREF="Engine.html#DOC.1.3.2.6.1.5.1">attribute</A>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="Dictionary handler methods."></A>
+<A NAME="DOC.1.3.2.6.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Dictionary handler methods.</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="insertDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void insertDictionary( const char*  name, <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>&amp; dicthandle, const char*  before = 0 )</B></TT>
+<DD>Inserts a dictionary to the engine's list.
+The dictionary defined by the handle is stored in the <!1><A HREF="EngineFactory.html">EngineFactory</A> and
+the engine refers to it. Any changes in the dictionary after inserting it into
+the engine's list will take its effect on the speech.
+The dictionary mustn't be removed from the factory while the engine uses it!
+The priority of a dictionary is higher if it has greater index.
+The dictionary will be inserted before the dictionary defined by "before" parameter
+If the "before" parameter is zero the dictionary will be placed at the end of
+the list which means the highest priority
+<DL><DT><DD></DL><P>
+<A NAME="replaceDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void replaceDictionary( const char*  name, <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>&amp; dicthandle )</B></TT>
+<DD>Replaces the dictionary.
+This method is equivalent with proper remove/insert call. It helps to 
+deal with the dictionary order.
+<DL><DT><DD></DL><P>
+<A NAME="removeDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void removeDictionary( const char*  name )</B></TT>
+<DD>Removes a dictionary from the engine's list.
+The dictionary will remain in the factory but the engine will not use it further.
+<DL><DT><DD></DL><P>
+<A NAME="enableDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void enableDictionary( const char*  name, bool enable=true )</B></TT>
+<DD>Enables/disables a dictionary
+If the "enable" parameter is true the dictionary will be enabled otherwise it will
+be disabled. The engine uses only the enabled dictionaries.
+<DL><DT><DD></DL><P>
+<A NAME="isDictionaryEnabled"></A>
+<A NAME="DOC.1.3.2.6.1.6.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool isDictionaryEnabled( const char*  name ) const </B></TT>
+<DD>Gives if the dictonary is enabled or not
+<DL><DT><DD></DL><P>
+<A NAME="getDictCount"></A>
+<A NAME="DOC.1.3.2.6.1.6.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getDictCount() const </B></TT>
+<DD>Gives the engine's dictionary-list size.
+The indexes of the dictionaries are between 0 and this value.
+<DL><DT><DD></DL><P>
+<A NAME="getDictionaryIndex"></A>
+<A NAME="DOC.1.3.2.6.1.6.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>int getDictionaryIndex( const char*  name ) const </B></TT>
+<DD>Gives the index of a dictionary defined by "name"
+Return with -1 if the given name is not in the list
+<DL><DT><DD></DL><P>
+<A NAME="getDictionaryName"></A>
+<A NAME="DOC.1.3.2.6.1.6.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const char* getDictionaryName( int index ) const </B></TT>
+<DD>Gives the name of a dictionary defined by "name"
+throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range
+<DL><DT><DD></DL><P>
+<A NAME="getDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> getDictionary( const char*  name ) const </B></TT>
+<DD>Gives a handle of a dictionary defined by "name"
+If the given name doesn't exists the returned handle will be invalid
+<DL><DT><DD></DL><P>
+<A NAME="getDictionary"></A>
+<A NAME="DOC.1.3.2.6.1.6.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> getDictionary( int index ) const </B></TT>
+<DD>Gives a handle of a dictionary defined by "index"
+throws an <!1><A HREF="Errors.h.html#DOC.1.3.13.8">InvalidParamException</A> exception if the index is out of range
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="setPhonemeCoder"></A>
+<A NAME="DOC.1.3.2.6.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void setPhonemeCoder( <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A>* coder )</B></TT>
+<DD>Sets the outer phoneme coder to code the phoneme notification.
+If the client doesn't call this function, or calls it with NULL, the phoneme
+notification will be coded by the standard inner coder of the FlexVoice, otherwise
+the engine will code the phonemes with the given coder.
+The engine takes the ownership of the coder and the client mustn't use the given coder
+any more.
+With this method the client can make his or her own phoneme coding so it is
+unnecessary to use the FlexVoice's standard phoneme table. For more information please
+read the documentation of <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A>
+Since the new and the delete for an object cannot be at different sides
+of the dll boundary (to avoid asserts in debug mode), the coder must provide
+a destroy function that is called by the engine (the implementation
+must be "delete this").
+<DL><DT><DD></DL><P>
+<A NAME="getPhonemeCoder"></A>
+<A NAME="DOC.1.3.2.6.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const <!1><A HREF="IPhonemeCoder.html">IPhonemeCoder</A>&amp; getPhonemeCoder() const </B></TT>
+<DD>Gives the PhonemeCoder used by the Engine
+If the PhonemeCoder was set by the <!1><A HREF="Engine.html#DOC.1.3.2.6.1.7">setPhonemeCoder</A> method this 
+function will return with this value otherwise it will return with the 
+default coder
+
+<DL><DT><DT><B>Returns:</B><DD>  Returns with a constant reference to the internally used PhonemeCoder
+This value cannot be used directly it should be cloned if needed.<BR><DD></DL><P>
+<A NAME="reset"></A>
+<A NAME="DOC.1.3.2.6.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void reset()</B></TT>
+<DD>Puts the engine in its initial phase and sets the current speaker to the default.
+In particular, puts the engine in the `resumed' state, clears all internal buffers,
+as well as the requests.
+<DL><DT><DD></DL><P>
+<A NAME="~Engine"></A>
+<A NAME="DOC.1.3.2.6.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~Engine()</B></TT>
+<DD>Destructor
+<DL><DT><DD></DL><P>
+<A NAME="operator delete"></A>
+<A NAME="DOC.1.3.2.6.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   void operator delete( void* p )</B></TT>
+<DD>Deletes the engine.
+Calls the factory's (protected) <!1><A HREF="FilePhonemeCoder.html#DOC.1.3.7.1.4">destroy</A> function.
+This ensures the proper management of engine instances.
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  class    EngineImpl<BR>  class    <!1><A HREF="EngineFactory.html">EngineFactory</A><BR>  class    EngineFactoryImpl<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

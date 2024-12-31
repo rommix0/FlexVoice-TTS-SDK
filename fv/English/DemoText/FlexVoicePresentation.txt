@@ -1,0 +1,23 @@
+FlexVoice Text-To-Speech, developed by Mindmaker is a 
+state-of the art speech synthesis technology. 
+FlexVoice is based on a unique hybrid approach that maximizes 
+the advantages of the best traditional TTS implementations. 
+
+As a result the output of FlexVoice is both natural-sounding and flexible.
+
+In addition to this, the amount of run-time memory needed by the system is so small 
+that many parallel instances of FlexVoice can be run simultaneously, each speaking on the 
+voice of a different individual.
+
+FlexVoice is built using Mindmaker's advanced machine-learning technologies,
+substantially reducing the development time for new languages and voices.
+
+Mindmaker also offers other speech technologies, such as a plug-in 
+speech recognition system, called Tisento. Tisento allows the easy development of various 
+telephony applications.
+
+For more information about Tisento or other Mindmaker products, please contact our 
+colleagues at Mindmaker, or visit our web-site at www.mindmaker.com.
+
+Thank you for your attention.
+

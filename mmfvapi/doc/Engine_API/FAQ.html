@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> FAQ</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">FAQ</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Frequently Asked Questions </BLOCKQUOTE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE><DL>
+<DT><B>Q:</B><DD>   I am experiencing problems with getting your sample codes to 
+run after I compile them. I am also having a problem with
+compiling my code. I have Win32.
+<DT><B>A:</B><DD>   Don't forget to set the STL-patch include directory in
+Developer Studio (<TT>Tools\Options\Directories\Include&nbsp;files</TT>).
+The <EM>very</EM> first directory should be the STL patch
+directory since the STL that comes with VC 6.0 SP4 is buggy
+and FlexVoice was compiled with the patched STL whose
+files are listed in the given STL patch directory.
+The STL patch directory is normally 
+<TT>\Program&nbsp;Files\Mindmaker\FlexVoice&nbsp;3.0\SDK\include\STL-patch</TT>.
+<DT><B>Q:</B><DD>   On Win32, I've put together a program that uses FlexVoice,
+I did everything as required (as per your HelloWorld sample codes)
+but the engine still crashes when I try to create it. What
+am I doing wrong?
+<DT><B>A:</B><DD>   There are two possible causes. The first is that the data directory
+you specified does not have all the necessary data. If the 
+sample codes (most notably the <TT>say</TT> application) functions
+correctly then look for a directory where "voicelist.tvl" resides
+- this is the correct data directory. If <TT>say</TT> fails, you have 
+probably broken the data directory - it is best if you reinstall
+your system. The second reason is that some compiler settings
+may not be set, most notably RTTI and exception support must be
+set. See also the previous FAQ item.
+</DL></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

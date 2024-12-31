@@ -1,0 +1,12 @@
+Language		English
+DataDir			default
+RequestFreq		1000
+TextCount		5
+BufferSize		500
+InitBuffSize		0
+PhonemeQueueSize	5
+WaveQueueSize		1
+Speed 			0
+Speaker			BenPhone.tav
+SampFreq		8000
+BitResolution		8

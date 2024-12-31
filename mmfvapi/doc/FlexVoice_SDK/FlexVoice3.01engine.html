@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> FlexVoice 3.01 engine</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">FlexVoice 3.01 engine</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>
+FlexVoice is implemented in a separate dll named FlexVoice_3_01_000.dll.
+All the algorithms that are needed for the speech synthesis can be found here.
+All interfaces and FlexVoice based applications use this dll.
+The <TT>FlexVoice_3_01_000.dll</TT> can be found in the Window's system directory.
+
+<P>The engine itself is requires some data files in order to function. These files
+could be found at the Redistribution of FlexVoice section.
+
+<P>In case of redistribution this location can be changed by the redistributor application.
+The string-type registry entry: <TT>HKLM/Software/Mindmaker/CommonDirectory</TT> must
+contain the current location.
+
+<P>The ending of dll's and the data-directory's name (3_01_000) shows the binary
+compatibility number. While the engine is binary compatible with the previous version
+of it, this number doesn't change and in case of an upgrade this dll and the
+datas are simply changed. If the engine looses the compatibility, it gets a new number
+and the upgrade leaves the previous dll and datas in place and puts the new one
+close to the previous ones. This solution lets the older, not refreshed applications use
+the old dll while the new ones can use the new dll.
+
+<P>
+</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

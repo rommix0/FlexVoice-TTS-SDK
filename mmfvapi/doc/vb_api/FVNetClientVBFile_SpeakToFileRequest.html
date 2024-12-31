@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>int FVNETCLIENT_VBFILE_DECLSPEC PASCAL FVNetClientVBFile_SpeakToFileRequest</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\FVNetCS\FVNetClient_VBfile.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>int FVNETCLIENT_VBFILE_DECLSPEC PASCAL <A HREF="#DOC.DOCU">FVNetClientVBFile_SpeakToFileRequest</A></H2></TD><TD><H2>( unsigned long handle,<BR>&nbsp; const char*  text,<BR>&nbsp; FVNetCSLanguage language,<BR>&nbsp; const char*  filename,<BR>&nbsp; <!1><A HREF="FVNetClientVBFile_FileFormat.html">FVNetClientVBFile_FileFormat</A> fileformat,<BR>&nbsp; const char*  speaker,<BR>&nbsp; int relVolume,<BR>&nbsp; int relSpeed,<BR>&nbsp; int relPitch,<BR>&nbsp; int writeSpeed )</H2></TD></TR></TABLE>
+<BLOCKQUOTE>Creates speech.</BLOCKQUOTE>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Creates speech.
+This method sends the text to the server. The server synthesizes the speech 
+and sends back the generated data to the client. The client 
+stores this data in the speech data buffer. 
+Using the FVNetClientVBFile_GetSpeechData method, the caller is able to 
+read out speech data from the speech data buffer.
+The method doesn't wait for the end of the speech generation it returns 
+immediately. To wait its end you can call the <!1><A HREF="FVNetClientVBFile_Wait.html">FVNetClientVBFile_Wait</A> method.
+
+<P></BLOCKQUOTE>
+<DL><DT><DT><B>Parameters:</B><DD><B>handle</B> -            The handle created by the <!1><A HREF="FVNetClientVBFile_Create.html">FVNetClientVBFile_Create</A> method
+<BR><B>text</B> -              The text to be synthesized
+<BR><B>language</B> -          The language (see FVNetCSLanguage)
+<BR><B>filename</B> -          The name of the output file
+<BR><B>speaker</B> -           The name of requested speaker. If NULL or empty, then
+there is no requested speaker.
+<BR><B>relVolume</B> -         The relative volume (in percent)
+<BR><B>relSpeed</B> -          The relative speed (in percent)
+<BR><B>relPitch</B> -          The relative pitch (in percent)
+<BR><B>writeSpeed</B> -        The speed of the wave generation (in percent)
+<BR><DT><B>Returns:</B><DD>  The return value is an error code (see <!1><A HREF="FVNetClientVBFile_ErrorCode.html">FVNetClientVBFile_ErrorCode</A>)<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

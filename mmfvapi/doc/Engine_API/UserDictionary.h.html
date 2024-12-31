@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> UserDictionary.h</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">UserDictionary.h</A></H2></TD></H2></TD></TR></TABLE>
+
+<TABLE>
+<TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="IDictionaryItem"></A>
+<A HREF=IDictionaryItem.html><B>IDictionaryItem</B></A></TD><TD><BR>
+<I>A dictionary item accesses the word parameters.</I>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="DictIterator"></A>
+<A HREF=DictIterator.html><B>DictIterator</B></A></TD><TD><BR>
+<I>Non-const iteration of a <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance.</I>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="ConstDictIterator"></A>
+<A HREF=ConstDictIterator.html><B>ConstDictIterator</B></A></TD><TD><BR>
+<I>Const iteration of a <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance.</I>
+</TD></TR><TR><TD VALIGN=TOP>
+<IMG ALT="o" BORDER=0 SRC=icon1.gif><A NAME="DictionaryHandle"></A>
+<A HREF=DictionaryHandle.html><B>DictionaryHandle</B></A></TD><TD><BR>
+<I>This dictionary implementation is compatible with FlexVoice 10 implementations.</I>
+</TD></TR>
+</TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>A <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> is a list of word-pronunciation associations.
+A <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance can be given to the <!1><A HREF="Engine.html">Engine</A> by calling
+<!1><A HREF="Engine.html">Engine</A>::setDictionary(). The engine will always look up
+word-pronunciations first in the <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> instance, providing
+an easy way to define the pronunciation of irregular worlds not yet
+known by the engine.
+
+<P>The <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> is implemented with an std::map-like interface.
+It holds <!1><A HREF="IDictionaryItem.html">IDictionaryItem</A>s that can be retrieved, replaced, etc.</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

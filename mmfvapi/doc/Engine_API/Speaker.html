@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC Speaker</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Speaker.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">Speaker</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Speaker class.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=65>
+<param name=classes value="CIAttribute,MIAttribute.html,CSpeaker,MSpeaker.html">
+<param name=before value="M,M">
+<param name=after value="Md_,M">
+<param name=indent value="0,1">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.3.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="Speaker.html">Speaker</A>&amp; </TD><TD><B>operator =  </B> ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; )<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.3.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>operator &lt;  </B> ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.3.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>bool </TD><TD><B>operator == </B> ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.3.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>load</B> ( const char*  filename )<BR>
+<I>loads the speaker definition from a file</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.3.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>save</B> ( const char*  filename )<BR>
+<I>saves the given speaker definition to a file</I>
+</TD></TR></TABLE></P>
+
+</DL>
+<HR><H3>Inherited from <A HREF="IAttribute.html">IAttribute</A>:</H3>
+<DL>
+<P><DL>
+<DT><H3>Public Methods</H3><DD><DT>
+<P> <B>set/get functions</B>
+<P><DL>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.1">set</A></B>( const char*  name, bool data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.2">get</A></B>( const char*  name, bool&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.3">set</A></B>( const char*  name, char data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.4">get</A></B>( const char*  name, char&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.5">set</A></B>( const char*  name, int data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.6">get</A></B>( const char*  name, int&amp; data, int index=0 ) const  = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.7">set</A></B>( const char*  name, double data, int index=0 ) = 0
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif>virtual   bool <B><A HREF="#DOC.1.3.9.1.1.8">get</A></B>( const char*  name, double&amp; data, int index=0 ) const  = 0
+</DL></P>
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>set</B>( const char*  name, const char*  data, int index=0 )
+<DT>
+<IMG ALT="o" SRC=icon2.gif>virtual   bool <B>get</B>( const char*  name, char* buffer, int buffsize, int* reqsize=0, int index=0 ) const 
+</DL></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Speaker class.
+The valid parameter-names are the following:
+( The quoted value should be used as the name of the parameter,
+the next field is the parameter type. In case of strings the number after the 
+type shows the maximal size of the parameter )
+
+<P>"version"               string[100]     The name of the speaker
+"name"                  string[50]      The name of the speaker
+"filename"              string[500]     The last used filename
+"gender"                string[20]      
+"age"                   string[20]
+"synthType"             string[20]
+"voiceDescr"            string[50]
+"boundaryModel"         string[50]
+"boundaryPostModel"     string[50]
+"prominenceModel"       string[50]
+"durationModel"         string[50]
+"pitchModel"            string[50]
+"loudnessModel"         string[50]
+"vsShape"               string[50]
+"styleDescr"            string[50]
+"volumeSmoothWindow"    int
+"volume"                double
+"speechRate"            double
+"speedWPM"              int
+"defaultPitch"          int
+"pitchMin"              int
+"pitchMax"              int
+"pitchRate"             double
+"singingPitchRate"      double
+"intonationLevel"       double
+"headsize"              double
+"tilt"                  double
+"richness"              double
+"breathiness"           double
+"creakiness"            double
+"smoothness"            double
+"fricationRate"         double
+"plosiveRate"           double
+
+<P>"subharmonicFilter"         structure:Filter
+"voicingSourceHarmFilter"   structure:Filter
+"voicingSourceNoiseFilter"  structure:Filter
+"equalizer"                 structure:Equalizer
+"vsNoiseParams"             structure:NoiseParams
+
+<P>Structures:
+
+<P>Filter:
+"lowpass"               bool
+"d1"                    double
+"d2"                    double
+"f1"                    int
+"f2"                    int
+
+<P>Equalizer:
+"f0"                    int-array
+"gain"                  double-array
+"bw"                    double-array
+"channels"              int
+
+<P>Usage example:
+ITTSAttribute * equalizer = attr-&gt;getAttribute( "equalizer" );    
+if( equalizer != NULL )
+{
+equalizer-&gt;set( "channels"     , 10                    );
+for( int i=0; i &lt; 10; ++i )
+{
+equalizer-&gt;set( "f0"  , 0  , i );
+equalizer-&gt;set( "gain", 0.0, i );
+equalizer-&gt;set( "bw"  , 100, i );
+}
+}
+ITTSAttribute * equalizer = attr-&gt;getAttribute( "equalizer" );    
+if( equalizer != NULL )
+{
+int count=0;
+equalizer-&gt;get( "channels", count );
+speaker.m_equalizer.setChannels( count );
+for( int i=0; i &lt; count; ++i )
+{
+int     f0;
+double  bw;
+double  gain;
+
+<P>equalizer-&gt;get( "f0"  , f0  , i );
+equalizer-&gt;get( "gain", bw  , i );
+equalizer-&gt;get( "bw"  , gain, i  );
+speaker.m_equalize-&gt;setChannelParams( f0, gain, bw );
+}
+}
+
+<P>NoiseParams:
+"peekAmpl"              double
+"startPos"              double
+"floor"                 double
+
+<P>Obsolate parameters: (no meaning anymore, garantied that it will 
+be not used in the future)
+- durationDescr
+- durationStat
+- pitchDescr
+- pitchQDescr
+- volumeDescr
+- volumeStat</BLOCKQUOTE>
+<DL>
+
+<A NAME="operator =  "></A>
+<A NAME="DOC.1.3.3.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="Speaker.html">Speaker</A>&amp; operator =  ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; )</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator <  "></A>
+<A NAME="DOC.1.3.3.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator &lt;  ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; ) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="operator == "></A>
+<A NAME="DOC.1.3.3.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>bool operator == ( const <!1><A HREF="Speaker.html">Speaker</A>&amp; ) const </B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="load"></A>
+<A NAME="DOC.1.3.3.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void load( const char*  filename )</B></TT>
+<DD>loads the speaker definition from a file
+<DL><DT><DD></DL><P>
+<A NAME="save"></A>
+<A NAME="DOC.1.3.3.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void save( const char*  filename )</B></TT>
+<DD>saves the given speaker definition to a file
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

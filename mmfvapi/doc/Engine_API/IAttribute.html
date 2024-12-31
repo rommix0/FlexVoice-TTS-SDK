@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC IAttribute</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Attribute.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">IAttribute</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Attribute interface Lets object hide the member variables from the client by defining parameters with their name.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=125>
+<param name=classes value="CIAttribute,MIAttribute.html,CIDictionaryItem,MIDictionaryItem.html,CSpeaker,MSpeaker.html,CIOutputSite,MIOutputSite.html">
+<param name=before value="M,M|_,MR_,Mr_">
+<param name=after value="M,M,M,M">
+<param name=indent value="0,0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>set/get functions</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>set</B> ( const char*  name, bool data, int index=0 )<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>get</B> ( const char*  name, bool&amp; data, int index=0 ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>set</B> ( const char*  name, char data, int index=0 )<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>get</B> ( const char*  name, char&amp; data, int index=0 ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>set</B> ( const char*  name, int data, int index=0 )<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>get</B> ( const char*  name, int&amp; data, int index=0 ) const <BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>set</B> ( const char*  name, double data, int index=0 )<BR>
+<I></I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.1.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>get</B> ( const char*  name, double&amp; data, int index=0 ) const <BR>
+<I></I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>set</B> ( const char*  name, const char*  data, int index=0 )<BR>
+<I>Sets the value of a string parameter identified by the 'name' In case of arrays, the 'index' identifies the array-index if name is not recognized, the return value is false otherwise true The length of some parameter's value is maximized that is described in the documentation.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.9.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   bool </TD><TD><B>get</B> ( const char*  name, char* buffer, int buffsize, int* reqsize=0, int index=0 ) const <BR>
+<I>Gets the value of a string parameter identified by the 'name' In case of arrays, the 'index' identifies the array-index If name is not recognized, the return value is false otherwise true The result will be copied to the buffer that should be minimum 'buffsize' large.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Attribute interface
+Lets object hide the member variables from the client by defining parameters
+with their name. Without using this interface the class can't keep the binary
+compatibility if it is extended with new member. This means that all client program
+should be rebuilt. With this solution only those applications should be rebuilt
+that wants to use the new member.
+
+<P>The usage of this interface is not too complicated. E.g. if the application wants to
+set an int member value (m_intvalue) instead of writting 
+object.m_intvalue = 1;
+it should write
+
+<P>object.set( "intvalue", 1 );
+
+<P>To read this value instead of writting 
+
+<P>int value = object.m_intvalue;
+... using value...
+
+<P>it should write
+
+<P>int value;
+if( object.get( "intvalue", value ) )
+{
+... using value...
+}
+
+<P>If the object doesn't support "m_intvalue" further, the get and set calls returns false.
+Setting and reading members with some other simple type (bool, char, int, double) 
+works the same. This interface doesn't support short float and any unsigned types.
+
+<P>Handling strings is a bit different. 
+If the length of the string can be maximized then the object documents this fact 
+and the set and get methods handles this documented value. 
+E.g. setting a string value (named "strvalue") that was maximized in 10 
+can be done with the following call:
+
+<P>object.set( "strvalue", "hello" );
+
+<P>If the given text is longer then the maximum value it will be truncated.
+Reading this value:
+
+<P>char buffer[10+1];
+object.get( "strvalue", buffer, 10+1 );
+
+<P>In this example the value is garantied to fit in the given buffer.
+
+<P>If the length of string-parameter is not maximized, no truncation will be done in the
+set call. In this case the value-readin is more complex:
+
+<P>int reqsize=0;
+if( object.get( "strvalue", NULL, 0, reqsize )
+{
+char * buffer = new char[requsize+1];
+object.get( "strvalue", bufer, requsize+1 );
+... using buffer...
+}
+
+<P>If a member is an array of any type its size can be handled by setArraySize/getArraySize
+Accessing an element of an array can be done by the "index" parameter of 
+the set/get methods
+E.g:
+
+<P>object.setArraySize( "intarray", 3 );
+for( int i=0; i &lt; 3; ++i )
+{
+object.set( "intarray", 0, i );
+}
+...
+int size = object.getArraySize( "intarray", 3 );
+for( int i=0; i &lt; size; ++i )
+{
+int value;
+object.get( "intarray", value, i );
+...using value...
+}
+
+<P>If a member is a structure its IAttribute interface can be get by the
+getAttribute method. E.g.:
+
+<P>IAttribute* attr = object.getAttribute( "complex_value" );
+if( attr != NULL )
+{
+attr-&gt;set( "intvalue", 0 );
+}
+</BLOCKQUOTE>
+<DL>
+
+<A NAME="set/get functions"></A>
+<A NAME="DOC.1.3.9.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> set/get functions</B></TT>
+<DD>The following set functions (with all types) set the value of a parameter 
+identified by the 'name', the get functions give the current value.
+In case of arrays, the 'index' identifies
+the array-index. The size of the array can be set by \ref{setArraySize}
+and get by \ref{getArraySize}
+If name is not recognized, the return value is false otherwise true
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="set"></A>
+<A NAME="DOC.1.3.9.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool set( const char*  name, bool data, int index=0 ) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.1.3.9.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool get( const char*  name, bool&amp; data, int index=0 ) const  = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.1.3.9.1.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool set( const char*  name, char data, int index=0 ) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.1.3.9.1.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool get( const char*  name, char&amp; data, int index=0 ) const  = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.1.3.9.1.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool set( const char*  name, int data, int index=0 ) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.1.3.9.1.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool get( const char*  name, int&amp; data, int index=0 ) const  = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="set"></A>
+<A NAME="DOC.1.3.9.1.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool set( const char*  name, double data, int index=0 ) = 0</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.1.3.9.1.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool get( const char*  name, double&amp; data, int index=0 ) const  = 0</B></TT>
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="set"></A>
+<A NAME="DOC.1.3.9.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool set( const char*  name, const char*  data, int index=0 ) = 0</B></TT>
+<DD>Sets the value of a string parameter identified by the 'name'
+In case of arrays, the 'index' identifies the array-index
+if name is not recognized, the return value is false otherwise true
+The length of some parameter's value is maximized that is described
+in the documentation. The given longer values are truncated. This
+behaviour is because the easy usage.
+<DL><DT><DD></DL><P>
+<A NAME="get"></A>
+<A NAME="DOC.1.3.9.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   bool get( const char*  name, char* buffer, int buffsize, int* reqsize=0, int index=0 ) const  = 0</B></TT>
+<DD>Gets the value of a string parameter identified by the 'name'
+In case of arrays, the 'index' identifies the array-index
+If name is not recognized, the return value is false otherwise true
+The result will be copied to the buffer that should be minimum
+'buffsize' large. If the required value is longer than the given size,
+the value will be truncated. If the 'reqsize' is not NULL, the real length
+are written to this parameter
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="IDictionaryItem.html">IDictionaryItem</A><BR>
+<A HREF="Speaker.html">Speaker</A><BR>
+<A HREF="IOutputSite.html">IOutputSite</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

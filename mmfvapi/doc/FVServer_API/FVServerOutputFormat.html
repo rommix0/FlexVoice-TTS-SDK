@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>enum  FVServerOutputFormat</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\FVServer.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>enum  <A HREF="#DOC.DOCU">FVServerOutputFormat</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>The possible output formats</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.1">FVServerOutputFormat_Invalid</A></B>
+<DD><I>Invalid output format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.2">FVServerOutputFormat_PCM_Signed</A></B>
+<DD><I>Signed PCM format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.3">FVServerOutputFormat_PCM_Unsigned</A></B>
+<DD><I>Unsigned PCM format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.4">FVServerOutputFormat_ULAW</A></B>
+<DD><I>ULAW format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.5">FVServerOutputFormat_ALAW</A></B>
+<DD><I>ALAW format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.6">FVServerOutputFormat_VOX</A></B>
+<DD><I>VOX format The output data contains the samples in a coded format.</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.1.2.7">FVServerOutputFormat_VIS</A></B>
+<DD><I>VIS format The output data contains the samples in a coded format.</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>The possible output formats</BLOCKQUOTE>
+<DL>
+
+<A NAME="FVServerOutputFormat_Invalid"></A>
+<A NAME="DOC.1.3.1.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_Invalid</B></TT>
+<DD>Invalid output format.
+Used to indicate that the format hasn't been set yet
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_PCM_Signed"></A>
+<A NAME="DOC.1.3.1.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_PCM_Signed</B></TT>
+<DD>Signed PCM format.
+The output is given as samples (with the given bit resolution)
+and its value should be treat as signed.
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_PCM_Unsigned"></A>
+<A NAME="DOC.1.3.1.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_PCM_Unsigned</B></TT>
+<DD>Unsigned PCM format.
+The output is given as samples (with the given bit resolution)
+and its value should be treat as unsigned.
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_ULAW"></A>
+<A NAME="DOC.1.3.1.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_ULAW</B></TT>
+<DD>ULAW format.
+The output data contains the samples in a coded format.
+The bit resolution should be set to 16 that will be coded
+to 8 bit.
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_ALAW"></A>
+<A NAME="DOC.1.3.1.2.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_ALAW</B></TT>
+<DD>ALAW format.
+The output data contains the samples in a coded format.
+The bit resolution should be set to 16 that will be coded
+to 8 bit.
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_VOX"></A>
+<A NAME="DOC.1.3.1.2.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_VOX</B></TT>
+<DD>VOX format
+The output data contains the samples in a coded format.
+The bit resolution should be set to 16 that will be coded
+to 8 bit.
+<DL><DT><DD></DL><P>
+<A NAME="FVServerOutputFormat_VIS"></A>
+<A NAME="DOC.1.3.1.2.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> FVServerOutputFormat_VIS</B></TT>
+<DD>VIS format
+The output data contains the samples in a coded format.
+The bit resolution should be set to 16
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

@@ -1,0 +1,310 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MultiSpeakTest.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MultiSpeakTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MULTISPEAKTEST_DIALOG DIALOGEX 0, 0, 77, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MultiSpeakTest"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Add &English",IDC_BUTTON_ADD_ENGLISH,10,10,55,14
+    PUSHBUTTON      "Add &Hungarian",IDC_BUTTON_ADD_HUNGARIAN,10,30,55,14
+    PUSHBUTTON      "Add &Malay",IDC_BUTTON_ADD_MALAY,10,50,55,14
+END
+
+IDD_DIALOG_SPEAK_TEST DIALOG DISCARDABLE  0, 0, 307, 330
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,250,15,50,14
+    EDITTEXT        IDC_EDIT_TEXT,10,15,165,75,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN
+    LTEXT           "&Text:",IDC_STATIC,10,5,17,8
+    EDITTEXT        IDC_EDIT_EVENTS,10,110,165,80,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Events",IDC_STATIC,10,100,23,8
+    PUSHBUTTON      "Clear",IDC_BUTTON_EVENTS_CLEAR,125,195,50,15
+    CONTROL         "Text",IDC_CHECK_TEXT_DONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,201,110,30,10
+    CONTROL         "Paragraph",IDC_CHECK_PARAGRAPH_DONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,201,120,49,10
+    CONTROL         "",IDC_CHECK_TEXT_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,110,8,10
+    LTEXT           "Start/Done",IDC_STATIC,185,100,36,8
+    CONTROL         "",IDC_CHECK_PARAGRAPH_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,120,8,10
+    CONTROL         "Sentence",IDC_CHECK_SENTENCE_DONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,201,130,47,10
+    CONTROL         "",IDC_CHECK_SENTENCE_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,130,8,10
+    CONTROL         "Token",IDC_CHECK_TOKEN_DONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,201,150,37,10
+    CONTROL         "",IDC_CHECK_TOKEN_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,150,8,10
+    CONTROL         "Word",IDC_CHECK_WORD_DONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,201,160,33,10
+    CONTROL         "",IDC_CHECK_WORD_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,160,8,10
+    CONTROL         "Phoneme",IDC_CHECK_PHONEME_DONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,201,170,46,10
+    CONTROL         "",IDC_CHECK_PHONEME_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,170,8,10
+    PUSHBUTTON      "&Speak",IDC_BUTTON_SPEAK,185,35,50,14
+    PUSHBUTTON      "&Pause",IDC_BUTTON_PAUSE_RESUME,185,75,50,14
+    EDITTEXT        IDC_EDIT_REPEAT_COUNT,185,15,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "&Repeat count",IDC_STATIC,185,5,44,8
+    CONTROL         "Prepare",IDC_CHECK_PREPARE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,190,41,10
+    CONTROL         "Bookmark",IDC_CHECK_BOOKMARK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,200,48,10
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_TEXT_BACK,250,110,25,10,WS_DISABLED
+    LTEXT           "Skip",IDC_STATIC,250,100,15,8
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_TEXT_FORWARD,276,110,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_PARAGRAPH_BACK,250,120,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_PARAGRAPH_FORWARD,276,120,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_SENTENCE_BACK,250,130,25,10
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_SENTENCE_FORWARD,276,130,25,10
+    CONTROL         "Phrase",IDC_CHECK_PHRASE_DONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,201,140,38,10
+    CONTROL         "",IDC_CHECK_PHRASE_START,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,185,140,8,10
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_PHRASE_BACK,250,140,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_PHRASE_FORWARD,276,140,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      "+",IDC_BUTTON_SELECT_ALL_EVENTS,185,180,10,10
+    PUSHBUTTON      "-",IDC_BUTTON_DESELECT_ALL_EVENTS,201,180,10,10
+    LTEXT           " All",IDC_STATIC,211,180,10,8
+    EDITTEXT        IDC_EDIT_SKIP_COUNT,275,95,25,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Slider1",IDC_SLIDER_SPEECH_RATE,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,235,225,40,10
+    LTEXT           "Speech Rate",IDC_STATIC,190,225,43,8
+    EDITTEXT        IDC_EDIT_SPEECH_RATE,275,225,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_VOLUME,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,235,240,40,10
+    EDITTEXT        IDC_EDIT_VOLUME,275,240,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_DEFAULT_PITCH,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,116,225,40,10
+    LTEXT           "Default Pitch",IDC_STATIC,70,225,42,8
+    EDITTEXT        IDC_EDIT_DEFAULT_PITCH,156,225,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_MIN_PITCH,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,116,241,40,10
+    LTEXT           "Min Pitch",IDC_STATIC,70,241,30,8
+    EDITTEXT        IDC_EDIT_MIN_PITCH,156,241,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_MAX_PITCH,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,116,257,40,10
+    LTEXT           "Max Pitch",IDC_STATIC,70,257,32,8
+    EDITTEXT        IDC_EDIT_MAX_PITCH,156,257,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_PITCH_RATE,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,116,270,40,10
+    LTEXT           "Pitch Rate",IDC_STATIC,70,270,34,8
+    EDITTEXT        IDC_EDIT_PITCH_RATE,156,270,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_INTONATION_LEVEL,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,116,286,40,10
+    LTEXT           "Inton. Level",IDC_STATIC,70,286,38,8
+    EDITTEXT        IDC_EDIT_INTONATION_LEVEL,156,286,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_HEADSIZE,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,235,255,40,10
+    LTEXT           "Richness",IDC_STATIC,190,270,30,8
+    EDITTEXT        IDC_EDIT_HEADSIZE,275,255,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_RICHNESS,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,235,270,40,10
+    LTEXT           "Headsize",IDC_STATIC,190,255,30,8
+    EDITTEXT        IDC_EDIT_RICHNESS,275,270,25,14,ES_AUTOHSCROLL
+    LTEXT           "Volume",IDC_STATIC,190,240,24,8
+    LTEXT           "Frication Rate",IDC_STATIC,190,285,45,8
+    LTEXT           "Smoothness",IDC_STATIC,190,300,40,8
+    CONTROL         "Slider1",IDC_SLIDER_FRICATION_RATE,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,235,285,40,10
+    EDITTEXT        IDC_EDIT_FRICATION_RATE,275,285,25,14,ES_AUTOHSCROLL
+    CONTROL         "Slider1",IDC_SLIDER_SMOOTHNESS,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,235,300,40,10
+    EDITTEXT        IDC_EDIT_SMOOTHNESS,275,300,25,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_SPEAKER,10,225,50,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_TOKEN_BACK,250,150,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_TOKEN_FORWARD,276,150,25,10,
+                    WS_DISABLED
+    PUSHBUTTON      "<<",IDC_BUTTON_SKIP_WORD_BACK,250,160,25,10
+    PUSHBUTTON      ">>",IDC_BUTTON_SKIP_WORD_FORWARD,276,160,25,10
+    PUSHBUTTON      "S&top",IDC_BUTTON_STOP,185,55,50,14
+    LTEXT           "Speaker",IDC_STATIC,10,215,28,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MultiSpeakTest MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MultiSpeakTest\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MultiSpeakTest.EXE\0"
+            VALUE "ProductName", "MultiSpeakTest Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MULTISPEAKTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 70
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_DIALOG_SPEAK_TEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 300
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 323
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MultiSpeakTest.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

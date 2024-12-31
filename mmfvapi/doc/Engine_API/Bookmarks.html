@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Bookmarks</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Bookmarks</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>During the speech there are many events that can be important for the
+user. These events can be the speech start/stop events, the notifications 
+about the currently speaking specific parts of the text such as the 
+beginning and the ends of the sentences, words and even the phonemes.
+The notifications are passed to the OutputSites that dispatches them 
+to the listeners. To handle the notifications the user should implement
+the <!1><A HREF="INotify.html">INotify</A> interface and should register it to the OutputSite
+(see <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.8">registerNotify</A>). Note that only those notifications will be 
+passed to the listener that are explicit listed by the registration.
+Before destroying the listener object it should be unregistered from
+the OutputSite! 
+The <!1><A HREF="Bookmark.html">Bookmark</A> is passed to listener object by calling its 
+<!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> method. Depending on the implementation of the OutputSite
+it calls the <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.4">prepare</A> method of the listener to give time it to 
+prepare for the real event.
+
+<P>Depending on the type of the <!1><A HREF="Bookmark.html">Bookmark</A> some of them can be 
+dynamic_cast-ed to its real type that can contain specific information
+about the specific event.
+
+<P>The base <!1><A HREF="Bookmark.html">Bookmark</A> contains information about the event, about
+its text positioning and about its timing.
+
+<P>It is very important to ensure that the notification method should return
+as soon as possible while taking much time in the bookmark() and the prepare()
+methods can cause problems in the engine. Also important that in these methods
+no synchron methods should be called from the engine while it can cause 
+deadlocks. E.g. if the engine's wait() method is called in the bookmark 
+it will cause explicit deadlock, while the engine's wait() call doesn't 
+return until the speech is finished but it cannot because the notification 
+didn't return yet. To avoid these problems the <!1><A HREF="NotifyTransfer.html">NotifyTransfer</A> object
+can be used that transfers the notifications to another thread that 
+ensures that the the notification can't block the engine.</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

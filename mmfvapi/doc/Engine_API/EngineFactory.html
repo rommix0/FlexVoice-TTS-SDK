@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC EngineFactory</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Engine.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">EngineFactory</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Responsible for managing <!1><A HREF="Engine.html">Engine</A> and instances, <!1><A HREF="Speaker.html">Speaker</A> resources  and Dictionaries (<!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>).</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=35>
+<param name=classes value="CEngineFactory,MEngineFactory.html">
+<param name=before value="M">
+<param name=after value="M">
+<param name=indent value="0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>Construction, destruction.</B> <BR>
+<I></I>
+<P><TABLE BORDER>
+<TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.1.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>EngineFactory</B> ( const char* path )<BR>
+<I>Constructs an engine factory using the data at the given path.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A> </TD><TD><B>~EngineFactory</B> ()<BR>
+<I>Destroys the factory - the behavior is undefined if the factory is destructed while there is a living <!1><A HREF="Engine.html">Engine</A> instance</I>
+</TD></TR></TABLE></P>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>static   const char* </TD><TD><B>getDefaultDataPath</B> ()<BR>
+<I>Gives the default data path.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>const char* </TD><TD><B>getLangDataPath</B> ( <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Gives the data path.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>loadLanguage</B> ( <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Loads the resources for the given language.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.5"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>unloadLanguage</B> ( <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Unloads the given language.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.6"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>::std::auto_ptr&lt;<!1><A HREF="Engine.html">Engine</A>&gt;  </TD><TD><B>createEngine</B> ( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Creates an engine instance that will use the given output site and the given speaker.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.7"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>::std::auto_ptr&lt;SyncEngine&gt;  </TD><TD><B>createSyncEngine</B> ( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Not implemented yet!</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.8"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>::std::auto_ptr&lt;StreamEngine&gt;  </TD><TD><B>createStreamEngine</B> ( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Not implemented yet!</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.9"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>long </TD><TD><B>addSpeaker</B> ( <!1><A HREF="Language.html">Language</A> lang, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )<BR>
+<I>Adds a speaker to the factory.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.10"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>removeSpeaker</B> ( long <!1><A HREF="Bookmark.html#DOC.1.3.4.2.1.10">id</A> )<BR>
+<I>Removes the speaker identified by its ID.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.11"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> </TD><TD><B>createDictionary</B> ( <!1><A HREF="Language.html">Language</A> lang )<BR>
+<I>Creates a new dictionary and returns with a handle of it.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.2.5.1.12"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>void </TD><TD><B>removeDictionary</B> ( <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> handle)<BR>
+<I>Removes and deletes a dictionary referred by the given handle.</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Responsible for managing <!1><A HREF="Engine.html">Engine</A> and instances, <!1><A HREF="Speaker.html">Speaker</A> resources 
+and Dictionaries (<!1><A HREF="DictionaryHandle.html">DictionaryHandle</A>).
+A factory is used to instantiate engines.
+Also, factories manage resources, such as speaker binaries.
+The factory must be kept alive until the last engine instance is destroyed.</BLOCKQUOTE>
+<DL>
+
+<A NAME="Construction, destruction."></A>
+<A NAME="DOC.1.3.2.5.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> Construction, destruction.</B></TT>
+<DL><DT><DD></DL><P><DL>
+
+<A NAME="EngineFactory"></A>
+<A NAME="DOC.1.3.2.5.1.1.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> EngineFactory( const char* path )</B></TT>
+<DD>Constructs an engine factory using the data at the given path.
+If path is NULL then the constructor tries to find out the correct path.
+First it tries to get the environment variable "FLEXVOICE_DATA". If it exists
+the constructor will use it.. 
+On Windows the setup program of the FlexVoice engine will place the data path
+to the registry, so in this case the environment variable setting is not requred.
+If the given path is incorrect or there are files that cannot be loaded, the 
+constructor throws an exception:CannotInitializeFactory.
+
+<P>
+<DL><DT><DT><B>Throws:</B><DD><B>CannotInitializeFactory</B>  if the required resources could not be read (could not be found or are corrupted).<BR><DT><B>Parameters:</B><DD><B>path</B> - 
+<BR><DD></DL><P>
+<A NAME="~EngineFactory"></A>
+<A NAME="DOC.1.3.2.5.1.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> ~EngineFactory()</B></TT>
+<DD>Destroys the factory - the behavior is undefined if the factory is destructed
+while there is a living <!1><A HREF="Engine.html">Engine</A> instance
+<DL><DT><DD></DL><P></DL>
+
+<A NAME="getDefaultDataPath"></A>
+<A NAME="DOC.1.3.2.5.1.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>static   const char* getDefaultDataPath()</B></TT>
+<DD>Gives the default data path.
+This is the path from where the factory will be initialized if the user will
+supply NULL in the dataPath parameter of the constructor. 
+It is usefull for finding the VoiceList.tvl or Default.tav without creating
+an EngineFactory object which is an expensive operation.
+<DL><DT><DD></DL><P>
+<A NAME="getLangDataPath"></A>
+<A NAME="DOC.1.3.2.5.1.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>const char* getLangDataPath( <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Gives the data path.
+This path is from where the factory initialized the given language.
+It is useful if the user gave a NULL pointer to the constructor and wants 
+to get the path in order to find the VoiceList.tvl or the Default.tav files. 
+The return value can never be NULL when the construction succeeded.
+<DL><DT><DD></DL><P>
+<A NAME="loadLanguage"></A>
+<A NAME="DOC.1.3.2.5.1.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void loadLanguage( <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Loads the resources for the given language.
+This call is required for creating an Engine with the given language.
+@throws If the resources for the given language is not available in the 
+path that was specified in the constructor it throws an 
+exception:CannotLoadLanguage.
+<DL><DT><DD></DL><P>
+<A NAME="unloadLanguage"></A>
+<A NAME="DOC.1.3.2.5.1.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void unloadLanguage( <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Unloads the given language.
+Before this call all the engine created with this language should be
+destroyed. 
+<DL><DT><DD></DL><P>
+<A NAME="createEngine"></A>
+<A NAME="DOC.1.3.2.5.1.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>::std::auto_ptr&lt;<!1><A HREF="Engine.html">Engine</A>&gt;  createEngine( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Creates an engine instance that will use the given output site and the given speaker.
+Engines must be instantiated by calling <!1><A HREF="DictionaryHandle.html#DOC.1.3.8.4.12.11">create</A>.
+
+<P>Engines can be destroyed normally, using the delete operator -
+the delete operator of engines is overriden to call the factory's 
+(protected) <!1><A HREF="FilePhonemeCoder.html#DOC.1.3.7.1.4">destroy</A> function. This ensures the proper counting of engine
+instances.
+
+<P>Also, in Windows the delete operator associated with the DLL containing the 
+implementation of create is called. This is only important when the user
+compiles a debug version of the code.
+
+<P>Ownership of the output site is NOT transferred to the constructed engine instance.
+The preferred wave format of the given output site is used as the output format.
+
+<P>
+<DL><DT><DT><B>Throws:</B><DD><B>OutputFormatNotSupported</B> 
+<BR><B>CannotCreateEngine</B> <BR><DD></DL><P>
+<A NAME="createSyncEngine"></A>
+<A NAME="DOC.1.3.2.5.1.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>::std::auto_ptr&lt;SyncEngine&gt;  createSyncEngine( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Not implemented yet!
+<DL><DT><DD></DL><P>
+<A NAME="createStreamEngine"></A>
+<A NAME="DOC.1.3.2.5.1.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>::std::auto_ptr&lt;StreamEngine&gt;  createStreamEngine( <!1><A HREF="IOutputSite.html">IOutputSite</A>* output, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Not implemented yet!
+<DL><DT><DD></DL><P>
+<A NAME="addSpeaker"></A>
+<A NAME="DOC.1.3.2.5.1.9"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>long addSpeaker( <!1><A HREF="Language.html">Language</A> lang, const <!1><A HREF="Speaker.html">Speaker</A>&amp; <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>, <!1><A HREF="SpeakerCacheStrategy.html">SpeakerCacheStrategy</A> cacheStrategy )</B></TT>
+<DD>Adds a speaker to the factory.
+The speaker definition is loaded in the resource pool managed by this
+factory.
+
+<P>The method may execute longer depending on the properties of the speaker
+and the state of the factory: loading a proprietary speaker for the first
+time may take a few seconds.
+This method can be used to preload speaker resources before the
+construction of any engine instance - useful e.g. in a service when engine
+construction times are critical.
+
+<P>
+<DL><DT><DT><B>Parameters:</B><DD><B>lang</B> -             the given language.
+<BR><B></B> - <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>         <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A> to be added.
+<BR><B>cacheStrategy</B> -    cache strategy used with the given <!1><A HREF="BookmarkSpeakerChanged.html#DOC.1.3.4.2.6.1">speaker</A>
+<BR><DT><B>Returns:</B><DD>  unique id identifying the speaker<BR><DD></DL><P>
+<A NAME="removeSpeaker"></A>
+<A NAME="DOC.1.3.2.5.1.10"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void removeSpeaker( long <!1><A HREF="Bookmark.html#DOC.1.3.4.2.1.10">id</A> )</B></TT>
+<DD>Removes the speaker identified by its ID.
+The actual timing of the removal of associated resources from memory
+depends on the caching strategy associated with the speaker.
+Also, if the speaker resources are in use by some engine then they
+are not freed.
+
+<DL><DT><DT><B>Parameters:</B><DD><B></B> - <!1><A HREF="Bookmark.html#DOC.1.3.4.2.1.10">id</A><BR><DD></DL><P>
+<A NAME="createDictionary"></A>
+<A NAME="DOC.1.3.2.5.1.11"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B><!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> createDictionary( <!1><A HREF="Language.html">Language</A> lang )</B></TT>
+<DD>Creates a new dictionary and returns with a handle of it.
+The returned handle will be valid until the dictionary is removed.
+<DL><DT><DD></DL><P>
+<A NAME="removeDictionary"></A>
+<A NAME="DOC.1.3.2.5.1.12"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>void removeDictionary( <!1><A HREF="DictionaryHandle.html">DictionaryHandle</A> handle)</B></TT>
+<DD>Removes and deletes a dictionary referred by the given handle.
+After removing a dictionary, the handles referring to this dictionary shouldn't
+be used.
+<DL><DT><DD></DL><P></DL>
+
+<HR><DL><DT><B>This class has no child classes.</B></DL>
+
+<DL><DT><DT><B>Friends:</B><DD>  class <!1><A HREF="Engine.html">Engine</A><BR>  class EngineImpl<BR>  class EngineFactoryImpl<BR><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> The Speaker</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">The Speaker</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The speaker is a set of parameters that descibe the voice and the prosody.
+The speakers are stored in files (.tav) and can be edited by the VoiceEditor.
+The structure is represented by the <!1><A HREF="Speaker.html">Speaker</A> class. It has a load
+and the save methods that loads/saves the information stored in the
+structure. Note that the load method doesn't also load the resources 
+described in the structure. E.g. the voice description file that is 
+referenced in the speaker structure (e.g. Julie.bin) is not loaded wehen 
+loading the .tav file into the speaker, only it's name is stored. 
+It will happen only after calling the factory's addSpeaker method. That's
+why it is very important to add the loaded speakers to the factory, without
+it the engine cannot use the not loaded resources.
+
+<P>The parameters in the Speaker class can be referenced by their name.
+The detailed parameter-description can be found in the description of the 
+class (see <!1><A HREF="Speaker.html">Speaker</A> ).</BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">Hierarchy of classes</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

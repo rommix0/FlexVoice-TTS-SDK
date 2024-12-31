@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE> Model</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2> <A HREF="#DOC.DOCU">Model</A></H2></TD></H2></TD></TR></TABLE>
+<A NAME="DOC.DOCU"></A>
+<BLOCKQUOTE>The FlexVoice Net Client/Server API is a simple interface to create 
+a FlexVoice speech server and client applications that communicates 
+with ICP/IP protocol.
+
+<P>The server side uses a FlexVoice engine and listens in the given port.
+When a request comes from the client it communicates the details, takes 
+the input text and starts to create the speech. The generated data 
+(in the required format) will be passed through the network and the 
+client takes the action with the given data. If there's a problem
+with the communication between the server and the client the 
+connection will be aborted and the server will continue the listening.
+There can be more client communicating with the server in the same time.
+The number of the enabled simultanous clients can be set in the 
+server side. It depends on the strength of the machine that runs the 
+server (it sould be measured).
+
+<P><FONT SIZE="+1"><B>Server</B></FONT>
+
+<P>A server should be created (see <!1><A HREF="FVNetServerCreate.html">FVNetServerCreate</A>) 
+and initialized (see <!1><A HREF="FVNetServerInitialize.html">FVNetServerInitialize</A>) and it will start the 
+listening and communicating with the clients automatically. At the end
+of the session the server can be destroyed (see <!1><A HREF="FVNetServerDestroy.html">FVNetServerDestroy</A>).
+Running the server it requires the installation of a full FlexVoice.
+
+<P><FONT SIZE="+1"><B>Server</B></FONT>
+
+<P>The client doesn't require FlexVoice on the machine, it only takes 
+the connection with the server and gets the data from it. 
+After creating a client (see <!1><A HREF="FVNetClientCreate.html">FVNetClientCreate</A>) it should be 
+connected to the server (see <!1><A HREF="FVNetClientConnect.html">FVNetClientConnect</A>). in case of
+successful connection the requests can be sent to the server by 
+calling the <!1><A HREF="FVNetClientSpeak.html">FVNetClientSpeak</A> method.
+The results will come though a C-style callback function 
+(see <!1><A HREF="FVNetClientCallback.html">(*FVNetClientCallback)</A>). The client can process 
+the got data e.g it can pass it to the sound card or it can save the
+result in a file. There's also possibility to wait for the end
+of the speech by caling the <!1><A HREF="FVNetClientWait.html">FVNetClientWait</A> function.
+When the client is not needed anymore it can be destroyed by the 
+<!1><A HREF="FVNetClientDestroy.html">FVNetClientDestroy</A> call.
+
+<P></BLOCKQUOTE>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

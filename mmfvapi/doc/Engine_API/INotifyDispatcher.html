@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>class  FLEXVOICE_DECLSPEC INotifyDispatcher</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Notifier.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>class  FLEXVOICE_DECLSPEC <A HREF="#DOC.DOCU">INotifyDispatcher</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Interface for managing notification dispatching.</BLOCKQUOTE>
+<HR>
+
+<H2>Inheritance:</H2>
+<APPLET CODE="ClassGraph.class" WIDTH=600 HEIGHT=95>
+<param name=classes value="CINotifyDispatcher,MINotifyDispatcher.html,CINotifier,MINotifier.html,CIOutputSite,MIOutputSite.html">
+<param name=before value="M,M|_,Mr_">
+<param name=after value="M,M,M">
+<param name=indent value="0,0,0">
+<param name=arrowdir value="down">
+</APPLET>
+<HR>
+
+<DL>
+<P><TABLE BORDER>
+<DT><H3>Public Methods</H3><DD><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.5.2.1"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>registerNotify</B> ( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )<BR>
+<I>Adds the given INotify instance to the internal list of INotify instances managed by the dispatcher.</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.5.2.2"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>unregisterNotify</B> ( <!1><A HREF="INotify.html">INotify</A>*  notify )<BR>
+<I>Deletes the given INotify instance from the internal list of INotify instances managed by the dispatcher</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.5.2.3"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>addBookmarkTypes</B> ( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )<BR>
+<I>Allows the manipulation of the bookmark types associated with a given INotify instance</I>
+</TD></TR><TR>
+<TD VALIGN=TOP><A HREF="#DOC.1.3.5.2.4"><IMG ALT="[more]" BORDER=0 SRC=icon1.gif></A>virtual   void </TD><TD><B>removeBookmarkTypes</B> ( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types )<BR>
+<I>Allows the manipulation of the bookmark types associated with a given INotify instance</I>
+</TD></TR></TABLE></P>
+
+</DL>
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Interface for managing notification dispatching.
+An INotifyDispatcher interface stores a number of
+<!1><A HREF="INotify.html">INotify</A> instances. When a notification arrives, it goes through
+this internal list and calls the notification method of
+all the INotify instances for which the given notification type is
+permitted. An INotifyDispatcher typically implements an <!1><A HREF="INotify.html">INotify</A>
+interface, as well.</BLOCKQUOTE>
+<DL>
+
+<A NAME="registerNotify"></A>
+<A NAME="DOC.1.3.5.2.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void registerNotify( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types ) = 0</B></TT>
+<DD>Adds the given INotify instance to the internal list of INotify instances
+managed by the dispatcher.
+Ownership is not transferred. The client is responsible for managing the lifetime
+of the INotify instance.
+
+<DL><DT><DT><B>Parameters:</B><DD><B>notify</B> -  non-zero pointer to an <!1><A HREF="INotify.html">INotify</A> instance.
+<BR><B>types</B> -   `list' of <!1><A HREF="NotifyTransfer.html#DOC.1.3.5.4.3">bookmark</A> types, the given <!1><A HREF="INotify.html">INotify</A> instance will be
+notified of.<BR><DD></DL><P>
+<A NAME="unregisterNotify"></A>
+<A NAME="DOC.1.3.5.2.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void unregisterNotify( <!1><A HREF="INotify.html">INotify</A>*  notify ) = 0</B></TT>
+<DD>Deletes the given INotify instance from the internal list of INotify instances
+managed by the dispatcher
+<DL><DT><DD></DL><P>
+<A NAME="addBookmarkTypes"></A>
+<A NAME="DOC.1.3.5.2.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void addBookmarkTypes( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types ) = 0</B></TT>
+<DD>Allows the manipulation of the bookmark types associated with a given INotify instance
+<DL><DT><DD></DL><P>
+<A NAME="removeBookmarkTypes"></A>
+<A NAME="DOC.1.3.5.2.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B>virtual   void removeBookmarkTypes( <!1><A HREF="INotify.html">INotify</A>*  notify, const <!1><A HREF="BookmarkTypeList.html">BookmarkTypeList</A>&amp; types ) = 0</B></TT>
+<DD>Allows the manipulation of the bookmark types associated with a given INotify instance
+<DL><DT><DD></DL><P></DL>
+<HR>
+<DL><DT><B>Direct child classes:
+</B><DD><A HREF="INotifier.html">INotifier</A><BR>
+<A HREF="IOutputSite.html">IOutputSite</A><BR>
+</DL>
+
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK

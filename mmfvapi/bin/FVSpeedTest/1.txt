@@ -1,0 +1,9 @@
+The launch of Intel's latest Celeron, which can now be had with a maximum clock speed of 1300 MHz, takes its battle with AMD to the next level. The Celeron 1300 is set to go head-to-head with the AMD Duron 1200, which is geared toward the same market segment. But the Celeron 1300, based on the Tualatin core, performs very sluggishly. The reason being that, with the front-side bus and memory clock limited to 100 MHz, it's hard to tweak the performance any more, no matter how high Intel may increase the clock speed. Or, to put it more bluntly, modern CPU meets obsolete platform. Plans to develop the latter further have long since been shelved by Intel. 
+
+The Intel Celeron 1300 is basically nothing more than a Pentium III with a 100 MHz ceiling imposed on its FSB clock speed. This measure was considered necessary by the chip monopoly's marketing gurus to ensure that there was enough distance between it and the Pentium 4. 
+
+Another feature that holds back the Celeron with the Tualatin core is the requirement that it be used in conjunction with conventional SDRAM, which puts yet another dent in the Celeron's performance. The Celeron would only be able to really show what it is capable of if DDR-SDRAM and an FSB clock speed of 133 MHz were available. However, our attempts to overclock the FSB clearly showed that anything above the 120 MHz limit spells stability trouble. 
+
+In all other respects, the Celeron uses state-of-the-art technology. The 0.13 micron fabrication behind it ensures that even a standard fan will keep the CPU icy, even when its voltage has been set to 1.50 V. There is one caveat, which we already mentioned in our article on the Celeron 1200. If you own an old board with an Intel 815EP chipset, you can forget using any new CPU with a Tualatin core. 
+
+

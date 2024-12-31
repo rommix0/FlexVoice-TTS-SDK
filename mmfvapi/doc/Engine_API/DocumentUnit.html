@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>enum  DocumentUnit</TITLE>
+   <META NAME="GENERATOR" CONTENT="DOC++ 3.4.8">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+In file \include\TTSAPI\Engine.h:<TABLE BORDER=0><TR>
+<TD VALIGN=TOP><H2>enum  <A HREF="#DOC.DOCU">DocumentUnit</A></H2></TD></H2></TD></TR></TABLE>
+<BLOCKQUOTE>Document units for controlling <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A> and <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> - NOT YET SUPPORTED.</BLOCKQUOTE>
+
+<HR>
+<P><DL>
+ <DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.1">DU_TEXT</A></B>
+<DD><I>Text given in a single <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A> forms a DU_TEXT unit</I>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.2">DU_SECTION</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.3">DU_PARAGRAPH</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.4">DU_SENTENCE</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.5">DU_PHRASE</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.6">DU_EXPRESSION</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.7">DU_WORD</A></B>
+<DT>
+<IMG ALT="[more]" BORDER=0 SRC=icon1.gif> <B><A HREF="#DOC.1.3.2.1.3.8">DU_NULL_UNIT</A></B>
+<DD><I>When used in a <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> call instructs the engine  to stop immediately</I>
+</DL></P>
+
+
+<A NAME="DOC.DOCU"></A>
+<HR>
+<H2>Documentation</H2>
+<BLOCKQUOTE>Document units for controlling <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A> and <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> - NOT YET SUPPORTED.
+
+<P>The text passed to the TTS Engine can be thought of a "document", composed
+of document units, organized hierarchically.
+The <!1><A HREF="Engine.html#DOC.1.3.2.6.1.3">skip</A> method can be used to skip forward or backward within and
+between document units. 
+The timing of <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> can also be controlled by declaring the document 
+unit at which the speech should stop next.</BLOCKQUOTE>
+<DL>
+
+<A NAME="DU_TEXT"></A>
+<A NAME="DOC.1.3.2.1.3.1"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_TEXT</B></TT>
+<DD>Text given in a single <!1><A HREF="Engine.html#DOC.1.3.2.6.1.1.3">speakRequest</A> forms a DU_TEXT
+unit
+<DL><DT><DD></DL><P>
+<A NAME="DU_SECTION"></A>
+<A NAME="DOC.1.3.2.1.3.2"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_SECTION</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_PARAGRAPH"></A>
+<A NAME="DOC.1.3.2.1.3.3"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_PARAGRAPH</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_SENTENCE"></A>
+<A NAME="DOC.1.3.2.1.3.4"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_SENTENCE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_PHRASE"></A>
+<A NAME="DOC.1.3.2.1.3.5"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_PHRASE</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_EXPRESSION"></A>
+<A NAME="DOC.1.3.2.1.3.6"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_EXPRESSION</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_WORD"></A>
+<A NAME="DOC.1.3.2.1.3.7"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_WORD</B></TT>
+<DL><DT><DD></DL><P>
+<A NAME="DU_NULL_UNIT"></A>
+<A NAME="DOC.1.3.2.1.3.8"></A>
+<DT><IMG ALT="o" BORDER=0 SRC=icon2.gif><TT><B> DU_NULL_UNIT</B></TT>
+<DD>When used in a <!1><A HREF="WavePlayOutputSiteEx.html#DOC.1.3.12.1.1.2">pause</A> call instructs the engine 
+to stop immediately
+<DL><DT><DD></DL><P></DL>
+<DL><DT><DD></DL><P><P><I><A HREF="index.html">Alphabetic index</A></I> <I><A HREF="HIER.html">HTML hierarchy of classes</A> or <A HREF="HIERjava.html">Java</A></I></P><HR>
+(C) 2000-2002, Mindmaker. FlexVoice 3.01 SDK
